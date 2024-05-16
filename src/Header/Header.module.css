@@ -1,0 +1,17 @@
+.navigation{
+    display: flex;
+    justify-content: space-around;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+}
+.facebookButton{
+
+}
+.instagramButton{
+
+}
+.pinterestButton{
+background-color: #fa2323;
+}
