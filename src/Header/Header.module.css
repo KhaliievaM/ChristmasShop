@@ -1,17 +1,367 @@
-.navigation{
-    display: flex;
-    justify-content: space-around;
+@keyframes burgerAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-.menu{
-    display: flex;
-    justify-content: space-around;
+.header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  min-height: 100px;
+  width: 100%;
+  padding-bottom: 1em;
+  background-color: #ffffff;
+  font: 1em Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 0 auto;
 }
-.facebookButton{
+.header .redHead {
+  font: 1em Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.7em;
+  padding: 1em;
+  color: #ffffff;
+  background-color: #f63f25;
+}
+.header .whiteHead {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+}
+.header .whiteHead .header_title_burger h1 {
+  font-size: 1.8em;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+.header .whiteHead .header_title_burger .h1Font {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+}
+.header .whiteHead .header_title_burger .header_burger_container {
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header .whiteHead .header_title_burger .header_burger_container .header_burger {
+  display: none;
+  position: relative;
+  z-index: 50;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30px;
+  height: 18px;
+}
+.header .whiteHead .header_title_burger .header_burger_container .header_burger span {
+  height: 2px;
+  width: 80%;
+  transform: scale(1);
+  background-color: #000000;
+}
+.header .whiteHead .header_title_burger .header_burger_container .header_burger:before, .header .whiteHead .header_title_burger .header_burger_container .header_burger:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #000000;
+  transition: all 0.3s ease 0s;
+}
+.header .whiteHead .header_title_burger .header_burger_container .header_burger:before {
+  top: 0;
+}
+.header .whiteHead .header_title_burger .header_burger_container .header_burger:after {
+  bottom: 0;
+}
+.header .whiteHead .header_title_burger .header_burger_container .header_burger.active span {
+  transform: scale(0);
+}
+.header .whiteHead .header_title_burger .header_burger_container .header_burger.active:before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+.header .whiteHead .header_title_burger .header_burger_container .header_burger.active:after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+.header .whiteHead .menu {
+  display: inline-flex;
+  justify-content: space-evenly;
+  column-gap: 1em;
+  align-items: center;
+  padding-top: 1em;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+.header .whiteHead .menu .socialMediaButton {
+  display: flex;
+  justify-content: center;
+}
+.header .whiteHead .menu .socialMediaButton button {
+  background-position: center;
+  background-size: contain;
+  background-color: #ffffff;
+  width: 2em;
+  height: 2em;
+  margin: 0.5em;
+  max-width: 100%;
+}
+.header .whiteHead .menu .socialMediaButton .facebookButton {
+  background-image: url("../Multimedia/104498_facebook_icon.png");
+}
+.header .whiteHead .menu .socialMediaButton .instagramButton {
+  background-image: url("../Multimedia/7156617_instagram_social_media_icon.png");
+}
+.header .whiteHead .menu .socialMediaButton .pinterestButton {
+  background-image: url("../Multimedia/7156612_pinterest_social_media_icon.png");
+}
+.header .whiteHead .menu .navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+}
+.header .whiteHead .menu .navigation ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  column-gap: 2.3em;
+  row-gap: 1em;
+  font-size: 0.8rem;
+}
+.header .whiteHead .menu .navigation li {
+  cursor: pointer;
+  padding: 0.5em;
+}
+.header .whiteHead .menu .navigation li:hover {
+  color: #f63f25;
+}
+.header .whiteHead .menu .navigation li .logIn {
+  display: none;
+}
+.header .whiteHead .menu .logAndCart {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.header .whiteHead .menu .logAndCart .logIn, .header .whiteHead .menu .logAndCart .cart {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0.5em;
+  background-color: #ffffff;
+}
+.header .whiteHead .menu .logAndCart .logInImage {
+  background-image: url("../Multimedia/9035990_person_circle_sharp_icon.png");
+  max-width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-color: #ffffff;
+  position: center;
+  height: 2em;
+  width: 2em;
+  padding: 8px;
+  margin-right: 0.5em;
+}
+.header .whiteHead .menu .logAndCart .cart {
+  height: 2em;
+}
+.header .whiteHead .menu .logAndCart .cart .cartCounter {
+  background-color: black;
+  color: #ffffff;
+  border-radius: 1em;
+  padding: 0.23em;
+  margin-left: 0.5em;
+}
 
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .header .whiteHead .menu .navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    width: 500px;
+  }
 }
-.instagramButton{
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .header {
+    background-color: #f9fafa;
+    padding: 1.5em 0;
+  }
+  .header .redHead {
+    display: none;
+  }
+  .header .whiteHead {
+    flex-direction: column-reverse;
+    row-gap: 1em;
+    padding-top: 0;
+  }
+  .header .whiteHead .header_title_burger {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30%;
+  }
+  .header .whiteHead .header_title_burger .header_burger_container {
+    display: flex;
+    margin-right: 2em;
+    z-index: 100;
+  }
+  .header .whiteHead .header_title_burger .header_burger_container .header_burger {
+    display: flex;
+  }
+  .header .whiteHead .menu {
+    display: inline-flex;
+    text-align: center;
+    padding-top: 0;
+  }
+  .header .whiteHead .menu .socialMediaButton button {
+    text-align: center;
+    background-color: #f9fafa;
+  }
+  .header .whiteHead .menu .navigation {
+    display: none;
+  }
+  .header .whiteHead .menu .open {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    overflow-y: auto;
+    padding: 50px 40px;
+    background-color: #f1f0ec;
+    animation: burgerAnimation 0.4s;
+  }
+  .header .whiteHead .menu .open ul {
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 30px;
+  }
+  .header .whiteHead .menu .open ul li {
+    cursor: pointer;
+    padding: 0.5em;
+  }
+  .header .whiteHead .menu .open ul li:hover {
+    color: #f63f25;
+  }
+  .header .whiteHead .menu .open ul li .logIn {
+    display: flex;
+    align-items: center;
+    font: 1em Arial, Helvetica, sans-serif;
+    background-color: #f1f0ec;
+  }
+  .header .whiteHead .menu .open ul li .logIn .logInImage {
+    background-image: url("../Multimedia/9035990_person_circle_sharp_icon.png");
+    max-width: 100%;
+    background-position: center;
+    background-size: contain;
+    background-color: #f1f0ec;
+    position: center;
+    height: 2em;
+    width: 2em;
+    margin-right: 0.5em;
+  }
+  .header .whiteHead .menu .logAndCart .cart {
+    background-color: #f9fafa;
+  }
+  .header .whiteHead .menu .logAndCart .logIn {
+    display: none;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .header {
+    background-color: #f9fafa;
+  }
+  .header .redHead {
+    display: none;
+  }
+  .header .whiteHead {
+    flex-direction: column-reverse;
+    padding-top: 1em;
+  }
+  .header .whiteHead .header_title_burger {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20%;
+  }
+  .header .whiteHead .header_title_burger .header_burger_container {
+    display: flex;
+    margin-right: 1em;
+    z-index: 100;
+  }
+  .header .whiteHead .header_title_burger .header_burger_container .header_burger {
+    display: flex;
+  }
+  .header .whiteHead .menu {
+    text-align: center;
+    align-items: center;
+  }
+  .header .whiteHead .menu .socialMediaButton button {
+    background-color: #f9fafa;
+  }
+  .header .whiteHead .menu .navigation {
+    display: none;
+  }
+  .header .whiteHead .menu .open {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    overflow-y: auto;
+    padding: 50px 40px;
+    background-color: #f1f0ec;
+    animation: burgerAnimation 0.4s;
+  }
+  .header .whiteHead .menu .open ul {
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 30px;
+  }
+  .header .whiteHead .menu .open ul li {
+    cursor: pointer;
+    padding: 0.5em;
+  }
+  .header .whiteHead .menu .open ul li:hover {
+    color: #f63f25;
+  }
+  .header .whiteHead .menu .logAndCart .cart {
+    background-color: #f9fafa;
+  }
+  .header .whiteHead .menu .logAndCart .logIn {
+    display: none;
+  }
+}
 
-}
-.pinterestButton{
-background-color: #fa2323;
-}
+/*# sourceMappingURL=Header.module.css.map */
