@@ -1,0 +1,457 @@
+@font-face {
+  font-family: 'CustomFont';
+  src: url('/DidotLTPro-Italic.ttf');
+}
+
+$backgroundImage: url("https://static.wixstatic.com/media/84770f_99fd76090dbf4e30aa83ec60453ad425~mv2.jpg/v1/fill/w_1903,h_700,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_99fd76090dbf4e30aa83ec60453ad425~mv2.jpg");
+$backgroundSize: cover;
+$whiteColor: #ffffff;
+$redColor: #f63f25;
+$fontForButton: 1em Arial, sans-serif;
+$transitionForButton: all 0.5s ease;
+@mixin button($padding, $bgcol, $min-width, $col, $brd-rad, $font, $trans) {
+  padding: $padding;
+  background-color: $bgcol;
+  min-width: $min-width;
+  color: $col;
+  border-radius: $brd-rad;
+  font: $font;
+  transition: $trans;
+}
+
+@mixin disFlexHome($display, $jusCon, $alItems) {
+  display: $display;
+  justify-content: $jusCon;
+  align-items: $alItems;
+}
+
+@mixin disFlexDirHome($display, $jusCon, $alItems, $flDir) {
+  display: $display;
+  justify-content: $jusCon;
+  align-items: $alItems;
+  flex-direction: $flDir;
+}
+
+
+.wrapper {
+  @include disFlexHome(flex, center, center);
+  width: 100%;
+  margin: 0 auto;
+  background-image: $backgroundImage;
+  background-attachment: fixed;
+  background-position: center; //box-sizing: border-box;
+
+  .containerOfHomePage {
+    @include disFlexDirHome(flex, center, center, column); //box-sizing: border-box;
+    width: 100%;
+    color: white;
+
+    .topOfHomePage {
+      @include disFlexDirHome(flex, center, center, column);
+      row-gap: 3em;
+      position: center;
+      max-width: 1200px;
+      margin: 5em auto;
+
+      .deerHead {
+        @include disFlexHome(flex, center, center);
+        column-gap: 2em;
+
+        .deerOfHomePage {
+          width: 102px;
+          height: 102px;
+          max-width: 100%;
+          object-fit: contain;
+          object-position: center center;
+          background-image: url("https://static.wixstatic.com/media/c4a816_8067a3b0de5745dda0baac8a555294fc~mv2.png/v1/fill/w_128,h_128,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c4a816_8067a3b0de5745dda0baac8a555294fc~mv2.png");
+          background-position: center;
+          background-size: contain;
+        }
+
+        span {
+          padding: 0.2em;
+          border-bottom: 1px solid;
+        }
+      }
+
+      .title {
+        @include disFlexDirHome(flex, center, center, column);
+        row-gap: 1.5em;
+
+        h1 {
+          text-align: center;
+          font-family: 'CustomFont', sans-serif;
+          letter-spacing: normal;
+          font-size: 4.375em;
+          font-style: italic;
+        }
+
+        span {
+          font: 18px "Poppins", sans-serif;
+          letter-spacing: 3.5px;
+          font-weight: 400;
+          font-style: normal;
+          text-align: center;
+        }
+      }
+
+      .btn_startShop {
+        @include button(0.7em, $redColor, 11.3em, $whiteColor, 1.5em, $fontForButton, $transitionForButton);
+
+        &:hover {
+          background-color: $whiteColor;
+          color: $redColor;
+        }
+      }
+    }
+
+    .middleOfHomePage {
+      @include disFlexDirHome(flex, center, center, column); //position: relative;
+      flex: 1;
+      width: 100%;
+      margin-top: 8em;
+      background-color: $whiteColor;
+
+      .whiteBlock {
+        @include disFlexDirHome(flex, center, center, row);
+        width: 100%;
+        max-height: 500px;
+        background-color: $whiteColor;
+
+        .containerOfThreeCategories {
+          @include disFlexHome(flex, center, center);
+          column-gap: 2em;
+          padding: 2em;
+          box-sizing: content-box;
+          position: relative;
+          top: -90px;
+          background-color: $whiteColor;
+
+          .threeCategories {
+            @include disFlexDirHome(flex, center, center, column);
+            row-gap: 1em;
+
+            img {
+              width: 18.9375em;
+              height: 27em;
+              object-fit: cover;
+
+            }
+
+            a {
+              font-family: 'CustomFont', sans-serif;
+              letter-spacing: normal;
+              font-size: 1.7em;
+              font-style: italic;
+              color: black;
+            }
+
+            hr {
+              text-align: center;
+              width: 10%;
+              margin-top: 0.4em;
+              margin-bottom: 0.4em;
+              border-style: inset;
+              border-width: 1px;
+            }
+
+            button {
+
+              @include button(0.7em, $whiteColor, 11.3em, black, 1.5em, $fontForButton, $transitionForButton);
+              border: 1px solid black;
+              border-radius: 1.5em;
+
+              &:hover {
+                color: $redColor;
+                border: 1px solid $redColor;
+              }
+            }
+          }
+        }
+      }
+
+      .promoCodeBlock {
+        @include disFlexDirHome(inline-flex, center, center, row);
+        width: 100%;
+
+        img {
+          flex: 25%;
+          width: 476px;
+          height: content-box;
+          object-position: 50% 50%; // width="245" height="520"
+          object-fit: cover;
+        }
+
+        .redBlockPromoCode {
+          @include disFlexDirHome(flex, center, center, column);
+          flex: 50%;
+          text-align: center;
+          background-color: $redColor;
+
+          .textInRedBlock {
+            text-align: center;
+            font: 40px "Times New Roman", serif;
+            font-weight: 200;
+            font-style: italic; //padding: 10% 20%;width: 550px;
+            margin: 1.5em 3em;
+            padding: 1em 4em;
+            border: 1px solid $whiteColor;
+            border-radius: 6px;
+            color: $whiteColor;
+
+            img {
+              width: 90px;
+              height: 90px;
+              transform: rotate(180deg);
+            }
+
+            .zigzag {
+              font-weight: 600;
+              font-style: normal;
+              font-size: 60px; //transform: rotate(90deg);
+            }
+          }
+
+          button {
+            @include button(0.7em, $redColor, 11.3em, $whiteColor, 1.5em, $fontForButton, $transitionForButton);
+            position: relative;
+            top: -80px;
+            border: 1px solid $whiteColor;
+            border-radius: 1.5em;
+
+            &:hover {
+              border: 1px solid $redColor;
+              color: $redColor;
+              background-color: $whiteColor;
+            }
+          }
+        }
+      }
+    }
+
+    .bottomOfHomePage {
+      @include disFlexDirHome(flex, center, center, column); //position: relative;object-fit: cover;object-position: 50% 50%;
+      width: 100%;
+      height: 100%;
+      background-image: url("https://static.wixstatic.com/media/84770f_bc1d493819db4d27891a877ce0063d2a~mv2_d_1920_1280_s_2.jpg/v1/fill/w_1903,h_801,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_bc1d493819db4d27891a877ce0063d2a~mv2_d_1920_1280_s_2.jpg");
+
+      .containerFeedbackFormContacts {
+        @include disFlexDirHome(flex, center, center, column);
+
+        .feedbackForm {
+          @include disFlexDirHome(flex, center, center, column);
+          margin: 5em auto;
+
+          .sendAMess {
+            @include disFlexDirHome(flex, center, center, column);
+            text-align: center;
+            margin: 1em auto;
+            font: 18px "Poppins", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 3.5px;
+            color: $redColor;
+            img{
+              width: 70px;
+              height: 50px;
+              font-size: 20px;
+              transform: rotate(180deg);
+            }
+          }
+
+          .form {
+
+
+            .form_block {
+              @include disFlexDirHome(flex, center, stretch, column);
+              margin: 1em auto;
+              width: 600px;
+              font: $fontForButton;
+
+
+              .form_nameEmail {
+                @include disFlexDirHome(flex, space-between, stretch, row);
+
+                .form_element {
+                  flex-grow: 1;
+                }
+              }
+
+              .form_element {
+                padding: 9px;
+                margin: 0.5em;
+                border: 1px solid #c1c1c1;
+                border-radius: 3px;
+                background-color: $whiteColor;
+                color: $redColor;
+                cursor: pointer;
+
+                &:hover {
+                  color: $redColor;
+                  background-color: #eeeeee;
+                  box-shadow: 0 0 0 1px black inset;
+                  border: 1px solid #000000;
+                  border-radius: 3px;
+                }
+              }
+
+              ::placeholder {
+                color: #fcb5ae;
+                opacity: 1; /* Firefox */
+              }
+
+              //}
+            }
+            .form_button {
+              @include button(0.7em 1em, $redColor, 11.3em, $whiteColor, 1.5em, $fontForButton, $transitionForButton);
+
+              &:hover {
+                color: $redColor;
+                background-color: #e7e7e7;
+              }
+            }
+          }
+        }
+
+        .contacts {
+          .contactUs{
+            @include disFlexDirHome(flex, center, center, column);
+            text-align: center;
+            margin: 1em auto;
+            font: 18px "Poppins", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 3.5px;
+            color: $redColor;
+            img{
+              width: 70px;
+              height: 50px;
+              font-size: 20px;
+              transform: rotate(180deg);
+            }
+          }
+          .numEmail{
+            @include disFlexDirHome(flex, center, center, row);
+            text-align: center;
+            margin: 1em auto;
+            font: 18px "Poppins", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 3px;
+            color: #999a9e;
+            .numEmail_line{
+              border-left: 2px solid #999a9e;
+              height: 16px;
+              margin: 0 12px;
+            }
+            a{
+              color: #999a9e;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    margin: 21vh auto;
+    text-align: center;
+
+    main {
+      //max-width: 1000px;
+
+      //.middleOfHomePage { <img src="" alt="" style="width: 1903px; height: 801px; object-fit: cover; object-position: 50% 50%;" width="980" height="801" fetchpriority="high">
+      //  display: flex;
+      //  justify-content: center;
+      //  align-items: center;
+      //  flex-direction: row;
+      //  column-gap: 2em;
+      //  margin-top: 4em;
+      //  padding: 2em;
+      //  background-color: $whiteColor;
+      //}
+    }
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .wrapper {
+    margin: 29vh auto;
+    text-align: center;
+
+    .containerOfHomePage {
+      //max-width: 800px;
+
+      //.middleOfHomePage {
+      //  display: flex;
+      //  justify-content: center;
+      //  align-items: center;
+      //  flex-direction: row;
+      //  column-gap: 1.5em;
+      //  margin-top: 4em;
+      //  padding: 2em;
+      //  background-color: $whiteColor;
+      //}
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .wrapper {
+    margin: 18vh auto;
+    text-align: center;
+    width: 100%;
+
+    h1 {
+      color: black;
+    }
+
+    main {
+      //max-width: 800px;
+
+      //.middleOfHomePage {
+      //  display: flex;
+      //  justify-content: center;
+      //  align-items: center;
+      //  flex-direction: column;
+      //  row-gap: 2em;
+      //  margin-top: 4em;
+      //  padding: 2em;
+      //  background-color: $whiteColor;
+      //}
+    }
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    margin: 20vh auto;
+    text-align: center;
+    width: 100%;
+
+    .containerOfHomePage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      width: 100%;
+
+      .topOfHomePage {
+        min-width: 100%;
+
+        .middleOfHomePage {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+
+

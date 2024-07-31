@@ -1,0 +1,519 @@
+//html, body, div, span, applet, object, iframe,
+//h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+//a, abbr, acronym, address, big, cite, code,
+//del, dfn, em, font, img, ins, kbd, q, s, samp,
+//small, strike, strong, sub, sup, tt, var,
+//dl, dt, dd, ol, ul, li,
+//fieldset, form, label, legend,
+//table, caption, tbody, tfoot, thead, tr, th, td {
+//  margin: 0;
+//  padding: 0;
+//  border: 0;
+//  outline: 0;
+//  font-weight: inherit;
+//  font-style: inherit;
+//  font-size: 100%;
+//  font-family: inherit;
+//  vertical-align: baseline;
+//}
+//:focus {
+//  outline: 0;
+//}
+//body {
+//  line-height: 1;
+//  color: black;
+//  background: white;
+//}
+//ol, ul {
+//  list-style: none;
+//}
+//table {
+//  border-collapse: separate;
+//  border-spacing: 0;
+//}
+//caption, th, td {
+//  text-align: left;
+//  font-weight: normal;
+//}
+//blockquote:before, blockquote:after,
+//q:before, q:after {
+//  content: "";
+//}
+//blockquote, q {
+//  quotes: "" "";
+//}
+$font-stack: 1em Arial, Helvetica, sans-serif;
+$whiteColor: #ffffff;
+$redColor: #f63f25;
+$colors: (
+        "white":#ffffff,
+        "red": #f63f25,
+        "black": #000000,
+);
+@keyframes burgerAnimation {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@mixin disFlex($display, $flexFlow, $jusCon) {
+  display: $display;
+  flex-flow: $flexFlow;
+  justify-content: $jusCon;
+}
+
+.header {
+  @include disFlex(flex, column nowrap, center);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  min-height: 100px;
+  width: 100%;
+  padding-bottom: 1em;
+  background-color: map-get($colors, "white");
+  font: $font-stack;
+  text-align: center;
+  margin: 0 auto;
+
+  .redHead {
+    font: $font-stack;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.7em;
+    padding: 1em;
+    color: $whiteColor;
+    background-color: $redColor;
+  }
+
+  .whiteHead {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2em;
+
+    .header_title_burger {
+      h1 {
+        font-size: 1.8em; // Arial Narrow, sans-serif
+        font-weight: 600;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .h1Font {
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        text-transform: uppercase;
+      }
+
+      .header_burger_container {
+        display: none;
+        justify-content: flex-end;
+        align-items: center;
+
+        .header_burger {
+          display: none;
+          position: relative;
+          z-index: 50;
+          align-items: center;
+          justify-content: flex-end;
+          width: 30px;
+          height: 18px;
+
+          & span {
+            height: 2px;
+            width: 80%;
+            transform: scale(1);
+            background-color: #000000;
+          }
+
+          &:before, &:after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background-color: #000000;
+            transition: all 0.3s ease 0s;
+          }
+
+          &:before {
+            top: 0;
+          }
+
+          &:after {
+            bottom: 0;
+          }
+
+          &.active span {
+            transform: scale(0);
+          }
+
+          &.active:before {
+            top: 50%;
+            transform: rotate(-45deg) translate(0, -50%);
+          }
+
+          &.active:after {
+            bottom: 50%;
+            transform: rotate(45deg) translate(0, 50%);
+          }
+        }
+      }
+    }
+
+    .menu {
+      display: inline-flex;
+      justify-content: space-evenly;
+      column-gap: 1em;
+      align-items: center;
+      padding-top: 1em;
+      max-width: 1800px;
+      margin: 0 auto;
+
+      .socialMediaButton {
+        display: flex;
+        justify-content: center;
+
+        & button {
+          background-position: center;
+          background-size: contain;
+          background-color: $whiteColor;
+          width: 2em;
+          height: 2em;
+          margin: 0.5em;
+          max-width: 100%;
+        }
+
+        .facebookButton {
+          background-image: url("../Multimedia/104498_facebook_icon.png");
+        }
+
+        .instagramButton {
+          background-image: url("../Multimedia/7156617_instagram_social_media_icon.png");
+        }
+
+        .pinterestButton {
+          background-image: url("../Multimedia/7156612_pinterest_social_media_icon.png");
+        }
+      }
+
+      .navigation {
+        @include disFlex(flex, row wrap, center);
+        align-content: center;
+
+        ul {
+          @include disFlex(flex, row wrap, center);
+          align-content: center;
+          column-gap: 2.3em;
+          row-gap: 1em;
+          font-size: 0.8rem;
+        }
+
+        li {
+          cursor: pointer;
+          padding: 0.5em;
+
+          &:hover {
+            color: $redColor;
+          }
+
+          .logIn {
+            display: none;
+          }
+        }
+      }
+
+      .logAndCart {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        .logIn, .cart {
+          display: flex;
+          align-items: center;
+          position: relative;
+          margin: 0.5em;
+          background-color: $whiteColor;
+        }
+
+        .logInImage {
+          background-image: url("../Multimedia/9035990_person_circle_sharp_icon.png");
+          max-width: 100%;
+          background-position: center;
+          background-size: contain;
+          background-color: $whiteColor;
+          position: center;
+          height: 2em;
+          width: 2em;
+          padding: 8px;
+          margin-right: 0.5em;
+        }
+
+        .cart {
+          height: 2em;
+
+          .cartCounter {
+            background-color: black;
+            color: $whiteColor;
+            border-radius: 1em;
+            padding: 0.23em;
+            margin-left: 0.5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .header {
+    .whiteHead {
+      .menu {
+        .navigation {
+          @include disFlex(flex, row wrap, center);
+          align-content: center;
+          width: 500px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .header {
+    background-color: #f9fafa;
+    padding: 1.5em 0;
+
+    .redHead {
+      display: none;
+    }
+
+    .whiteHead {
+      flex-direction: column-reverse;
+      row-gap: 1em;
+      padding-top: 0;
+
+      .header_title_burger {
+        display: flex;
+        justify-content: flex-end;
+        gap: 30%;
+
+        .header_burger_container {
+          display: flex;
+          margin-right: 2em;
+          z-index: 100;
+
+          .header_burger {
+            display: flex;
+          }
+        }
+      }
+
+      .menu {
+        display: inline-flex;
+        text-align: center;
+        padding-top: 0;
+
+        .socialMediaButton button {
+          text-align: center;
+          background-color: #f9fafa;
+        }
+
+        .navigation {
+          display: none;
+        }
+
+        .open {
+          display: flex !important;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          position: fixed;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 50;
+          overflow-y: auto;
+          padding: 50px 40px;
+          background-color: #f1f0ec;
+          animation: burgerAnimation 0.4s;
+
+          ul {
+            display: flex;
+            text-align: start;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            row-gap: 30px;
+
+            li {
+              cursor: pointer;
+              padding: 0.5em;
+
+              &:hover {
+                color: $redColor;
+              }
+
+              .logIn {
+                display: flex;
+                align-items: center;
+                font: 1em Arial, Helvetica, sans-serif;
+                background-color: #f1f0ec;
+
+                .logInImage {
+                  background-image: url("../Multimedia/9035990_person_circle_sharp_icon.png");
+                  max-width: 100%;
+                  background-position: center;
+                  background-size: contain;
+                  background-color: #f1f0ec;
+                  position: center;
+                  height: 2em;
+                  width: 2em;
+                  margin-right: 0.5em;
+                }
+              }
+            }
+          }
+
+        }
+
+        .logAndCart {
+          .cart {
+            background-color: #f9fafa;
+          }
+
+          .logIn {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .header {
+    background-color: #f9fafa;
+
+    .redHead {
+      display: none;
+    }
+
+    .whiteHead {
+      flex-direction: column-reverse;
+      //row-gap: 0.5em;
+      padding-top: 1em;
+      .header_title_burger {
+        display: flex;
+        justify-content: flex-end;
+        gap: 20%;
+
+        .header_burger_container {
+          display: flex;
+          margin-right: 1em;
+          z-index: 100;
+
+          .header_burger {
+            display: flex;
+          }
+        }
+      }
+
+      .menu {
+        text-align: center;
+        align-items: center;
+        .socialMediaButton button {
+          background-color: #f9fafa;
+        }
+
+        .navigation {
+          display: none;
+        }
+
+        .open {
+          display: flex !important;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          position: fixed;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 50;
+          overflow-y: auto;
+          padding: 50px 40px;
+          background-color: #f1f0ec;
+          animation: burgerAnimation 0.4s;
+
+          ul {
+            display: flex;
+            text-align: start;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            row-gap: 30px;
+
+            li {
+              cursor: pointer;
+              padding: 0.5em;
+
+              &:hover {
+                color: $redColor;
+              }
+            }
+          }
+        }
+
+        .logAndCart {
+
+          .cart {
+            background-color: #f9fafa;
+          }
+
+          .logIn {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
