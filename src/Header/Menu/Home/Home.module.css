@@ -226,6 +226,10 @@
   width: 100%;
   height: 100%;
   background-image: url("https://static.wixstatic.com/media/84770f_bc1d493819db4d27891a877ce0063d2a~mv2_d_1920_1280_s_2.jpg/v1/fill/w_1903,h_801,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_bc1d493819db4d27891a877ce0063d2a~mv2_d_1920_1280_s_2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .wrapper .containerOfHomePage .bottomOfHomePage .containerFeedbackFormContacts {
   display: flex;
@@ -316,7 +320,7 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
-  margin: 1em auto;
+  margin: 0 auto;
   font: 18px "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -335,7 +339,7 @@
   align-items: center;
   flex-direction: row;
   text-align: center;
-  margin: 1em auto;
+  margin: 0 auto;
   font: 18px "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;

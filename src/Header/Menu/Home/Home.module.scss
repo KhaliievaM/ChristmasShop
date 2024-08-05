@@ -234,6 +234,10 @@ $transitionForButton: all 0.5s ease;
       width: 100%;
       height: 100%;
       background-image: url("https://static.wixstatic.com/media/84770f_bc1d493819db4d27891a877ce0063d2a~mv2_d_1920_1280_s_2.jpg/v1/fill/w_1903,h_801,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_bc1d493819db4d27891a877ce0063d2a~mv2_d_1920_1280_s_2.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
 
       .containerFeedbackFormContacts {
         @include disFlexDirHome(flex, center, center, column);
@@ -251,7 +255,8 @@ $transitionForButton: all 0.5s ease;
             font-weight: 400;
             letter-spacing: 3.5px;
             color: $redColor;
-            img{
+
+            img {
               width: 70px;
               height: 50px;
               font-size: 20px;
@@ -261,13 +266,11 @@ $transitionForButton: all 0.5s ease;
 
           .form {
 
-
             .form_block {
               @include disFlexDirHome(flex, center, stretch, column);
               margin: 1em auto;
               width: 600px;
               font: $fontForButton;
-
 
               .form_nameEmail {
                 @include disFlexDirHome(flex, space-between, stretch, row);
@@ -302,6 +305,7 @@ $transitionForButton: all 0.5s ease;
 
               //}
             }
+
             .form_button {
               @include button(0.7em 1em, $redColor, 11.3em, $whiteColor, 1.5em, $fontForButton, $transitionForButton);
 
@@ -314,37 +318,41 @@ $transitionForButton: all 0.5s ease;
         }
 
         .contacts {
-          .contactUs{
+          .contactUs {
             @include disFlexDirHome(flex, center, center, column);
             text-align: center;
-            margin: 1em auto;
+            margin: 0 auto;
             font: 18px "Poppins", sans-serif;
             font-style: normal;
             font-weight: 400;
             letter-spacing: 3.5px;
             color: $redColor;
-            img{
+
+            img {
               width: 70px;
               height: 50px;
               font-size: 20px;
               transform: rotate(180deg);
             }
           }
-          .numEmail{
+
+          .numEmail {
             @include disFlexDirHome(flex, center, center, row);
             text-align: center;
-            margin: 1em auto;
+            margin: 0 auto;
             font: 18px "Poppins", sans-serif;
             font-style: normal;
             font-weight: 400;
             letter-spacing: 3px;
             color: #999a9e;
-            .numEmail_line{
+
+            .numEmail_line {
               border-left: 2px solid #999a9e;
               height: 16px;
               margin: 0 12px;
             }
-            a{
+
+            a {
               color: #999a9e;
             }
           }

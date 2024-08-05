@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Header from "./Header/Header";
 import Home from "./Header/Menu/Home/Home";
+import Footer from "./Footer/Footer"
 import styles from "./App.css"
 // import React from "@types/react";
 
@@ -24,6 +25,7 @@ function App() {
       {/*    Learn React*/}
       {/*  </a>*/}
       {/*</header>*/}
+        <Footer/>
     </div>
   );
 }
