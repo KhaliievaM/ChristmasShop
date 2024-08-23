@@ -1,8 +1,9 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Header from "./Header/Header";
-import Home from "./Header/Menu/Home/Home";
-import Footer from "./Footer/Footer"
+import Header from "./Components/Header/Header";
+import Home from "./Components/Menu/Home/Home";
+import About from "./Components/Menu/About/About"
+import Footer from "./Components/Footer/Footer"
 import styles from "./App.css"
 // import React from "@types/react";
 
@@ -10,7 +11,8 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Home/>
+        <About/>
+        {/*<Home/>*/}
       {/*<header className="App-header">*/}
       {/*  <img src={logo} className="App-logo" alt="logo" />*/}
       {/*  <p>*/}

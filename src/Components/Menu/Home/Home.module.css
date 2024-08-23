@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: inherit;
   margin: 0 auto;
   background-image: url("https://static.wixstatic.com/media/84770f_99fd76090dbf4e30aa83ec60453ad425~mv2.jpg/v1/fill/w_1903,h_700,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_99fd76090dbf4e30aa83ec60453ad425~mv2.jpg");
   background-attachment: fixed;
@@ -30,13 +30,13 @@
   max-width: 1200px;
   margin: 5em auto;
 }
-.wrapper .containerOfHomePage .topOfHomePage .deerHead {
+.wrapper .containerOfHomePage .topOfHomePage .topOfHomePage_deer {
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 2em;
 }
-.wrapper .containerOfHomePage .topOfHomePage .deerHead .deerOfHomePage {
+.wrapper .containerOfHomePage .topOfHomePage .topOfHomePage_deer .topOfHomePage_deer_image {
   width: 102px;
   height: 102px;
   max-width: 100%;
@@ -46,32 +46,32 @@
   background-position: center;
   background-size: contain;
 }
-.wrapper .containerOfHomePage .topOfHomePage .deerHead span {
+.wrapper .containerOfHomePage .topOfHomePage .topOfHomePage_deer span {
   padding: 0.2em;
   border-bottom: 1px solid;
 }
-.wrapper .containerOfHomePage .topOfHomePage .title {
+.wrapper .containerOfHomePage .topOfHomePage .topOfHomePage_title {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   row-gap: 1.5em;
 }
-.wrapper .containerOfHomePage .topOfHomePage .title h1 {
+.wrapper .containerOfHomePage .topOfHomePage .topOfHomePage_title h1 {
   text-align: center;
   font-family: "CustomFont", sans-serif;
   letter-spacing: normal;
   font-size: 4.375em;
   font-style: italic;
 }
-.wrapper .containerOfHomePage .topOfHomePage .title span {
+.wrapper .containerOfHomePage .topOfHomePage .topOfHomePage_title span {
   font: 18px "Poppins", sans-serif;
   letter-spacing: 3.5px;
   font-weight: 400;
   font-style: normal;
   text-align: center;
 }
-.wrapper .containerOfHomePage .topOfHomePage .btn_startShop {
+.wrapper .containerOfHomePage .topOfHomePage .topOfHomePage_btn_startShop {
   padding: 0.7em;
   background-color: #f63f25;
   min-width: 11.3em;
@@ -80,7 +80,7 @@
   font: 1em Arial, sans-serif;
   transition: all 0.5s ease;
 }
-.wrapper .containerOfHomePage .topOfHomePage .btn_startShop:hover {
+.wrapper .containerOfHomePage .topOfHomePage .topOfHomePage_btn_startShop:hover {
   background-color: #ffffff;
   color: #f63f25;
 }
@@ -94,7 +94,7 @@
   margin-top: 8em;
   background-color: #ffffff;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .whiteBlock {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_whiteBlock {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,7 +103,7 @@
   max-height: 500px;
   background-color: #ffffff;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .whiteBlock .containerOfThreeCategories {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_whiteBlock .middleOfHomePage_whiteBlock_containerOfThreeCategories {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,26 +114,26 @@
   top: -90px;
   background-color: #ffffff;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .whiteBlock .containerOfThreeCategories .threeCategories {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_whiteBlock .middleOfHomePage_whiteBlock_containerOfThreeCategories .middleOfHomePage_whiteBlock_containerOfThreeCategories_threeCategories {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   row-gap: 1em;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .whiteBlock .containerOfThreeCategories .threeCategories img {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_whiteBlock .middleOfHomePage_whiteBlock_containerOfThreeCategories .middleOfHomePage_whiteBlock_containerOfThreeCategories_threeCategories img {
   width: 18.9375em;
   height: 27em;
   object-fit: cover;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .whiteBlock .containerOfThreeCategories .threeCategories a {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_whiteBlock .middleOfHomePage_whiteBlock_containerOfThreeCategories .middleOfHomePage_whiteBlock_containerOfThreeCategories_threeCategories a {
   font-family: "CustomFont", sans-serif;
   letter-spacing: normal;
   font-size: 1.7em;
   font-style: italic;
   color: black;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .whiteBlock .containerOfThreeCategories .threeCategories hr {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_whiteBlock .middleOfHomePage_whiteBlock_containerOfThreeCategories .middleOfHomePage_whiteBlock_containerOfThreeCategories_threeCategories hr {
   text-align: center;
   width: 10%;
   margin-top: 0.4em;
@@ -141,7 +141,7 @@
   border-style: inset;
   border-width: 1px;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .whiteBlock .containerOfThreeCategories .threeCategories button {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_whiteBlock .middleOfHomePage_whiteBlock_containerOfThreeCategories .middleOfHomePage_whiteBlock_containerOfThreeCategories_threeCategories button {
   padding: 0.7em;
   background-color: #ffffff;
   min-width: 11.3em;
@@ -152,34 +152,36 @@
   border: 1px solid black;
   border-radius: 1.5em;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .whiteBlock .containerOfThreeCategories .threeCategories button:hover {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_whiteBlock .middleOfHomePage_whiteBlock_containerOfThreeCategories .middleOfHomePage_whiteBlock_containerOfThreeCategories_threeCategories button:hover {
   color: #f63f25;
   border: 1px solid #f63f25;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .promoCodeBlock {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_promoCodeBlock {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   width: 100%;
+  height: 520px;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .promoCodeBlock img {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_promoCodeBlock img {
   flex: 25%;
   width: 476px;
   height: content-box;
   object-position: 50% 50%;
   object-fit: cover;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .promoCodeBlock .redBlockPromoCode {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_promoCodeBlock .middleOfHomePage_promoCodeBlock_redBlock {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   flex: 50%;
+  height: 520px;
   text-align: center;
   background-color: #f63f25;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .promoCodeBlock .redBlockPromoCode .textInRedBlock {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_promoCodeBlock .middleOfHomePage_promoCodeBlock_redBlock .middleOfHomePage_promoCodeBlock_redBlock_text {
   text-align: center;
   font: 40px "Times New Roman", serif;
   font-weight: 200;
@@ -190,17 +192,17 @@
   border-radius: 6px;
   color: #ffffff;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .promoCodeBlock .redBlockPromoCode .textInRedBlock img {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_promoCodeBlock .middleOfHomePage_promoCodeBlock_redBlock .middleOfHomePage_promoCodeBlock_redBlock_text img {
   width: 90px;
   height: 90px;
   transform: rotate(180deg);
 }
-.wrapper .containerOfHomePage .middleOfHomePage .promoCodeBlock .redBlockPromoCode .textInRedBlock .zigzag {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_promoCodeBlock .middleOfHomePage_promoCodeBlock_redBlock .middleOfHomePage_promoCodeBlock_redBlock_text .zigzag {
   font-weight: 600;
   font-style: normal;
   font-size: 60px;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .promoCodeBlock .redBlockPromoCode button {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_promoCodeBlock .middleOfHomePage_promoCodeBlock_redBlock button {
   padding: 0.7em;
   background-color: #f63f25;
   min-width: 11.3em;
@@ -213,7 +215,7 @@
   border: 1px solid #ffffff;
   border-radius: 1.5em;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .promoCodeBlock .redBlockPromoCode button:hover {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_promoCodeBlock .middleOfHomePage_promoCodeBlock_redBlock button:hover {
   border: 1px solid #f63f25;
   color: #f63f25;
   background-color: #ffffff;
@@ -231,20 +233,20 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-.wrapper .containerOfHomePage .bottomOfHomePage .containerFeedbackFormContacts {
+.wrapper .containerOfHomePage .bottomOfHomePage .bottomOfHomePage_containerFeedbackFormContacts {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.wrapper .containerOfHomePage .bottomOfHomePage .containerFeedbackFormContacts .feedbackForm {
+.wrapper .containerOfHomePage .bottomOfHomePage .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 5em auto;
 }
-.wrapper .containerOfHomePage .bottomOfHomePage .containerFeedbackFormContacts .feedbackForm .sendAMess {
+.wrapper .containerOfHomePage .bottomOfHomePage .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_sendAMess {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -257,13 +259,13 @@
   letter-spacing: 3.5px;
   color: #f63f25;
 }
-.wrapper .containerOfHomePage .bottomOfHomePage .containerFeedbackFormContacts .feedbackForm .sendAMess img {
+.wrapper .containerOfHomePage .bottomOfHomePage .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_sendAMess img {
   width: 70px;
   height: 50px;
   font-size: 20px;
   transform: rotate(180deg);
 }
-.wrapper .containerOfHomePage .bottomOfHomePage .containerFeedbackFormContacts .feedbackForm .form .form_block {
+.wrapper .containerOfHomePage .bottomOfHomePage .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block {
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -272,16 +274,16 @@
   width: 600px;
   font: 1em Arial, sans-serif;
 }
-.wrapper .containerOfHomePage .bottomOfHomePage .containerFeedbackFormContacts .feedbackForm .form .form_block .form_nameEmail {
+.wrapper .containerOfHomePage .bottomOfHomePage .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_nameEmail {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   flex-direction: row;
 }
-.wrapper .containerOfHomePage .bottomOfHomePage .containerFeedbackFormContacts .feedbackForm .form .form_block .form_nameEmail .form_element {
+.wrapper .containerOfHomePage .bottomOfHomePage .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_nameEmail .form_element {
   flex-grow: 1;
 }
-.wrapper .containerOfHomePage .bottomOfHomePage .containerFeedbackFormContacts .feedbackForm .form .form_block .form_element {
+.wrapper .containerOfHomePage .bottomOfHomePage .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_element {
   padding: 9px;
   margin: 0.5em;
   border: 1px solid #c1c1c1;
@@ -290,18 +292,18 @@
   color: #f63f25;
   cursor: pointer;
 }
-.wrapper .containerOfHomePage .bottomOfHomePage .containerFeedbackFormContacts .feedbackForm .form .form_block .form_element:hover {
+.wrapper .containerOfHomePage .bottomOfHomePage .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_element:hover {
   color: #f63f25;
   background-color: #eeeeee;
   box-shadow: 0 0 0 1px black inset;
   border: 1px solid #000000;
   border-radius: 3px;
 }
-.wrapper .containerOfHomePage .bottomOfHomePage .containerFeedbackFormContacts .feedbackForm .form .form_block ::placeholder {
+.wrapper .containerOfHomePage .bottomOfHomePage .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block ::placeholder {
   color: #fcb5ae;
   opacity: 1; /* Firefox */
 }
-.wrapper .containerOfHomePage .bottomOfHomePage .containerFeedbackFormContacts .feedbackForm .form .form_button {
+.wrapper .containerOfHomePage .bottomOfHomePage .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_button {
   padding: 0.7em 1em;
   background-color: #f63f25;
   min-width: 11.3em;
@@ -310,66 +312,69 @@
   font: 1em Arial, sans-serif;
   transition: all 0.5s ease;
 }
-.wrapper .containerOfHomePage .bottomOfHomePage .containerFeedbackFormContacts .feedbackForm .form .form_button:hover {
+.wrapper .containerOfHomePage .bottomOfHomePage .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_button:hover {
   color: #f63f25;
   background-color: #e7e7e7;
 }
-.wrapper .containerOfHomePage .bottomOfHomePage .containerFeedbackFormContacts .contacts .contactUs {
+.wrapper .containerOfHomePage .bottomOfHomePage .bottomOfHomePage_containerFeedbackFormContacts .contacts {
+  margin-bottom: 4em;
+}
+.wrapper .containerOfHomePage .bottomOfHomePage .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_contactUs {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
-  font: 18px "Poppins", sans-serif;
+  font: 16px "Poppins", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 3.5px;
   color: #f63f25;
 }
-.wrapper .containerOfHomePage .bottomOfHomePage .containerFeedbackFormContacts .contacts .contactUs img {
+.wrapper .containerOfHomePage .bottomOfHomePage .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_contactUs img {
   width: 70px;
   height: 50px;
   font-size: 20px;
   transform: rotate(180deg);
 }
-.wrapper .containerOfHomePage .bottomOfHomePage .containerFeedbackFormContacts .contacts .numEmail {
+.wrapper .containerOfHomePage .bottomOfHomePage .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_numEmail {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   text-align: center;
   margin: 0 auto;
-  font: 18px "Poppins", sans-serif;
+  font: 16px "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 3px;
   color: #999a9e;
 }
-.wrapper .containerOfHomePage .bottomOfHomePage .containerFeedbackFormContacts .contacts .numEmail .numEmail_line {
+.wrapper .containerOfHomePage .bottomOfHomePage .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_numEmail .contacts_numEmail_line {
   border-left: 2px solid #999a9e;
   height: 16px;
   margin: 0 12px;
 }
-.wrapper .containerOfHomePage .bottomOfHomePage .containerFeedbackFormContacts .contacts .numEmail a {
+.wrapper .containerOfHomePage .bottomOfHomePage .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_numEmail a {
   color: #999a9e;
 }
 
 @media screen and (min-width: 1200px) {
   .wrapper {
-    margin: 21vh auto;
+    margin-top: 21vh;
     text-align: center;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .wrapper {
-    margin: 29vh auto;
+    margin-top: 29vh;
     text-align: center;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .wrapper {
-    margin: 18vh auto;
+    margin-top: 18vh;
     text-align: center;
     width: 100%;
   }
@@ -379,7 +384,7 @@
 }
 @media screen and (max-width: 767px) {
   .wrapper {
-    margin: 20vh auto;
+    margin-top: 20vh;
     text-align: center;
     width: 100%;
   }
@@ -394,7 +399,7 @@
   .wrapper .containerOfHomePage .topOfHomePage {
     min-width: 100%;
   }
-  .wrapper .containerOfHomePage .topOfHomePage .middleOfHomePage {
+  .wrapper .containerOfHomePage .middleOfHomePage {
     flex-direction: column;
   }
 }

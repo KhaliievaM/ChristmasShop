@@ -35,7 +35,7 @@ $transitionForButton: all 0.5s ease;
 
 .wrapper {
   @include disFlexHome(flex, center, center);
-  width: 100%;
+  width: inherit;
   margin: 0 auto;
   background-image: $backgroundImage;
   background-attachment: fixed;
@@ -53,11 +53,11 @@ $transitionForButton: all 0.5s ease;
       max-width: 1200px;
       margin: 5em auto;
 
-      .deerHead {
+      .topOfHomePage_deer {
         @include disFlexHome(flex, center, center);
         column-gap: 2em;
 
-        .deerOfHomePage {
+        .topOfHomePage_deer_image {
           width: 102px;
           height: 102px;
           max-width: 100%;
@@ -74,7 +74,7 @@ $transitionForButton: all 0.5s ease;
         }
       }
 
-      .title {
+      .topOfHomePage_title {
         @include disFlexDirHome(flex, center, center, column);
         row-gap: 1.5em;
 
@@ -95,7 +95,7 @@ $transitionForButton: all 0.5s ease;
         }
       }
 
-      .btn_startShop {
+      .topOfHomePage_btn_startShop {
         @include button(0.7em, $redColor, 11.3em, $whiteColor, 1.5em, $fontForButton, $transitionForButton);
 
         &:hover {
@@ -112,13 +112,13 @@ $transitionForButton: all 0.5s ease;
       margin-top: 8em;
       background-color: $whiteColor;
 
-      .whiteBlock {
+      .middleOfHomePage_whiteBlock {
         @include disFlexDirHome(flex, center, center, row);
         width: 100%;
         max-height: 500px;
         background-color: $whiteColor;
 
-        .containerOfThreeCategories {
+        .middleOfHomePage_whiteBlock_containerOfThreeCategories {
           @include disFlexHome(flex, center, center);
           column-gap: 2em;
           padding: 2em;
@@ -127,7 +127,7 @@ $transitionForButton: all 0.5s ease;
           top: -90px;
           background-color: $whiteColor;
 
-          .threeCategories {
+          .middleOfHomePage_whiteBlock_containerOfThreeCategories_threeCategories {
             @include disFlexDirHome(flex, center, center, column);
             row-gap: 1em;
 
@@ -170,9 +170,10 @@ $transitionForButton: all 0.5s ease;
         }
       }
 
-      .promoCodeBlock {
+      .middleOfHomePage_promoCodeBlock {
         @include disFlexDirHome(inline-flex, center, center, row);
         width: 100%;
+        height: 520px;
 
         img {
           flex: 25%;
@@ -182,13 +183,14 @@ $transitionForButton: all 0.5s ease;
           object-fit: cover;
         }
 
-        .redBlockPromoCode {
+        .middleOfHomePage_promoCodeBlock_redBlock{
           @include disFlexDirHome(flex, center, center, column);
           flex: 50%;
+          height: 520px;
           text-align: center;
           background-color: $redColor;
 
-          .textInRedBlock {
+          .middleOfHomePage_promoCodeBlock_redBlock_text {
             text-align: center;
             font: 40px "Times New Roman", serif;
             font-weight: 200;
@@ -239,14 +241,14 @@ $transitionForButton: all 0.5s ease;
       background-repeat: no-repeat;
       background-size: 100% 100%;
 
-      .containerFeedbackFormContacts {
+      .bottomOfHomePage_containerFeedbackFormContacts {
         @include disFlexDirHome(flex, center, center, column);
 
         .feedbackForm {
           @include disFlexDirHome(flex, center, center, column);
           margin: 5em auto;
 
-          .sendAMess {
+          .feedbackForm_sendAMess {
             @include disFlexDirHome(flex, center, center, column);
             text-align: center;
             margin: 1em auto;
@@ -264,7 +266,7 @@ $transitionForButton: all 0.5s ease;
             }
           }
 
-          .form {
+          .feedbackForm_form {
 
             .form_block {
               @include disFlexDirHome(flex, center, stretch, column);
@@ -303,7 +305,6 @@ $transitionForButton: all 0.5s ease;
                 opacity: 1; /* Firefox */
               }
 
-              //}
             }
 
             .form_button {
@@ -318,13 +319,14 @@ $transitionForButton: all 0.5s ease;
         }
 
         .contacts {
-          .contactUs {
+          margin-bottom: 4em;
+          .contacts_contactUs {
             @include disFlexDirHome(flex, center, center, column);
             text-align: center;
             margin: 0 auto;
-            font: 18px "Poppins", sans-serif;
+            font: 16px "Poppins", sans-serif;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 500;
             letter-spacing: 3.5px;
             color: $redColor;
 
@@ -336,17 +338,17 @@ $transitionForButton: all 0.5s ease;
             }
           }
 
-          .numEmail {
+          .contacts_numEmail {
             @include disFlexDirHome(flex, center, center, row);
             text-align: center;
             margin: 0 auto;
-            font: 18px "Poppins", sans-serif;
+            font: 16px "Poppins", sans-serif;
             font-style: normal;
             font-weight: 400;
             letter-spacing: 3px;
             color: #999a9e;
 
-            .numEmail_line {
+            .contacts_numEmail_line {
               border-left: 2px solid #999a9e;
               height: 16px;
               margin: 0 12px;
@@ -366,7 +368,7 @@ $transitionForButton: all 0.5s ease;
 
 @media screen and (min-width: 1200px) {
   .wrapper {
-    margin: 21vh auto;
+    margin-top: 21vh;
     text-align: center;
 
     main {
@@ -388,7 +390,7 @@ $transitionForButton: all 0.5s ease;
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .wrapper {
-    margin: 29vh auto;
+    margin-top: 29vh;
     text-align: center;
 
     .containerOfHomePage {
@@ -410,7 +412,7 @@ $transitionForButton: all 0.5s ease;
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .wrapper {
-    margin: 18vh auto;
+    margin-top: 18vh;
     text-align: center;
     width: 100%;
 
@@ -438,7 +440,7 @@ $transitionForButton: all 0.5s ease;
 
 @media screen and (max-width: 767px) {
   .wrapper {
-    margin: 20vh auto;
+    margin-top: 20vh;
     text-align: center;
     width: 100%;
 
@@ -452,10 +454,9 @@ $transitionForButton: all 0.5s ease;
 
       .topOfHomePage {
         min-width: 100%;
-
-        .middleOfHomePage {
-          flex-direction: column;
-        }
+      }
+      .middleOfHomePage {
+        flex-direction: column;
       }
     }
   }

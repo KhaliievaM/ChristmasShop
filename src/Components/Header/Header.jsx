@@ -1,23 +1,23 @@
 import React, {useState} from 'react';
 import styles from './Header.module.css';
-import Home from "./Menu/Home/Home";
+import Home from "../Menu/Home/Home";
 
 const Header = (props) => {
     const [menuActive, setMenuActive] = useState(false);
     return (
         <header className={styles.header}>
-            <div className={styles.redHead}>ORDER ONLINE today</div>
+            <div className={styles.redHead}>ORDER ONLINE today</div>    {/*<div>free shipping on orders over $50</div>*/}
             <div className={styles.whiteHead}>
-                <div className={styles.header_title_burger}>
-                    <h1 className={styles.h1Font}>THE CHRISTMAS BOUTIQUE</h1>
+                <div className={styles.whiteHead_header_title_burger}>
+                    <h1 className={styles.whiteHead_header_title_h1}>THE CHRISTMAS BOUTIQUE</h1>
                     <div className={styles.header_burger_container}>
                         <div className={`${styles.header_burger} ${menuActive ? styles.active : ''}`} onClick={()=>setMenuActive(!menuActive)}>   {/*className={styles.header_burger}{styles[menuActive ? `${class1} ${class2}` : 'header_burger']}>{styles[`header_burger ${menuActive ? 'active' : ''}`]}*/}
                             <span></span>
                         </div>
                     </div>
                 </div>
-                <div className={styles.menu}>
-                    <div className={styles.socialMediaButton}>
+                <div className={styles.whiteHead_menu}>
+                    <div className={styles.whiteHead_menu_socialMediaButton}>
                         <button className={styles.facebookButton}></button>
                         <button className={styles.instagramButton}></button>
                         <button className={styles.pinterestButton}></button>
@@ -34,7 +34,7 @@ const Header = (props) => {
                             <li>CONTACTS</li>
                         </ul>
                     </nav>
-                    <div className={styles.logAndCart}>
+                    <div className={styles.whiteHead_menu_logAndCart}>
                         <button className={styles.logIn}>
                             <div className={styles.logInImage}></div>
                             Log In

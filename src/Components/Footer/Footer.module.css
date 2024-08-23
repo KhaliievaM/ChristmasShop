@@ -3,8 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: -21vh;
+  width: inherit;
   background-color: #232429;
   color: #eaf7ef;
 }
@@ -19,9 +18,9 @@
 }
 .footer .footer_container .footer_headBlock {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   row-gap: 1.438em;
 }
 .footer .footer_container .footer_headBlock .footer_headBlock_deer {
@@ -35,13 +34,13 @@
   background-size: contain;
 }
 .footer .footer_container .footer_headBlock .footer_headBlock_h2 {
-  text-transform: uppercase;
   font: 26px "Oswald", sans-serif;
-  cursor: pointer;
+  font-weight: 400;
   font-optical-sizing: auto;
   letter-spacing: 0.05em;
-  font-weight: 400;
   font-style: normal;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 .footer .footer_container .footer_headBlock .footer_headBlock_nav {
   display: flex;
@@ -49,9 +48,9 @@
 }
 .footer .footer_container .footer_headBlock .footer_headBlock_nav ul {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: baseline;
-  flex-direction: row;
   margin: 1.438em auto;
 }
 .footer .footer_container .footer_headBlock .footer_headBlock_nav ul li {
@@ -74,29 +73,29 @@
   justify-content: center;
 }
 .footer .footer_container .footer_mediumBlock .footer_mediumBlock_socialMediaButton button {
-  background-position: center;
-  background-size: contain;
-  color: white;
   width: 25px;
   height: 25px;
   margin: 0.5em;
   max-width: 100%;
   background-color: #232429;
+  color: white;
+  background-position: center;
+  background-size: contain;
 }
 .footer .footer_container .footer_mediumBlock .footer_mediumBlock_socialMediaButton .footer_mediumBlock_socialMediaButton_facebookButton {
-  background-image: url("../Multimedia/facebook_white_icon.png");
+  background-image: url("../../Multimedia/facebook_white_icon.png");
 }
 .footer .footer_container .footer_mediumBlock .footer_mediumBlock_socialMediaButton .footer_mediumBlock_socialMediaButton_instagramButton {
-  background-image: url("../Multimedia/instagram_white_icon.png");
+  background-image: url("../../Multimedia/instagram_white_icon.png");
 }
 .footer .footer_container .footer_mediumBlock .footer_mediumBlock_socialMediaButton .footer_mediumBlock_socialMediaButton_pinterestButton {
-  background-image: url("../Multimedia/pinterest_white_icon.png");
+  background-image: url("../../Multimedia/pinterest_white_icon.png");
 }
-.footer .footer_container .footer_mediumBlock_a {
+.footer .footer_container .footer_mediumBlock .footer_mediumBlock_a {
   display: inline-flex;
   column-gap: 1.1em;
 }
-.footer .footer_container .footer_mediumBlock_a a {
+.footer .footer_container .footer_mediumBlock .footer_mediumBlock_a a {
   text-decoration: none;
   color: #f73f23;
 }

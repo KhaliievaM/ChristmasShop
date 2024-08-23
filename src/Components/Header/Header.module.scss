@@ -43,6 +43,7 @@
 //  quotes: "" "";
 //}
 $font-stack: 1em Arial, Helvetica, sans-serif;
+$font-family-title: "Oswald", sans-serif;
 $whiteColor: #ffffff;
 $redColor: #f63f25;
 $colors: (
@@ -64,29 +65,34 @@ $colors: (
   flex-flow: $flexFlow;
   justify-content: $jusCon;
 }
+@mixin disJusAli($display, $jusCon, $aliIte) {
+  display: $display;
+  justify-content: $jusCon;
+  align-items: $aliIte;
+}
 
 .header {
   @include disFlex(flex, column nowrap, center);
+  text-align: center;
+  font: $font-stack;
+  width: inherit;
+  min-height: 100px;
+  margin: 0 auto;
+  padding-bottom: 1em;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 50;
-  min-height: 100px;
-  width: 100%;
-  padding-bottom: 1em;
   background-color: map-get($colors, "white");
-  font: $font-stack;
-  text-align: center;
-  margin: 0 auto;
 
   .redHead {
     font: $font-stack;
-    text-transform: uppercase;
     text-align: center;
+    text-transform: uppercase;
     letter-spacing: 0.7em;
     padding: 1em;
-    color: $whiteColor;
     background-color: $redColor;
+    color: $whiteColor;
   }
 
   .whiteHead {
@@ -94,16 +100,16 @@ $colors: (
     flex-direction: column;
     padding-top: 2em;
 
-    .header_title_burger {
+    .whiteHead_header_title_burger {
       h1 {
+        text-align: center;
         font-size: 1.8em; // Arial Narrow, sans-serif
         font-weight: 600;
-        text-align: center;
         cursor: pointer;
       }
 
-      .h1Font {
-        font-family: "Oswald", sans-serif;
+      .whiteHead_header_title_h1{
+        font-family: $font-family-title;
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
@@ -111,16 +117,12 @@ $colors: (
       }
 
       .header_burger_container {
-        display: none;
-        justify-content: flex-end;
-        align-items: center;
+        @include disJusAli(none, flex-end, center);
 
         .header_burger {
-          display: none;
+          @include disJusAli(none, flex-end, center);
           position: relative;
           z-index: 50;
-          align-items: center;
-          justify-content: flex-end;
           width: 30px;
           height: 18px;
 
@@ -165,39 +167,37 @@ $colors: (
       }
     }
 
-    .menu {
-      display: inline-flex;
-      justify-content: space-evenly;
+    .whiteHead_menu {
+      @include disJusAli(inline-flex, space-evenly, center);
       column-gap: 1em;
-      align-items: center;
-      padding-top: 1em;
       max-width: 1800px;
+      padding-top: 1em;
       margin: 0 auto;
 
-      .socialMediaButton {
+      .whiteHead_menu_socialMediaButton {
         display: flex;
         justify-content: center;
 
         & button {
           background-position: center;
           background-size: contain;
-          background-color: $whiteColor;
           width: 2em;
           height: 2em;
           margin: 0.5em;
           max-width: 100%;
+          background-color: $whiteColor;
         }
 
         .facebookButton {
-          background-image: url("../Multimedia/104498_facebook_icon.png");
+          background-image: url("../../Multimedia/104498_facebook_icon.png");
         }
 
         .instagramButton {
-          background-image: url("../Multimedia/7156617_instagram_social_media_icon.png");
+          background-image: url("../../Multimedia/7156617_instagram_social_media_icon.png");
         }
 
         .pinterestButton {
-          background-image: url("../Multimedia/7156612_pinterest_social_media_icon.png");
+          background-image: url("../../Multimedia/7156612_pinterest_social_media_icon.png");
         }
       }
 
@@ -227,10 +227,8 @@ $colors: (
         }
       }
 
-      .logAndCart {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
+      .whiteHead_menu_logAndCart {
+        @include disJusAli(flex, center, flex-start);
 
         .logIn, .cart {
           display: flex;
@@ -241,12 +239,12 @@ $colors: (
         }
 
         .logInImage {
-          background-image: url("../Multimedia/9035990_person_circle_sharp_icon.png");
-          max-width: 100%;
+          background-image: url("../../Multimedia/9035990_person_circle_sharp_icon.png");
+          background-color: $whiteColor;
           background-position: center;
           background-size: contain;
-          background-color: $whiteColor;
           position: center;
+          max-width: 100%;
           height: 2em;
           width: 2em;
           padding: 8px;
@@ -257,11 +255,11 @@ $colors: (
           height: 2em;
 
           .cartCounter {
-            background-color: black;
-            color: $whiteColor;
             border-radius: 1em;
             padding: 0.23em;
             margin-left: 0.5em;
+            background-color: black;
+            color: $whiteColor;
           }
         }
       }
@@ -270,13 +268,12 @@ $colors: (
 }
 
 @media screen and (min-width: 1200px) {
-
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .header {
     .whiteHead {
-      .menu {
+      .whiteHead_menu {
         .navigation {
           @include disFlex(flex, row wrap, center);
           align-content: center;
@@ -301,7 +298,7 @@ $colors: (
       row-gap: 1em;
       padding-top: 0;
 
-      .header_title_burger {
+      .whiteHead_header_title_burger {
         display: flex;
         justify-content: flex-end;
         gap: 30%;
@@ -317,12 +314,12 @@ $colors: (
         }
       }
 
-      .menu {
+      .whiteHead_menu {
         display: inline-flex;
         text-align: center;
         padding-top: 0;
 
-        .socialMediaButton button {
+        .whiteHead_menu_socialMediaButton button {
           text-align: center;
           background-color: #f9fafa;
         }
@@ -372,7 +369,7 @@ $colors: (
                 background-color: #f1f0ec;
 
                 .logInImage {
-                  background-image: url("../Multimedia/9035990_person_circle_sharp_icon.png");
+                  background-image: url("../../Multimedia/9035990_person_circle_sharp_icon.png");
                   max-width: 100%;
                   background-position: center;
                   background-size: contain;
@@ -405,6 +402,7 @@ $colors: (
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .header {
     background-color: #f9fafa;
+    width: inherit;
 
     .redHead {
       display: none;
@@ -412,9 +410,8 @@ $colors: (
 
     .whiteHead {
       flex-direction: column-reverse;
-      //row-gap: 0.5em;
       padding-top: 1em;
-      .header_title_burger {
+      .whiteHead_header_title_burger {
         display: flex;
         justify-content: flex-end;
         gap: 20%;
@@ -430,10 +427,10 @@ $colors: (
         }
       }
 
-      .menu {
+      .whiteHead_menu {
         text-align: center;
         align-items: center;
-        .socialMediaButton button {
+        .whiteHead_menu_socialMediaButton button {
           background-color: #f9fafa;
         }
 
