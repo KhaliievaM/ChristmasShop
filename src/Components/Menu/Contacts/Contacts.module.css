@@ -1,0 +1,147 @@
+.container_size {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://static.wixstatic.com/media/84770f_bc1d493819db4d27891a877ce0063d2a~mv2_d_1920_1280_s_2.jpg/v1/fill/w_1903,h_801,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_bc1d493819db4d27891a877ce0063d2a~mv2_d_1920_1280_s_2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.container_size .bottomOfHomePage_containerFeedbackFormContacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5em auto;
+}
+.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_sendAMess {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 1em auto;
+  font: 18px "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 3.5px;
+  color: red;
+}
+.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_sendAMess img {
+  width: 70px;
+  height: 50px;
+  font-size: 20px;
+  transform: rotate(180deg);
+}
+.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  margin: 1em auto;
+  width: 600px;
+  font: 1em Arial, sans-serif;
+}
+.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_nameEmail {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: row;
+}
+.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_nameEmail .form_element {
+  flex-grow: 1;
+}
+.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_element {
+  padding: 9px;
+  margin: 0.5em;
+  border: 1px solid #c1c1c1;
+  border-radius: 3px;
+  background-color: white;
+  color: red;
+  cursor: pointer;
+}
+.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_element:hover {
+  color: red;
+  background-color: #eeeeee;
+  box-shadow: 0 0 0 1px black inset;
+  border: 1px solid #000000;
+  border-radius: 3px;
+}
+.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block ::placeholder {
+  color: #fcb5ae;
+  opacity: 1; /* Firefox */
+}
+.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_button {
+  padding: 0.7em 1em;
+  background-color: red;
+  min-width: 11.3em;
+  color: white;
+  border-radius: 1.5em;
+  font: 1em Arial, sans-serif;
+  transition: all 0.5s ease;
+}
+.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_button:hover {
+  color: red;
+  background-color: #e7e7e7;
+}
+.container_size .bottomOfHomePage_containerFeedbackFormContacts .contacts {
+  margin-bottom: 4em;
+}
+.container_size .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_contactUs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  font: 16px "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 3.5px;
+  color: red;
+}
+.container_size .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_contactUs img {
+  width: 70px;
+  height: 50px;
+  font-size: 20px;
+  transform: rotate(180deg);
+}
+.container_size .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_numEmail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  margin: 0 auto;
+  font: 16px "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: #999a9e;
+}
+.container_size .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_numEmail .contacts_numEmail_line {
+  border-left: 2px solid #999a9e;
+  height: 16px;
+  margin: 0 12px;
+}
+.container_size .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_numEmail a {
+  color: #999a9e;
+}
+
+/*# sourceMappingURL=Contacts.module.css.map */
