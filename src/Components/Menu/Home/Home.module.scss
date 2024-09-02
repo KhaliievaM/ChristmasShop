@@ -95,13 +95,15 @@ $transitionForButton: all 0.5s ease;
         }
       }
 
-      .topOfHomePage_btn_startShop {
+
+      .link{
         @include button(0.7em, $redColor, 11.3em, $whiteColor, 1.5em, $fontForButton, $transitionForButton);
 
         &:hover {
           background-color: $whiteColor;
           color: $redColor;
         }
+
       }
     }
 
@@ -155,7 +157,7 @@ $transitionForButton: all 0.5s ease;
               border-width: 1px;
             }
 
-            button {
+            .linkShop{
 
               @include button(0.7em, $whiteColor, 11.3em, black, 1.5em, $fontForButton, $transitionForButton);
               border: 1px solid black;
@@ -214,7 +216,7 @@ $transitionForButton: all 0.5s ease;
             }
           }
 
-          button {
+          .linkShopNow {
             @include button(0.7em, $redColor, 11.3em, $whiteColor, 1.5em, $fontForButton, $transitionForButton);
             position: relative;
             top: -80px;
@@ -231,137 +233,137 @@ $transitionForButton: all 0.5s ease;
       }
     }
 
-    .bottomOfHomePage {
-      @include disFlexDirHome(flex, center, center, column); //position: relative;object-fit: cover;object-position: 50% 50%;
-      width: 100%;
-      height: 100%;
-      background-image: url("https://static.wixstatic.com/media/84770f_bc1d493819db4d27891a877ce0063d2a~mv2_d_1920_1280_s_2.jpg/v1/fill/w_1903,h_801,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_bc1d493819db4d27891a877ce0063d2a~mv2_d_1920_1280_s_2.jpg");
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-
-      .bottomOfHomePage_containerFeedbackFormContacts {
-        @include disFlexDirHome(flex, center, center, column);
-
-        .feedbackForm {
-          @include disFlexDirHome(flex, center, center, column);
-          margin: 5em auto;
-
-          .feedbackForm_sendAMess {
-            @include disFlexDirHome(flex, center, center, column);
-            text-align: center;
-            margin: 1em auto;
-            font: 18px "Poppins", sans-serif;
-            font-style: normal;
-            font-weight: 400;
-            letter-spacing: 3.5px;
-            color: $redColor;
-
-            img {
-              width: 70px;
-              height: 50px;
-              font-size: 20px;
-              transform: rotate(180deg);
-            }
-          }
-
-          .feedbackForm_form {
-
-            .form_block {
-              @include disFlexDirHome(flex, center, stretch, column);
-              margin: 1em auto;
-              width: 600px;
-              font: $fontForButton;
-
-              .form_nameEmail {
-                @include disFlexDirHome(flex, space-between, stretch, row);
-
-                .form_element {
-                  flex-grow: 1;
-                }
-              }
-
-              .form_element {
-                padding: 9px;
-                margin: 0.5em;
-                border: 1px solid #c1c1c1;
-                border-radius: 3px;
-                background-color: $whiteColor;
-                color: $redColor;
-                cursor: pointer;
-
-                &:hover {
-                  color: $redColor;
-                  background-color: #eeeeee;
-                  box-shadow: 0 0 0 1px black inset;
-                  border: 1px solid #000000;
-                  border-radius: 3px;
-                }
-              }
-
-              ::placeholder {
-                color: #fcb5ae;
-                opacity: 1; /* Firefox */
-              }
-
-            }
-
-            .form_button {
-              @include button(0.7em 1em, $redColor, 11.3em, $whiteColor, 1.5em, $fontForButton, $transitionForButton);
-
-              &:hover {
-                color: $redColor;
-                background-color: #e7e7e7;
-              }
-            }
-          }
-        }
-
-        .contacts {
-          margin-bottom: 4em;
-          .contacts_contactUs {
-            @include disFlexDirHome(flex, center, center, column);
-            text-align: center;
-            margin: 0 auto;
-            font: 16px "Poppins", sans-serif;
-            font-style: normal;
-            font-weight: 500;
-            letter-spacing: 3.5px;
-            color: $redColor;
-
-            img {
-              width: 70px;
-              height: 50px;
-              font-size: 20px;
-              transform: rotate(180deg);
-            }
-          }
-
-          .contacts_numEmail {
-            @include disFlexDirHome(flex, center, center, row);
-            text-align: center;
-            margin: 0 auto;
-            font: 16px "Poppins", sans-serif;
-            font-style: normal;
-            font-weight: 400;
-            letter-spacing: 3px;
-            color: #999a9e;
-
-            .contacts_numEmail_line {
-              border-left: 2px solid #999a9e;
-              height: 16px;
-              margin: 0 12px;
-            }
-
-            a {
-              color: #999a9e;
-            }
-          }
-
-        }
-      }
-    }
+    //.bottomOfHomePage {
+    //  @include disFlexDirHome(flex, center, center, column); //position: relative;object-fit: cover;object-position: 50% 50%;
+    //  width: 100%;
+    //  height: 100%;
+    //  background-image: url("https://static.wixstatic.com/media/84770f_bc1d493819db4d27891a877ce0063d2a~mv2_d_1920_1280_s_2.jpg/v1/fill/w_1903,h_801,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_bc1d493819db4d27891a877ce0063d2a~mv2_d_1920_1280_s_2.jpg");
+    //  background-attachment: fixed;
+    //  background-position: center;
+    //  background-repeat: no-repeat;
+    //  background-size: 100% 100%;
+    //
+    //  .bottomOfHomePage_containerFeedbackFormContacts {
+    //    @include disFlexDirHome(flex, center, center, column);
+    //
+    //    .feedbackForm {
+    //      @include disFlexDirHome(flex, center, center, column);
+    //      margin: 5em auto;
+    //
+    //      .feedbackForm_sendAMess {
+    //        @include disFlexDirHome(flex, center, center, column);
+    //        text-align: center;
+    //        margin: 1em auto;
+    //        font: 18px "Poppins", sans-serif;
+    //        font-style: normal;
+    //        font-weight: 400;
+    //        letter-spacing: 3.5px;
+    //        color: $redColor;
+    //
+    //        img {
+    //          width: 70px;
+    //          height: 50px;
+    //          font-size: 20px;
+    //          transform: rotate(180deg);
+    //        }
+    //      }
+    //
+    //      .feedbackForm_form {
+    //
+    //        .form_block {
+    //          @include disFlexDirHome(flex, center, stretch, column);
+    //          margin: 1em auto;
+    //          width: 600px;
+    //          font: $fontForButton;
+    //
+    //          .form_nameEmail {
+    //            @include disFlexDirHome(flex, space-between, stretch, row);
+    //
+    //            .form_element {
+    //              flex-grow: 1;
+    //            }
+    //          }
+    //
+    //          .form_element {
+    //            padding: 9px;
+    //            margin: 0.5em;
+    //            border: 1px solid #c1c1c1;
+    //            border-radius: 3px;
+    //            background-color: $whiteColor;
+    //            color: $redColor;
+    //            cursor: pointer;
+    //
+    //            &:hover {
+    //              color: $redColor;
+    //              background-color: #eeeeee;
+    //              box-shadow: 0 0 0 1px black inset;
+    //              border: 1px solid #000000;
+    //              border-radius: 3px;
+    //            }
+    //          }
+    //
+    //          ::placeholder {
+    //            color: #fcb5ae;
+    //            opacity: 1; /* Firefox */
+    //          }
+    //
+    //        }
+    //
+    //        .form_button {
+    //          @include button(0.7em 1em, $redColor, 11.3em, $whiteColor, 1.5em, $fontForButton, $transitionForButton);
+    //
+    //          &:hover {
+    //            color: $redColor;
+    //            background-color: #e7e7e7;
+    //          }
+    //        }
+    //      }
+    //    }
+    //
+    //    .contacts {
+    //      margin-bottom: 4em;
+    //      .contacts_contactUs {
+    //        @include disFlexDirHome(flex, center, center, column);
+    //        text-align: center;
+    //        margin: 0 auto;
+    //        font: 16px "Poppins", sans-serif;
+    //        font-style: normal;
+    //        font-weight: 500;
+    //        letter-spacing: 3.5px;
+    //        color: $redColor;
+    //
+    //        img {
+    //          width: 70px;
+    //          height: 50px;
+    //          font-size: 20px;
+    //          transform: rotate(180deg);
+    //        }
+    //      }
+    //
+    //      .contacts_numEmail {
+    //        @include disFlexDirHome(flex, center, center, row);
+    //        text-align: center;
+    //        margin: 0 auto;
+    //        font: 16px "Poppins", sans-serif;
+    //        font-style: normal;
+    //        font-weight: 400;
+    //        letter-spacing: 3px;
+    //        color: #999a9e;
+    //
+    //        .contacts_numEmail_line {
+    //          border-left: 2px solid #999a9e;
+    //          height: 16px;
+    //          margin: 0 12px;
+    //        }
+    //
+    //        a {
+    //          color: #999a9e;
+    //        }
+    //      }
+    //
+    //    }
+    //  }
+    //}
   }
 }
 

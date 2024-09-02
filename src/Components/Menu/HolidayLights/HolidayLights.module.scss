@@ -1,0 +1,42 @@
+.marginContainer{
+  margin-top: 21vh;
+  margin-bottom: 3em;
+  .container_HolidayLights{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2em auto;
+    .navBlock_HolidayLights{
+      display: flex;
+      flex-direction: row;
+      column-gap: 0.8em;
+      font-family: 'proximaNova', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      color: #6c676a;
+      line-height: 1.5;
+      .linkHome{}
+    }
+    .headBlock_HolidayLights{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .backImage{
+        margin: 1em auto;
+        width: 1773px;
+        height: 411px;
+        object-fit: cover;
+        object-position: 50% 50%;
+      }
+      .h2_HolidayLights{
+        text-align: center;
+        font-family: 'CustomFont', sans-serif;
+        letter-spacing: normal;
+        font-size: 50px;
+        font-style: italic;
+        color: #48494e;
+      }
+    }
+  }
+}

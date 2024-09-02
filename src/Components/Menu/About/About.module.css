@@ -18,16 +18,18 @@
 }
 .containerOfAboutPage .h2_AboutPage {
   text-align: center;
-  font: 40px "Times New Roman", serif;
+  font: 50px "Times New Roman", serif;
   font-weight: 200;
   font-style: italic;
   text-transform: uppercase;
+  margin-top: 1em;
 }
 .containerOfAboutPage .zigzag_AboutPage {
   width: 70px;
   height: 50px;
   font-size: 20px;
   transform: rotate(180deg);
+  margin-bottom: 2em;
 }
 .containerOfAboutPage .image_AboutPage {
   width: 980px;
@@ -75,7 +77,7 @@
 
 @media screen and (min-width: 1200px) {
   .containerOfAboutPage {
-    margin-top: 35vh;
+    margin-top: 26vh;
     margin-bottom: -90px;
     text-align: center;
   }

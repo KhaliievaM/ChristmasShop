@@ -2,11 +2,13 @@
   font-family: 'didotLTPro';
   src: url("../../../Multimedia/DidotLTPro-Italic.ttf");
 }
+
 @font-face {
   font-family: 'proximaNova';
   src: url("../../../Multimedia/ProximaNovaT-Thin.ttf");
 }
-.containerOfAboutPage{
+
+.containerOfAboutPage {
   margin: 5em auto;
   max-width: 1200px;
   text-align: center;
@@ -15,29 +17,34 @@
   align-items: center;
   flex-direction: column;
   color: #494950;
-  .h2_AboutPage{
+
+  .h2_AboutPage {
     text-align: center;
-    font: 40px "Times New Roman", serif;
+    font: 50px "Times New Roman", serif;
     font-weight: 200;
     font-style: italic;
     text-transform: uppercase;
+    margin-top: 1em;
   }
+
   .zigzag_AboutPage {
     width: 70px;
     height: 50px;
     font-size: 20px;
     transform: rotate(180deg);
+    margin-bottom: 2em;
   }
 
-  .image_AboutPage{
-    width:980px;
-    height:400px;
+  .image_AboutPage {
+    width: 980px;
+    height: 400px;
     object-fit: cover;
   }
-  .article_AboutPage{
+
+  .article_AboutPage {
     width: 600px;
 
-    .container_article_AboutPage{
+    .container_article_AboutPage {
       background-color: white;
       display: flex;
       flex-direction: column;
@@ -46,7 +53,8 @@
       padding: 2em;
       position: relative;
       top: -90px;
-      .article_h3_AboutPage{
+
+      .article_h3_AboutPage {
         text-align: center;
         font-family: 'didotLTPro', sans-serif;
         font-size: 28px;
@@ -54,7 +62,8 @@
         width: 500px;
         line-height: 1.2;
       }
-      .redLine_AboutPage{
+
+      .redLine_AboutPage {
         min-width: 39px;
         min-height: 5px;
         border-bottom: 1px solid red;
@@ -62,7 +71,8 @@
         margin-top: 0.4em;
         margin-bottom: 0.4em;
       }
-      .article_p_AboutPage{
+
+      .article_p_AboutPage {
         padding: 1.8em;
         font-family: 'proximaNova', sans-serif;
         font-size: 16px;
@@ -72,14 +82,12 @@
         line-height: 1.5;
       }
     }
-
-
   }
 }
 
 @media screen and (min-width: 1200px) {
   .containerOfAboutPage {
-    margin-top: 35vh;
+    margin-top: 26vh;
     margin-bottom: -90px;
     text-align: center;
 

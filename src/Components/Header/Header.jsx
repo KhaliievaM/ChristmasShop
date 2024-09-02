@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import styles from './Header.module.css';
+import {Link} from "react-router-dom";
 import Home from "../Menu/Home/Home";
 
 const Header = (props) => {
@@ -25,13 +26,19 @@ const Header = (props) => {
                     <nav className={styles[menuActive ? 'open' : 'navigation']}>
                         <ul>
                             <li><button className={styles.logIn}><div className={styles.logInImage}></div>Log In</button></li>
-                            <li>HOME</li>
-                            <li>SHOP ALL</li>
-                            <li>CHRISTMAS TREES</li>
-                            <li>UNIQUE ORNAMENTS</li>
-                            <li>HOLIDAY LIGHTS</li>
-                            <li>ABOUT</li>
-                            <li>CONTACTS</li>
+                            <Link to="/" className={styles.menu}>HOME</Link>
+                            <Link to="/shopAll" className={styles.menu}>SHOP ALL</Link>
+                            <Link to="/christmasTrees" className={styles.menu}>CHRISTMAS TREES</Link>
+                            <Link to="/uniqueOrnaments" className={styles.menu}>UNIQUE ORNAMENTS</Link>
+                            <Link to="/holidayLights" className={styles.menu}>HOLIDAY LIGHTS</Link>
+                            <Link to="/about" className={styles.menu}>ABOUT</Link>
+                            <Link to="/contacts" className={styles.menu}>CONTACTS</Link>
+                            {/*<li>SHOP ALL</li>*/}
+                            {/*<li>CHRISTMAS TREES</li>*/}
+                            {/*<li>UNIQUE ORNAMENTS</li>*/}
+                            {/*<li>HOLIDAY LIGHTS</li>*/}
+                            {/*<li>ABOUT</li>*/}
+                            {/*<li>CONTACTS</li>*/}
                         </ul>
                     </nav>
                     <div className={styles.whiteHead_menu_logAndCart}>

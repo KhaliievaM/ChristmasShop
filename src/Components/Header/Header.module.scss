@@ -46,6 +46,7 @@ $font-stack: 1em Arial, Helvetica, sans-serif;
 $font-family-title: "Oswald", sans-serif;
 $whiteColor: #ffffff;
 $redColor: #f63f25;
+$double-color: #2f2b29;
 $colors: (
         "white":#ffffff,
         "red": #f63f25,
@@ -106,6 +107,7 @@ $colors: (
         font-size: 1.8em; // Arial Narrow, sans-serif
         font-weight: 600;
         cursor: pointer;
+        color: $double-color;
       }
 
       .whiteHead_header_title_h1{
@@ -130,7 +132,7 @@ $colors: (
             height: 2px;
             width: 80%;
             transform: scale(1);
-            background-color: #000000;
+            background-color: $double-color;
           }
 
           &:before, &:after {
@@ -138,7 +140,7 @@ $colors: (
             position: absolute;
             height: 2px;
             width: 100%;
-            background-color: #000000;
+            background-color: $double-color;
             transition: all 0.3s ease 0s;
           }
 
@@ -211,20 +213,29 @@ $colors: (
           column-gap: 2.3em;
           row-gap: 1em;
           font-size: 0.8rem;
-        }
-
-        li {
-          cursor: pointer;
-          padding: 0.5em;
-
-          &:hover {
-            color: $redColor;
+          .menu{
+            cursor: pointer;
+            padding: 0.5em;
+            color: #232429;
+            &:hover {
+              color: $redColor;
+            }
           }
 
-          .logIn {
-            display: none;
+          li {
+            cursor: pointer;
+            padding: 0.5em;
+
+            &:hover {
+              color: $redColor;
+            }
+
+            .logIn {
+              display: none;
+            }
           }
         }
+
       }
 
       .whiteHead_menu_logAndCart {
@@ -258,7 +269,7 @@ $colors: (
             border-radius: 1em;
             padding: 0.23em;
             margin-left: 0.5em;
-            background-color: black;
+            background-color: $double-color;
             color: $whiteColor;
           }
         }
@@ -268,7 +279,36 @@ $colors: (
 }
 
 @media screen and (min-width: 1200px) {
+  .header{
+    @include disFlex(flex, column nowrap, center);
+    text-align: center;
+    font: $font-stack;
+    min-width: 1200px;
+    //width: inherit;
+    //min-height: 100px;
+    //margin: 0 auto;
+    //padding-bottom: 1em;
+    //position: fixed;
+    //top: 0;
+    //left: 0;
+    //z-index: 50;
+    //background-color: map-get($colors, "white");
+
+    .whiteHead {
+      display: flex;
+      flex-direction: column;
+      padding-top: 2em;
+      .whiteHead_menu {
+        @include disJusAli(inline-flex, space-evenly, center);
+        column-gap: 1em;
+        min-width: 1400px;
+        padding-top: 1em;
+        margin: 0 auto;
+      }
+      }
+    }
 }
+
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .header {
@@ -354,45 +394,49 @@ $colors: (
             justify-content: flex-start;
             row-gap: 30px;
 
-            li {
+            .menu{
               cursor: pointer;
               padding: 0.5em;
+              color: #232429;
 
               &:hover {
                 color: $redColor;
               }
 
-              .logIn {
-                display: flex;
-                align-items: center;
-                font: 1em Arial, Helvetica, sans-serif;
-                background-color: #f1f0ec;
+            }
+            li{
+            .logIn {
+              display: flex;
+              align-items: center;
+              font: 1em Arial, Helvetica, sans-serif;
+              background-color: #f1f0ec;
 
-                .logInImage {
-                  background-image: url("../../Multimedia/9035990_person_circle_sharp_icon.png");
-                  max-width: 100%;
-                  background-position: center;
-                  background-size: contain;
-                  background-color: #f1f0ec;
-                  position: center;
-                  height: 2em;
-                  width: 2em;
-                  margin-right: 0.5em;
-                }
+              .logInImage {
+                background-image: url("../../Multimedia/9035990_person_circle_sharp_icon.png");
+                max-width: 100%;
+                background-position: center;
+                background-size: contain;
+                background-color: #f1f0ec;
+                position: center;
+                height: 2em;
+                width: 2em;
+                margin-right: 0.5em;
               }
+            }
             }
           }
 
         }
 
-        .logAndCart {
+        .whiteHead_menu_logAndCart{
+
+          button .logIn {
+            display: none;
+          }
           .cart {
             background-color: #f9fafa;
           }
 
-          .logIn {
-            display: none;
-          }
         }
       }
     }
@@ -464,9 +508,10 @@ $colors: (
             justify-content: flex-start;
             row-gap: 30px;
 
-            li {
+            link {
               cursor: pointer;
               padding: 0.5em;
+              color: #232429;
 
               &:hover {
                 color: $redColor;
@@ -475,15 +520,15 @@ $colors: (
           }
         }
 
-        .logAndCart {
+        .whiteHead_menu_logAndCart{
 
+          button .logIn {
+            display: none;
+          }
           .cart {
             background-color: #f9fafa;
           }
 
-          .logIn {
-            display: none;
-          }
         }
       }
     }
