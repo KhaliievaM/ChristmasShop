@@ -1,10 +1,12 @@
 .marginContainer {
   margin-bottom: 3em;
+  width: 100%;
 }
 .marginContainer .container_UniqueOrnaments {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  width: 90%;
   margin: 2em auto;
 }
 .marginContainer .container_UniqueOrnaments .navBlock_UniqueOrnaments {
@@ -25,8 +27,7 @@
 }
 .marginContainer .container_UniqueOrnaments .headBlock_UniqueOrnaments .backImage {
   margin: 1em auto;
-  width: 1773px;
-  height: 411px;
+  width: 100%;
   object-fit: cover;
   object-position: 50% 50%;
 }

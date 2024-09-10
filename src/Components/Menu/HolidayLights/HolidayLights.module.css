@@ -1,4 +1,5 @@
 .marginContainer {
+  width: 100%;
   margin-bottom: 3em;
 }
 .marginContainer .container_HolidayLights {
@@ -6,6 +7,7 @@
   justify-content: center;
   flex-direction: column;
   margin: 2em auto;
+  width: 90%;
 }
 .marginContainer .container_HolidayLights .navBlock_HolidayLights {
   display: flex;
@@ -25,8 +27,7 @@
 }
 .marginContainer .container_HolidayLights .headBlock_HolidayLights .backImage {
   margin: 1em auto;
-  width: 1773px;
-  height: 411px;
+  width: 100%;
   object-fit: cover;
   object-position: 50% 50%;
 }

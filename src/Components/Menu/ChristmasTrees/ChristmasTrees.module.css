@@ -39,7 +39,27 @@
   font-style: italic;
   color: #48494e;
 }
-.marginContainer .container_products {
+.marginContainer .mainBlock_products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.marginContainer .mainBlock_products .quantityAndSort_products {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: "proximaNova", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #48494e;
+}
+.marginContainer .mainBlock_products .container_products {
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 1em;
