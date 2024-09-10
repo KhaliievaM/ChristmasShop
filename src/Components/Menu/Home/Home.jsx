@@ -1,13 +1,16 @@
 import React from 'react';
 import {useState} from "react";
+import {useRef} from "react";
 import Contacts from "../Contacts/Contacts";
+import {forwardRef} from "react";
 import styles from './Home.module.css';
 import zigzag from "../../../Multimedia/12997-2001.png";
 import redZigzag from "../../../Multimedia/12997-20010.png";
 import {Link} from "react-router-dom";
 
 
-const Home = () => {
+const Home = (props) => {
+    const contacts = props.contacts;
     // const [count, setCount] = useState(0);
     //
     // function handleClick() {
@@ -42,7 +45,8 @@ const Home = () => {
                 <section className={styles.middleOfHomePage}>
                     <div className={styles.middleOfHomePage_whiteBlock}>
                         <div className={styles.middleOfHomePage_whiteBlock_containerOfThreeCategories}>
-                            <div className={styles.middleOfHomePage_whiteBlock_containerOfThreeCategories_threeCategories}>
+                            <div
+                                className={styles.middleOfHomePage_whiteBlock_containerOfThreeCategories_threeCategories}>
 
                                 <img
                                     src="https://static.wixstatic.com/media/84770f_3d61665c560442849e3ac2f6f7675427~mv2_d_1500_1500_s_2.jpg/v1/fill/w_303,h_432,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_3d61665c560442849e3ac2f6f7675427~mv2_d_1500_1500_s_2.jpg"
@@ -55,7 +59,8 @@ const Home = () => {
 
                             </div>
 
-                            <div className={styles.middleOfHomePage_whiteBlock_containerOfThreeCategories_threeCategories}>
+                            <div
+                                className={styles.middleOfHomePage_whiteBlock_containerOfThreeCategories_threeCategories}>
 
                                 <img
                                     src="https://static.wixstatic.com/media/84770f_0a0ede78262c4c5e86861c5c598e82e6~mv2_d_1500_1500_s_2.jpg/v1/fill/w_318,h_432,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_0a0ede78262c4c5e86861c5c598e82e6~mv2_d_1500_1500_s_2.jpg"
@@ -67,7 +72,8 @@ const Home = () => {
 
                             </div>
 
-                            <div className={styles.middleOfHomePage_whiteBlock_containerOfThreeCategories_threeCategories}>
+                            <div
+                                className={styles.middleOfHomePage_whiteBlock_containerOfThreeCategories_threeCategories}>
 
                                 <img
                                     src="https://static.wixstatic.com/media/84770f_8ef70e422ee7477b8237772b4cd69cd3~mv2_d_1500_1500_s_2.jpg/v1/fill/w_303,h_432,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_8ef70e422ee7477b8237772b4cd69cd3~mv2_d_1500_1500_s_2.jpg"
@@ -81,32 +87,31 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div className={styles.middleOfHomePage_promoCodeBlock}>
-
-                        <img
-                            src='https://static.wixstatic.com/media/84770f_2d42248cf58941ffbaf7635cc5104abe~mv2_d_1920_1280_s_2.jpg/v1/fill/w_595,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_2d42248cf58941ffbaf7635cc5104abe~mv2_d_1920_1280_s_2.jpg'/>
-
-                        <div className={styles.middleOfHomePage_promoCodeBlock_redBlock}>
-
-                            <span className={styles.middleOfHomePage_promoCodeBlock_redBlock_text}>
-                                BUY ONLINE NOW AND GET 10% OFF
-                                <div>
-                                    <img src={zigzag} alt="" className={styles.zigzag}/>
-                                </div>
-                                USE PROMO CODE HOHOHO
-                            </span>
-                            <Link to="/shopAll" className={styles.linkShopNow}>Shop Now</Link>
-                            {/*<button>Shop Now</button>*/}
-
+                    <div className={styles.middleOfHomePageContainer_promoCodeBlock}>
+                        <div className={styles.middleOfHomePage_promoCodeBlock}>
+                            <img
+                                src='https://static.wixstatic.com/media/84770f_2d42248cf58941ffbaf7635cc5104abe~mv2_d_1920_1280_s_2.jpg/v1/fill/w_595,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_2d42248cf58941ffbaf7635cc5104abe~mv2_d_1920_1280_s_2.jpg'/>
+                            <div className={styles.middleOfHomePage_promoCodeBlock_redBlock}></div>
+                            <img
+                                src="https://static.wixstatic.com/media/84770f_7dd192db00dc4d219b7fcad2061e2fcb~mv2_d_1920_1920_s_2.jpg/v1/fill/w_595,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_7dd192db00dc4d219b7fcad2061e2fcb~mv2_d_1920_1920_s_2.jpg"/>
                         </div>
-                        <img
-                            src="https://static.wixstatic.com/media/84770f_7dd192db00dc4d219b7fcad2061e2fcb~mv2_d_1920_1920_s_2.jpg/v1/fill/w_595,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_7dd192db00dc4d219b7fcad2061e2fcb~mv2_d_1920_1920_s_2.jpg"/>
-                    </div>
-                </section>
-                <Contacts/>
+                        <div className={styles.middleOfHomePage_promoCodeBlock_redBlockText_container}>
+                                <div className={styles.middleOfHomePage_promoCodeBlock_redBlock_text}>
 
+                                        BUY ONLINE NOW <br/> AND GET 10% OFF
+                                        <div>
+                                            <img src={zigzag} alt="" className={styles.zigzag}/>
+                                        </div>
+                                        USE PROMO CODE <br/> HOHOHO
+                                </div>
+                        </div>
+                        <Link to="/shopAll" className={styles.linkShopNow}>Shop Now</Link>
+                    </div>
+
+                </section>
+                <Contacts contacts={contacts}/>
             </main>
         </div>
     )
 }
-export default Home
+export default forwardRef(Home)

@@ -13,13 +13,6 @@
   text-align: center;
   font: 1em Arial, Helvetica, sans-serif;
   width: inherit;
-  min-height: 100px;
-  margin: 0 auto;
-  padding-bottom: 1em;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 50;
   background-color: #ffffff;
 }
 .header .redHead {
@@ -34,28 +27,39 @@
 .header .whiteHead {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-top: 2em;
+  padding-bottom: 2em;
+  width: 100%;
 }
-.header .whiteHead .whiteHead_header_title_burger h1 {
+.header .whiteHead .whiteHead_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+.header .whiteHead .whiteHead_container .whiteHead_header_title_burger h1 {
   text-align: center;
   font-size: 1.8em;
   font-weight: 600;
   cursor: pointer;
   color: #2f2b29;
 }
-.header .whiteHead .whiteHead_header_title_burger .whiteHead_header_title_h1 {
+.header .whiteHead .whiteHead_container .whiteHead_header_title_burger .whiteHead_header_title_h1 {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
 }
-.header .whiteHead .whiteHead_header_title_burger .header_burger_container {
+.header .whiteHead .whiteHead_container .whiteHead_header_title_burger .header_burger_container {
   display: none;
   justify-content: flex-end;
   align-items: center;
 }
-.header .whiteHead .whiteHead_header_title_burger .header_burger_container .header_burger {
+.header .whiteHead .whiteHead_container .whiteHead_header_title_burger .header_burger_container .header_burger {
   display: none;
   justify-content: flex-end;
   align-items: center;
@@ -64,13 +68,13 @@
   width: 30px;
   height: 18px;
 }
-.header .whiteHead .whiteHead_header_title_burger .header_burger_container .header_burger span {
+.header .whiteHead .whiteHead_container .whiteHead_header_title_burger .header_burger_container .header_burger span {
   height: 2px;
   width: 80%;
   transform: scale(1);
   background-color: #2f2b29;
 }
-.header .whiteHead .whiteHead_header_title_burger .header_burger_container .header_burger:before, .header .whiteHead .whiteHead_header_title_burger .header_burger_container .header_burger:after {
+.header .whiteHead .whiteHead_container .whiteHead_header_title_burger .header_burger_container .header_burger:before, .header .whiteHead .whiteHead_container .whiteHead_header_title_burger .header_burger_container .header_burger:after {
   content: "";
   position: absolute;
   height: 2px;
@@ -78,37 +82,37 @@
   background-color: #2f2b29;
   transition: all 0.3s ease 0s;
 }
-.header .whiteHead .whiteHead_header_title_burger .header_burger_container .header_burger:before {
+.header .whiteHead .whiteHead_container .whiteHead_header_title_burger .header_burger_container .header_burger:before {
   top: 0;
 }
-.header .whiteHead .whiteHead_header_title_burger .header_burger_container .header_burger:after {
+.header .whiteHead .whiteHead_container .whiteHead_header_title_burger .header_burger_container .header_burger:after {
   bottom: 0;
 }
-.header .whiteHead .whiteHead_header_title_burger .header_burger_container .header_burger.active span {
+.header .whiteHead .whiteHead_container .whiteHead_header_title_burger .header_burger_container .header_burger.active span {
   transform: scale(0);
 }
-.header .whiteHead .whiteHead_header_title_burger .header_burger_container .header_burger.active:before {
+.header .whiteHead .whiteHead_container .whiteHead_header_title_burger .header_burger_container .header_burger.active:before {
   top: 50%;
   transform: rotate(-45deg) translate(0, -50%);
 }
-.header .whiteHead .whiteHead_header_title_burger .header_burger_container .header_burger.active:after {
+.header .whiteHead .whiteHead_container .whiteHead_header_title_burger .header_burger_container .header_burger.active:after {
   bottom: 50%;
   transform: rotate(45deg) translate(0, 50%);
 }
-.header .whiteHead .whiteHead_menu {
+.header .whiteHead .whiteHead_container .whiteHead_menu {
   display: inline-flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   column-gap: 1em;
   max-width: 1800px;
+  width: 100%;
   padding-top: 1em;
-  margin: 0 auto;
 }
-.header .whiteHead .whiteHead_menu .whiteHead_menu_socialMediaButton {
+.header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_socialMediaButton {
   display: flex;
   justify-content: center;
 }
-.header .whiteHead .whiteHead_menu .whiteHead_menu_socialMediaButton button {
+.header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_socialMediaButton button {
   background-position: center;
   background-size: contain;
   width: 2em;
@@ -117,22 +121,22 @@
   max-width: 100%;
   background-color: #ffffff;
 }
-.header .whiteHead .whiteHead_menu .whiteHead_menu_socialMediaButton .facebookButton {
+.header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_socialMediaButton .facebookButton {
   background-image: url("../../Multimedia/104498_facebook_icon.png");
 }
-.header .whiteHead .whiteHead_menu .whiteHead_menu_socialMediaButton .instagramButton {
+.header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_socialMediaButton .instagramButton {
   background-image: url("../../Multimedia/7156617_instagram_social_media_icon.png");
 }
-.header .whiteHead .whiteHead_menu .whiteHead_menu_socialMediaButton .pinterestButton {
+.header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_socialMediaButton .pinterestButton {
   background-image: url("../../Multimedia/7156612_pinterest_social_media_icon.png");
 }
-.header .whiteHead .whiteHead_menu .navigation {
+.header .whiteHead .whiteHead_container .whiteHead_menu .navigation {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
 }
-.header .whiteHead .whiteHead_menu .navigation ul {
+.header .whiteHead .whiteHead_container .whiteHead_menu .navigation ul {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -141,37 +145,37 @@
   row-gap: 1em;
   font-size: 0.8rem;
 }
-.header .whiteHead .whiteHead_menu .navigation ul .menu {
+.header .whiteHead .whiteHead_container .whiteHead_menu .navigation ul .menu {
   cursor: pointer;
   padding: 0.5em;
   color: #232429;
 }
-.header .whiteHead .whiteHead_menu .navigation ul .menu:hover {
+.header .whiteHead .whiteHead_container .whiteHead_menu .navigation ul .menu:hover {
   color: #f63f25;
 }
-.header .whiteHead .whiteHead_menu .navigation ul li {
+.header .whiteHead .whiteHead_container .whiteHead_menu .navigation ul li {
   cursor: pointer;
   padding: 0.5em;
 }
-.header .whiteHead .whiteHead_menu .navigation ul li:hover {
+.header .whiteHead .whiteHead_container .whiteHead_menu .navigation ul li:hover {
   color: #f63f25;
 }
-.header .whiteHead .whiteHead_menu .navigation ul li .logIn {
+.header .whiteHead .whiteHead_container .whiteHead_menu .navigation ul li .logIn {
   display: none;
 }
-.header .whiteHead .whiteHead_menu .whiteHead_menu_logAndCart {
+.header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart {
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
-.header .whiteHead .whiteHead_menu .whiteHead_menu_logAndCart .logIn, .header .whiteHead .whiteHead_menu .whiteHead_menu_logAndCart .cart {
+.header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart .logIn, .header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart .cart {
   display: flex;
   align-items: center;
   position: relative;
   margin: 0.5em;
   background-color: #ffffff;
 }
-.header .whiteHead .whiteHead_menu .whiteHead_menu_logAndCart .logInImage {
+.header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart .logInImage {
   background-image: url("../../Multimedia/9035990_person_circle_sharp_icon.png");
   background-color: #ffffff;
   background-position: center;
@@ -183,10 +187,10 @@
   padding: 8px;
   margin-right: 0.5em;
 }
-.header .whiteHead .whiteHead_menu .whiteHead_menu_logAndCart .cart {
+.header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart .cart {
   height: 2em;
 }
-.header .whiteHead .whiteHead_menu .whiteHead_menu_logAndCart .cart .cartCounter {
+.header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart .cart .cartCounter {
   border-radius: 1em;
   padding: 0.23em;
   margin-left: 0.5em;

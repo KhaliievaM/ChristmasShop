@@ -1,6 +1,6 @@
 .marginContainer {
-  margin-top: 21vh;
   margin-bottom: 3em;
+  width: 90%;
 }
 .marginContainer .container_ChristmasTrees {
   display: flex;
@@ -23,11 +23,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .marginContainer .container_ChristmasTrees .headBlock_ChristmasTrees .backImage {
   margin: 1em auto;
-  width: 1773px;
-  height: 411px;
+  width: 100%;
   object-fit: cover;
   object-position: 50% 50%;
 }
@@ -38,6 +38,12 @@
   font-size: 50px;
   font-style: italic;
   color: #48494e;
+}
+.marginContainer .container_products {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1em;
+  width: 100%;
 }
 
 /*# sourceMappingURL=ChristmasTrees.module.css.map */

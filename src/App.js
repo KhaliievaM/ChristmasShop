@@ -12,15 +12,28 @@ import About from "./Components/Menu/About/About"
 import Footer from "./Components/Footer/Footer"
 import styles from "./App.css"
 import ScrollToTop from "./Components/ScrollToTop";
+import {useRef} from "react";
 // import React from "@types/react";
 
 function App() {
+    // const contacts = useRef(null);
+    // const scrollToSection = (elementRef) =>{
+    //     window.scrollTo({
+    //         top: elementRef.current.offsetTop,
+    //         behavior: "smooth"
+    //     })
+    // }
+    function handleClick(elementRef) {
+        elementRef.current?.scrollIntoView({behavior: "smooth"})
+    }
+    const contacts = useRef(0);
+
   return (
       <div className="App">
-        <Header/>
+        <Header handleClick={handleClick} contacts={contacts} className={styles.header}/>
           <ScrollToTop/>
-           <Routes>
-             <Route path="/" element={<Home/>}/>
+           <Routes  className={styles.mainBlock}>
+             <Route path="/" element={<Home contacts={contacts}/>}/>
                <Route path="/shopAll" element={<ShopAll/>} />
                <Route path="/christmasTrees" element={<ChristmasTrees/>} />
                <Route path="/uniqueOrnaments" element={<UniqueOrnaments/>} />
@@ -30,7 +43,7 @@ function App() {
                {/*<Route path="*" element={<NoPage />} />*/}
 
            </Routes>
-        <Footer/>
+        <Footer className={styles.footer}/>
       </div>
   );
 }

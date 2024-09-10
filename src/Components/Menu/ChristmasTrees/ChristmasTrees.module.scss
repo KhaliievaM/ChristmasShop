@@ -1,7 +1,7 @@
 .marginContainer{
-  margin-top: 21vh;
   margin-bottom: 3em;
-.container_ChristmasTrees {
+  width: 90%;
+  .container_ChristmasTrees {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -23,10 +23,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     .backImage{
       margin: 1em auto;
-      width: 1773px;
-      height: 411px;
+      //width: 1773px;
+      //height: 411px;
+      width: 100%;
       object-fit: cover;
       object-position: 50% 50%;
     }
@@ -40,6 +42,13 @@
     }
   }
 }
+  .container_products{
+    display: grid;
+    //grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: auto auto auto auto;
+    gap: 1em;
+    width: 100%;
+  }
 }
 
 

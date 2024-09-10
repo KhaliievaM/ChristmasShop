@@ -9,7 +9,7 @@
 }
 
 .containerOfAboutPage {
-  margin: 5em auto;
+  margin: 3em auto;
   max-width: 1200px;
   text-align: center;
   display: flex;
@@ -52,7 +52,7 @@
       align-items: center;
       padding: 2em;
       position: relative;
-      top: -90px;
+      //top: -90px;
 
       .article_h3_AboutPage {
         text-align: center;
@@ -87,8 +87,8 @@
 
 @media screen and (min-width: 1200px) {
   .containerOfAboutPage {
-    margin-top: 26vh;
-    margin-bottom: -90px;
+    //margin-top: 26vh;
+    //margin-bottom: -90px;
     text-align: center;
 
   }

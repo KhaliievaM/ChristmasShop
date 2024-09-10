@@ -2,11 +2,15 @@
   font-family: "CustomFont";
   src: url("/DidotLTPro-Italic.ttf");
 }
+@font-face {
+  font-family: "proximaNova";
+  src: url("../../../Multimedia/ProximaNovaT-Thin.ttf");
+}
 .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: inherit;
+  width: 100%;
   margin: 0 auto;
   background-image: url("https://static.wixstatic.com/media/84770f_99fd76090dbf4e30aa83ec60453ad425~mv2.jpg/v1/fill/w_1903,h_700,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_99fd76090dbf4e30aa83ec60453ad425~mv2.jpg");
   background-attachment: fixed;
@@ -49,6 +53,9 @@
 .wrapper .containerOfHomePage .topOfHomePage .topOfHomePage_deer span {
   padding: 0.2em;
   border-bottom: 1px solid;
+  font-family: "proximaNova", sans-serif;
+  font-weight: 600;
+  background-color: rgba(13, 3, 3, 0.63);
 }
 .wrapper .containerOfHomePage .topOfHomePage .topOfHomePage_title {
   display: flex;
@@ -100,7 +107,6 @@
   align-items: center;
   flex-direction: row;
   width: 100%;
-  max-height: 500px;
   background-color: #ffffff;
 }
 .wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_whiteBlock .middleOfHomePage_whiteBlock_containerOfThreeCategories {
@@ -156,53 +162,82 @@
   color: #f63f25;
   border: 1px solid #f63f25;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_promoCodeBlock {
-  display: inline-flex;
-  justify-content: center;
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePageContainer_promoCodeBlock {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  flex-direction: row;
+  position: relative;
   width: 100%;
   height: 520px;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_promoCodeBlock img {
-  flex: 25%;
-  width: 476px;
-  height: content-box;
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePageContainer_promoCodeBlock .middleOfHomePage_promoCodeBlock {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  height: 520px;
+}
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePageContainer_promoCodeBlock .middleOfHomePage_promoCodeBlock img {
+  max-width: 100%;
   object-position: 50% 50%;
   object-fit: cover;
+  float: left;
+  height: 100%;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_promoCodeBlock .middleOfHomePage_promoCodeBlock_redBlock {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePageContainer_promoCodeBlock .middleOfHomePage_promoCodeBlock .middleOfHomePage_promoCodeBlock_redBlock {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  flex: 50%;
-  height: 520px;
-  text-align: center;
+  grid-row: 1/span;
+  grid-column: 2/span 2;
   background-color: #f63f25;
+  max-width: 100%;
+  object-position: 50% 50%;
+  object-fit: cover;
+  float: left;
+  height: 100%;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_promoCodeBlock .middleOfHomePage_promoCodeBlock_redBlock .middleOfHomePage_promoCodeBlock_redBlock_text {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePageContainer_promoCodeBlock .middleOfHomePage_promoCodeBlock_redBlockText_container {
+  display: inline-block;
   text-align: center;
-  font: 40px "Times New Roman", serif;
+  box-sizing: content-box;
+  position: relative;
+  top: -460px;
+  background-color: #f63f25;
+  min-width: 680px;
+  max-height: 520px;
+  margin: 0.5em auto;
+}
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePageContainer_promoCodeBlock .middleOfHomePage_promoCodeBlock_redBlockText_container .middleOfHomePage_promoCodeBlock_redBlock_text {
+  text-align: center;
+  font: 40px "CustomFont", serif;
   font-weight: 200;
   font-style: italic;
-  margin: 1.5em 3em;
-  padding: 1em 4em;
+  padding: 1em 3em;
   border: 1px solid #ffffff;
   border-radius: 6px;
   color: #ffffff;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: content-box;
+  top: 0;
+  left: 0;
+  position: relative;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_promoCodeBlock .middleOfHomePage_promoCodeBlock_redBlock .middleOfHomePage_promoCodeBlock_redBlock_text img {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePageContainer_promoCodeBlock .middleOfHomePage_promoCodeBlock_redBlockText_container .middleOfHomePage_promoCodeBlock_redBlock_text img {
   width: 90px;
   height: 90px;
   transform: rotate(180deg);
 }
-.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_promoCodeBlock .middleOfHomePage_promoCodeBlock_redBlock .middleOfHomePage_promoCodeBlock_redBlock_text .zigzag {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePageContainer_promoCodeBlock .middleOfHomePage_promoCodeBlock_redBlockText_container .middleOfHomePage_promoCodeBlock_redBlock_text .zigzag {
   font-weight: 600;
   font-style: normal;
   font-size: 60px;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_promoCodeBlock .middleOfHomePage_promoCodeBlock_redBlock .linkShopNow {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePageContainer_promoCodeBlock .linkShopNow {
   padding: 0.7em;
   background-color: #f63f25;
   min-width: 11.3em;
@@ -211,11 +246,12 @@
   font: 1em Arial, sans-serif;
   transition: all 0.5s ease;
   position: relative;
-  top: -80px;
+  top: -490px;
+  z-index: 5;
   border: 1px solid #ffffff;
   border-radius: 1.5em;
 }
-.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePage_promoCodeBlock .middleOfHomePage_promoCodeBlock_redBlock .linkShopNow:hover {
+.wrapper .containerOfHomePage .middleOfHomePage .middleOfHomePageContainer_promoCodeBlock .linkShopNow:hover {
   border: 1px solid #f63f25;
   color: #f63f25;
   background-color: #ffffff;
@@ -223,19 +259,16 @@
 
 @media screen and (min-width: 1200px) {
   .wrapper {
-    margin-top: 21vh;
     text-align: center;
   }
 }
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
   .wrapper {
-    margin-top: 29vh;
     text-align: center;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .wrapper {
-    margin-top: 18vh;
     text-align: center;
     width: 100%;
   }
@@ -243,9 +276,8 @@
     color: black;
   }
 }
-@media screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .wrapper {
-    margin-top: 20vh;
     text-align: center;
     width: 100%;
   }
