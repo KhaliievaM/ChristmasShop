@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "proximaNova";
+  src: url("../../../../Multimedia/ProximaNovaT-Thin.ttf");
+}
+.container_ProductCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.container_ProductCard:hover .img_quickView_ProductCard .quickView_ProductCard {
+  height: 20%;
+}
+.container_ProductCard:hover .productAction_ProductCard .addToCart_Button_ProductCard {
+  background-color: #f73f23;
+}
+.container_ProductCard .img_quickView_ProductCard {
+  position: relative;
+  width: 100%;
+}
+.container_ProductCard .img_quickView_ProductCard img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.container_ProductCard .img_quickView_ProductCard .quickView_ProductCard {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(253, 253, 253, 0.65);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+.container_ProductCard .img_quickView_ProductCard .quickView_ProductCard .quickView_ProductCard_text {
+  white-space: nowrap;
+  top: 50%;
+  width: 100%;
+  color: #48494e;
+  font-size: 16px;
+  position: absolute;
+  text-align: center;
+  font-family: "proximaNova", sans-serif;
+  font-weight: 800;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background: none;
+}
+.container_ProductCard .productAction_ProductCard {
+  margin-top: 1em;
+}
+.container_ProductCard .productAction_ProductCard .goToProductPage_ProductCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container_ProductCard .productAction_ProductCard .goToProductPage_ProductCard .productName_ProductCard {
+  text-align: center;
+  padding: 0.2em 0.5em;
+  font-family: "CustomFont", sans-serif;
+  letter-spacing: normal;
+  font-size: 23px;
+  font-style: italic;
+  color: #48494e;
+}
+.container_ProductCard .productAction_ProductCard .goToProductPage_ProductCard .redLine_ProductCard {
+  width: 39px;
+  min-height: 5px;
+  border-bottom: 1px solid red;
+  text-align: center;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+.container_ProductCard .productAction_ProductCard .goToProductPage_ProductCard .productPrice_ProductCard {
+  padding: 1em;
+  font-family: "proximaNova", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #48494e;
+  text-align: justify;
+  line-height: 1.5;
+}
+.container_ProductCard .productAction_ProductCard .addToCart_Button_ProductCard {
+  width: 100%;
+  font-size: 16px;
+  font-family: "proximaNova", sans-serif;
+  font-weight: 800;
+  text-align: center;
+  white-space: nowrap;
+  background-color: white;
+  color: white;
+  padding: 0.7em;
+  transition: 0.2s linear;
+}
+.container_ProductCard .productAction_ProductCard .addToCart_Button_ProductCard:hover {
+  background-color: rgba(247, 63, 35, 0.66);
+}
+
+/*# sourceMappingURL=ProductTemplate.module.css.map */
