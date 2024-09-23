@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "proximaNova";
+  src: url("../../Multimedia/ProximaNovaT-Thin.ttf");
+}
 .footer {
   display: flex;
   flex-direction: column;
@@ -11,10 +15,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   row-gap: 2em;
-  padding: 3em;
   width: 980px;
-  margin: 1em auto;
+  margin: 2em auto;
 }
 .footer .footer_container .footer_headBlock {
   display: flex;
@@ -22,6 +26,7 @@
   justify-content: center;
   align-items: center;
   row-gap: 1.438em;
+  width: 100%;
 }
 .footer .footer_container .footer_headBlock .footer_headBlock_deer {
   width: 85px;
@@ -45,17 +50,23 @@
 .footer .footer_container .footer_headBlock .footer_headBlock_nav {
   display: flex;
   border-top: 1px solid #eaf7ef;
+  width: 100%;
 }
 .footer .footer_container .footer_headBlock .footer_headBlock_nav ul {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: baseline;
-  margin: 1.438em auto;
+  margin-top: 1.438em;
+  margin-bottom: 1.438em;
+  width: 100%;
 }
-.footer .footer_container .footer_headBlock .footer_headBlock_nav ul li {
-  font: 12px Arial, Helvetica, sans-serif;
-  letter-spacing: 0.15em;
+.footer .footer_container .footer_headBlock .footer_headBlock_nav ul .menu {
+  font-size: 14px;
+  font-family: "proximaNova", sans-serif;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.1em;
   cursor: pointer;
 }
 .footer .footer_container .footer_headBlock .footer_headBlock_nav ul span {
@@ -66,7 +77,12 @@
   justify-content: space-between;
   align-items: center;
   color: #f73f23;
-  font: 1em Arial, sans-serif;
+  font-size: 16px;
+  font-family: "proximaNova", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-align: center;
+  width: 100%;
 }
 .footer .footer_container .footer_mediumBlock .footer_mediumBlock_socialMediaButton {
   display: flex;

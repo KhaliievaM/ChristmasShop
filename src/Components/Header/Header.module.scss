@@ -61,6 +61,12 @@ $colors: (
   }
 }
 
+@font-face {
+  font-family: 'proximaNova';
+  src: url("../../Multimedia/ProximaNovaT-Thin.ttf");
+}
+
+
 @mixin disFlex($display, $flexFlow, $jusCon) {
   display: $display;
   flex-flow: $flexFlow;
@@ -81,7 +87,9 @@ $colors: (
   background-color: map-get($colors, "white");
 
   .redHead {
-    font: $font-stack;
+    font-size: 16px;
+    font-family: 'proximaNova', sans-serif;
+    font-weight: 600;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.7em;
@@ -214,10 +222,12 @@ $colors: (
 
           ul {
             @include disFlex(flex, row wrap, center);
+            font-size: 14px;
+            font-family: 'proximaNova', sans-serif;
+            font-weight: 600;
             align-content: center;
             column-gap: 2.3em;
             row-gap: 1em;
-            font-size: 0.8rem;
 
             .menu {
               cursor: pointer;
@@ -248,10 +258,14 @@ $colors: (
         .whiteHead_menu_logAndCart {
           @include disJusAli(flex, center, flex-start);
 
+
           .logIn, .cart {
             display: flex;
             align-items: center;
             position: relative;
+            font-size: 14px;
+            font-family: 'proximaNova', sans-serif;
+            font-weight: 800;
             margin: 0.5em;
             background-color: $whiteColor;
           }
@@ -291,7 +305,8 @@ $colors: (
     @include disFlex(flex, column nowrap, center);
     text-align: center;
     font: $font-stack;
-    min-width: 1200px;
+    //min-width: 1200px;
+    width: 100%;
     //width: inherit;
     //min-height: 100px;
     //margin: 0 auto;
@@ -310,7 +325,8 @@ $colors: (
       .whiteHead_menu {
         @include disJusAli(inline-flex, space-evenly, center);
         column-gap: 1em;
-        min-width: 1400px;
+        //min-width: 1400px;
+        width: 100%;
         padding-top: 1em;
         margin: 0 auto;
       }

@@ -1,27 +1,13 @@
 import React from 'react';
-import {useState} from "react";
-import {useRef} from "react";
 import Contacts from "../Contacts/Contacts";
 import {forwardRef} from "react";
 import styles from './Home.module.css';
 import zigzag from "../../../Multimedia/12997-2001.png";
-import redZigzag from "../../../Multimedia/12997-20010.png";
 import {Link} from "react-router-dom";
 
 
 const Home = (props) => {
     const contacts = props.contacts;
-    // const [count, setCount] = useState(0);
-    //
-    // function handleClick() {
-    //     setCount(count + 1);
-    // }
-    // return (
-    //     <button onClick={handleClick}>
-    //         Clicked {count} times
-    //     </button>
-    // );
-
     return (
         <div className={styles.wrapper}>
             <main className={styles.containerOfHomePage}>
@@ -115,3 +101,13 @@ const Home = (props) => {
     )
 }
 export default forwardRef(Home)
+// const [count, setCount] = useState(0);
+//
+// function handleClick() {
+//     setCount(count + 1);
+// }
+// return (
+//     <button onClick={handleClick}>
+//         Clicked {count} times
+//     </button>
+// );

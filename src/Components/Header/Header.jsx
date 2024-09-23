@@ -4,8 +4,8 @@ import {Link} from "react-router-dom";
 import Home from "../Menu/Home/Home";
 
 const Header = (props) => {
-    const handleClick = props.handleClick;
-    const ref = props.contacts;
+     const handleClick = props.handleClick;
+     const ref = props.contacts;
     // console.log("from header")
     // console.log(handleClick)
     // console.log(ref)
@@ -41,12 +41,6 @@ const Header = (props) => {
                             <Link to="/about" className={styles.menu}>ABOUT</Link>
                             {/*<Link to="/contacts" className={styles.menu}>CONTACTS</Link>*/}
                             <li onClick={()=>handleClick(ref)}>CONTACTS</li>
-                            {/*<li>SHOP ALL</li>onclick{()=>props.clickContacts(props.contacts)}*/}
-                            {/*<li>CHRISTMAS TREES</li>*/}
-                            {/*<li>UNIQUE ORNAMENTS</li>*/}
-                            {/*<li>HOLIDAY LIGHTS</li>*/}
-                            {/*<li>ABOUT</li>*/}
-                            {/*<li>CONTACTS</li>*/}
                         </ul>
                     </nav>
                     <div className={styles.whiteHead_menu_logAndCart}>

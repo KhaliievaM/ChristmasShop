@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.css';
+import {Link} from "react-router-dom";
 
 const Footer = (props) => {
     return (
@@ -11,19 +12,20 @@ const Footer = (props) => {
                     <nav className={styles.footer_headBlock_nav}>
                         <ul>
                             {/*<li><button className={styles.logIn}><div className={styles.logInImage}></div>Log In</button></li>*/}
-                            <li>HOME</li>
+                            <Link to="/" className={styles.menu}>HOME</Link>
                             <span>&#10072;</span>
-                            <li>SHOP ALL</li>
+                            <Link to="/shopAll" className={styles.menu}>SHOP ALL</Link>
                             <span>&#10072;</span>
-                            <li>CHRISTMAS TREES</li>
+                            <Link to="/christmasTrees" className={styles.menu}>CHRISTMAS TREES</Link>
                             <span>&#10072;</span>
-                            <li>UNIQUE ORNAMENTS</li>
+                            <Link to="/uniqueOrnaments" className={styles.menu}>UNIQUE ORNAMENTS</Link>
                             <span>&#10072;</span>
-                            <li>HOLIDAY LIGHTS</li>
+                            <Link to="/holidayLights" className={styles.menu}>HOLIDAY LIGHTS</Link>
                             <span>&#10072;</span>
-                            <li>ABOUT</li>
+                            <Link to="/about" className={styles.menu}>ABOUT</Link>
                             <span>&#10072;</span>
-                            <li>CONTACTS</li>
+                            <Link to="/contacts" className={styles.menu}>CONTACTS</Link>
+                            {/*<li onClick={()=>handleClick(ref)}>CONTACTS</li>*/}
                         </ul>
                     </nav>
                 </div>

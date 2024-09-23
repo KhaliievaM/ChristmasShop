@@ -80,6 +80,9 @@
   margin-bottom: 0.4em;
 }
 .container_ProductCard .productAction_ProductCard .goToProductPage_ProductCard .productPrice_ProductCard {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.5em;
   padding: 1em;
   font-family: "proximaNova", sans-serif;
   font-size: 16px;
@@ -87,6 +90,16 @@
   color: #48494e;
   text-align: justify;
   line-height: 1.5;
+}
+.container_ProductCard .productAction_ProductCard .goToProductPage_ProductCard .productPrice_ProductCard .oldProductPrice_ProductCard {
+  display: flex;
+  text-decoration: line-through;
+}
+.container_ProductCard .productAction_ProductCard .goToProductPage_ProductCard .productPrice_ProductCard .noActive {
+  display: none;
+}
+.container_ProductCard .productAction_ProductCard .goToProductPage_ProductCard .productPrice_ProductCard .newProductPrice_ProductCard {
+  display: flex;
 }
 .container_ProductCard .productAction_ProductCard .addToCart_Button_ProductCard {
   width: 100%;

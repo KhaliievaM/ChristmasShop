@@ -4,6 +4,11 @@ $lightColor: #eaf7ef;
 $redText: #f73f23;
 $greyLink: #838384;
 
+@font-face {
+  font-family: 'proximaNova';
+  src: url("../../Multimedia/ProximaNovaT-Thin.ttf");
+}
+
 @mixin disJusAli($display, $jusCon, $aliIte) {
   display: $display;
   justify-content: $jusCon;
@@ -29,14 +34,16 @@ $greyLink: #838384;
 
   .footer_container {
     @include disFlxJus(flex, column, center);
+    align-items: center;
     row-gap: 2em;
-    padding: 3em;
+    //padding: 3em;
     width: 980px;
-    margin: 1em auto;
+    margin: 2em auto;
 
     .footer_headBlock {
       @include disFlxJusAli(flex, column, center, center);
       row-gap: 1.438em;
+      width: 100%;
 
       .footer_headBlock_deer {
         width: 85px;
@@ -62,14 +69,20 @@ $greyLink: #838384;
       .footer_headBlock_nav {
         display: flex;
         border-top: 1px solid $lightColor;
+        width: 100%;
 
         ul {
-          @include disFlxJusAli(flex, row, center, baseline);
-          margin: 1.438em auto;
+          @include disFlxJusAli(flex, row, space-between, baseline);
+          margin-top: 1.438em;
+          margin-bottom: 1.438em;
+          width: 100%;
 
-          li {
-            font: 12px Arial, Helvetica, sans-serif;
-            letter-spacing: 0.15em;
+          .menu {
+            font-size: 14px;
+            font-family: 'proximaNova', sans-serif;
+            font-weight: 600;
+            color: white;
+            letter-spacing: 0.1em;
             cursor: pointer;
           }
 
@@ -84,7 +97,12 @@ $greyLink: #838384;
     .footer_mediumBlock {
       @include disJusAli(inline-flex, space-between, center);
       color: $redText;
-      font: $mainFont;
+      font-size: 16px;
+      font-family: 'proximaNova', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-align: center;
+      width: 100%;
 
       .footer_mediumBlock_socialMediaButton {
         display: flex;

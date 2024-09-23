@@ -4,18 +4,19 @@ import {Link} from "react-router-dom";
 import ProductTemplate from "./ProductTemplate/ProductTemplate";
 import products from "../../Products";
 
-class ProductItems extends React.Component{
+class ProductItems extends React.Component {
 
     pageName;
     bgImg;
-    productsArray ;
+    productsArray;
 
     constructor(props) {
         super(props);
         this.pageName = props.pageName;
-        this.bgImg  = props.bgImg;
-        this.productsArray  = props.productsArray ;
+        this.bgImg = props.bgImg;
+        this.productsArray = props.productsArray;
     }
+
     render() {
         let productsContainer = "";
         let cloneOfProducts = [];
@@ -23,31 +24,25 @@ class ProductItems extends React.Component{
         if (Array.isArray(this.productsArray)) {
             counterElements = this.productsArray.length;
             productsContainer = this.productsArray.map(p =>
-                <ProductTemplate name={p.name} img={p.img} oldprice={p.about} price={p.price} about={p.about} info={p.info} SKU={p.SKU} key={p.id}/>);
+                <ProductTemplate name={p.name} img={p.img} oldprice={p.oldprice} price={p.price}  about={p.about}
+                                 info={p.info} SKU={p.SKU} key={p.id}/>);
 
         } else {
-            let newArrayforShopAll=[];
-             for(let i in this.productsArray){
-                 newArrayforShopAll[i] = this.productsArray[i];
-                 for(let key in newArrayforShopAll[i]){
-                     cloneOfProducts.push(newArrayforShopAll[i][key]);
-                 }
-                 counterElements = cloneOfProducts.length;
-                  productsContainer = cloneOfProducts.map(p =>
-                      <ProductTemplate name={p.name} img={p.img} oldprice={p.about} price={p.price} about={p.about} info={p.info} SKU={p.SKU} key={p.id}/>);
-             }
+            let newArrayforShopAll = [];
+            for (let i in this.productsArray) {
+                newArrayforShopAll[i] = this.productsArray[i];
+                for (let key in newArrayforShopAll[i]) {
+                    cloneOfProducts.push(newArrayforShopAll[i][key]);
+                }
+                counterElements = cloneOfProducts.length;
+                productsContainer = cloneOfProducts.map(p =>
+                    <ProductTemplate name={p.name} img={p.img} oldprice={p.about} price={p.price} about={p.about}
+                                     info={p.info} SKU={p.SKU} key={p.id}/>);
+            }
 
-        };
-        // let productsContainer = "";
-        // if (Array.isArray(this.productsArray)) {
-        //     productsContainer = this.productsArray.map(p =>
-        //             <ProductTemplate name={p.name} img={p.img} oldprice={p.about} price={p.price} about={p.about} info={p.info} SKU={p.SKU} key={p.id}/>);
-        // } else {
-        //     for (let arrName in this.productsArray) {
-        //         productsContainer = this.productsArray[arrName].map(p =>
-        //             <ProductTemplate name={p.name} img={p.img} oldprice={p.about} price={p.price} about={p.about} info={p.info} SKU={p.SKU} key={p.id}/>);
-        //     }
-        // };
+        }
+        ;
+
         return (
             <div className={styles.marginContainer}>
                 <div className={styles.container_ChristmasTrees}>
@@ -90,6 +85,8 @@ class ProductItems extends React.Component{
         )
     }
 }
+
+export default ProductItems;
 // const ChristmasTrees = () => {
 //     //
 //     // let productsContainer = products.map(p => <ProductTemplate name={p.name} img={p.img} oldprice={p.about} price={p.price} about={p.about} info={p.info} SKU={p.SKU} key={p.id}/>);
@@ -129,4 +126,13 @@ class ProductItems extends React.Component{
 //     //     </div>
 //     // )
 // }
-export default ProductItems;
+// let productsContainer = "";
+// if (Array.isArray(this.productsArray)) {
+//     productsContainer = this.productsArray.map(p =>
+//             <ProductTemplate name={p.name} img={p.img} oldprice={p.about} price={p.price} about={p.about} info={p.info} SKU={p.SKU} key={p.id}/>);
+// } else {
+//     for (let arrName in this.productsArray) {
+//         productsContainer = this.productsArray[arrName].map(p =>
+//             <ProductTemplate name={p.name} img={p.img} oldprice={p.about} price={p.price} about={p.about} info={p.info} SKU={p.SKU} key={p.id}/>);
+//     }
+// };
