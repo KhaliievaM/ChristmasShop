@@ -36,12 +36,10 @@ class ProductItems extends React.Component {
                 }
                 counterElements = cloneOfProducts.length;
                 productsContainer = cloneOfProducts.map(p =>
-                    <ProductTemplate name={p.name} img={p.img} oldprice={p.about} price={p.price} about={p.about}
+                    <ProductTemplate name={p.name} img={p.img} oldprice={p.oldprice} price={p.price} about={p.about}
                                      info={p.info} SKU={p.SKU} key={p.id}/>);
             }
-
-        }
-        ;
+        };
 
         return (
             <div className={styles.marginContainer}>

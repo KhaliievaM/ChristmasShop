@@ -18,7 +18,8 @@
 }
 .containerOfAboutPage .h2_AboutPage {
   text-align: center;
-  font: 50px "Times New Roman", serif;
+  font-family: "didotLTPro", serif;
+  font-size: 50px;
   font-weight: 200;
   font-style: italic;
   text-transform: uppercase;

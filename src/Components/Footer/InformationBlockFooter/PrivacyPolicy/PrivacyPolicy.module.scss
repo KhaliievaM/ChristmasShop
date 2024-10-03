@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'proximaNova';
+  src: url("../../../../Multimedia/ProximaNovaT-Thin.ttf");
+}
+.containerPrivacyPolicy{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  row-gap: 2em;
+  width: 48%;
+  margin: 4em auto;
+  div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-family: proximaNova, sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    color: #676B7A;
+    h2{
+      text-align: center;
+      text-transform: uppercase;
+      margin: 1em auto;
+      font-family: proximaNova, sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      color: #232429;
+    }
+    .redLine {
+      border-bottom: 1px solid red;
+      text-align: center;
+      margin-top: 0.4em;
+      margin-bottom: 0.4em;
+    }
+    p{
+      margin: 1em auto;
+    }
+  }
+}

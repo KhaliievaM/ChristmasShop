@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  //width: 100%;
   top: 0;
   left: 0;
   right: 0;
@@ -20,11 +20,13 @@
   .img_quickView_ProductCard{
     position: relative;
     width: 100%;
+    height: 100%;
     img {
       display: block;
       //width: 428px;
       //height: 428px;
       width: 100%;
+      height: 100%;
       object-fit: cover;
       object-position: 50% 50%;
     }

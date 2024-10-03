@@ -37,9 +37,12 @@ const Footer = (props) => {
                         <button className={styles.footer_mediumBlock_socialMediaButton_pinterestButton}></button>
                     </div>
                     <div className={styles.footer_mediumBlock_a}>
-                        <a href="src/Components/Footer/Footer">Shipping & Returns</a>
-                        <a href="src/Components/Footer/Footer">Privacy Policy</a>
-                        <div>FAQ</div>
+                        <Link to="/shippingAndReturns" className={styles.informLink}>Shipping & Returns</Link>
+                        <Link to="/privacyPolicy" className={styles.informLink}>Privacy Policy</Link>
+                        <Link to="/FAQ" className={styles.informLink}>FAQ</Link>
+                        {/*<a href="src/Components/Footer/Footer">Shipping & Returns</a>*/}
+                        {/*<a href="src/Components/Footer/Footer">Privacy Policy</a>*/}
+                        {/*<div>FAQ</div>*/}
                     </div>
                 </div>
                 <div className={styles.footer_footBlock}>&#169; 2035 by The Christmas Boutique . Powered and secured by <a href="src/Components/Footer/Footer"> Wix </a></div>

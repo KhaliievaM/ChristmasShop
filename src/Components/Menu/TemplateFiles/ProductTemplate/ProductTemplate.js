@@ -8,8 +8,8 @@ const ProductTemplate = (props) => {
     }else{
         isOldPrice= true;
     }
-    console.log(props.oldprice)
-    console.log(isOldPrice)
+    // console.log(props.oldprice)
+    // console.log(isOldPrice)
     return (
         <div className={styles.container_ProductCard}>
             <div className={styles.img_quickView_ProductCard}>

@@ -12,6 +12,9 @@ import Footer from "./Components/Footer/Footer";
 import ScrollToTop from "./Components/ScrollToTop";
 import {useRef} from "react";
 import ChristmasTrees from "./Components/Menu/ChristmasTrees/ChristmasTrees";
+import PrivacyPolicy from "./Components/Footer/InformationBlockFooter/PrivacyPolicy/PrivacyPolicy";
+import FAQ from "./Components/Footer/InformationBlockFooter/FAQ/FAQ";
+import ShippingAndReturns from "./Components/Footer/InformationBlockFooter/ShippingAndReturn/ShippingAndReturns";
 
 // import React from "@types/react";
 
@@ -37,6 +40,9 @@ function App() {
                     <Route path="/holidayLights" element={<HolidayLights/>}/>
                     <Route path="/about" element={<About/>}/>
                     <Route path="/contacts" element={<Contacts/>}/>
+                    <Route path="/privacyPolicy" element={<PrivacyPolicy/>}/>
+                    <Route path="/FAQ" element={<FAQ/>}/>
+                    <Route path="/shippingAndReturns" element={<ShippingAndReturns/>}/>
                     {/*<Route path="*" element={<NoPage />} />*/}
                 </Routes>
             </div>

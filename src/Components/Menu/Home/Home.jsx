@@ -38,7 +38,7 @@ const Home = (props) => {
                                     src="https://static.wixstatic.com/media/84770f_3d61665c560442849e3ac2f6f7675427~mv2_d_1500_1500_s_2.jpg/v1/fill/w_303,h_432,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_3d61665c560442849e3ac2f6f7675427~mv2_d_1500_1500_s_2.jpg"
                                     alt="Christmas ProductTemplate"/>
 
-                                <a href="src/Components/Menu/Home/Home">Christmas ProductTemplate</a>
+                                <a href="src/Components/Menu/Home/Home">Christmas Trees</a>
                                 <hr/>
                                 <Link to="/christmasTrees" className={styles.linkShop}>Shop Collection</Link>
                                 {/*<button>Shop Collection</button>*/}

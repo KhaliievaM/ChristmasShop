@@ -111,7 +111,7 @@
   display: inline-flex;
   column-gap: 1.1em;
 }
-.footer .footer_container .footer_mediumBlock .footer_mediumBlock_a a {
+.footer .footer_container .footer_mediumBlock .footer_mediumBlock_a .informLink {
   text-decoration: none;
   color: #f73f23;
 }
