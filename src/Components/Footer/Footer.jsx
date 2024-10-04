@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from './Footer.module.css';
 import {Link} from "react-router-dom";
+import facebookWhite from "../../Multimedia/facebook_white_icon.png";
+import instagramWhite from "../../Multimedia/instagram_white_icon.png";
+import pinterestWhite from "../../Multimedia/pinterest_white_icon.png";
 
 const Footer = (props) => {
     return (
@@ -32,17 +35,20 @@ const Footer = (props) => {
                 <div className={styles.footer_mediumBlock}>
                     <div>Follow us and have a Merry Christmas</div>
                     <div className={styles.footer_mediumBlock_socialMediaButton}>
-                        <button className={styles.footer_mediumBlock_socialMediaButton_facebookButton}></button>
-                        <button className={styles.footer_mediumBlock_socialMediaButton_instagramButton}></button>
-                        <button className={styles.footer_mediumBlock_socialMediaButton_pinterestButton}></button>
+                        <a href="https://www.facebook.com/wix"  target="_blank" rel="noopener">
+                            <img src={facebookWhite} alt=""/>
+                        </a>
+                        <a href="https://www.instagram.com/wix/"  target="_blank" rel="noopener">
+                            <img src={instagramWhite} alt=""/>
+                        </a>
+                        <a href="https://www.pinterest.com/wixcom/"  target="_blank" rel="noopener">
+                            <img src={pinterestWhite} alt=""/>
+                        </a>
                     </div>
                     <div className={styles.footer_mediumBlock_a}>
                         <Link to="/shippingAndReturns" className={styles.informLink}>Shipping & Returns</Link>
                         <Link to="/privacyPolicy" className={styles.informLink}>Privacy Policy</Link>
                         <Link to="/FAQ" className={styles.informLink}>FAQ</Link>
-                        {/*<a href="src/Components/Footer/Footer">Shipping & Returns</a>*/}
-                        {/*<a href="src/Components/Footer/Footer">Privacy Policy</a>*/}
-                        {/*<div>FAQ</div>*/}
                     </div>
                 </div>
                 <div className={styles.footer_footBlock}>&#169; 2035 by The Christmas Boutique . Powered and secured by <a href="src/Components/Footer/Footer"> Wix </a></div>

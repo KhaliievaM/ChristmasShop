@@ -108,27 +108,15 @@ $greyLink: #838384;
         display: flex;
         justify-content: center;
 
-        & button {
+        & a  img{
           width: 25px;
           height: 25px;
           margin: 0.5em;
-          max-width: 100%;
+          //max-width: 100%;
           background-color: $bgColor;
           color: white;
           background-position: center;
           background-size: contain;
-        }
-
-        .footer_mediumBlock_socialMediaButton_facebookButton {
-          background-image: url("../../Multimedia/facebook_white_icon.png");
-        }
-
-        .footer_mediumBlock_socialMediaButton_instagramButton {
-          background-image: url("../../Multimedia/instagram_white_icon.png");
-        }
-
-        .footer_mediumBlock_socialMediaButton_pinterestButton {
-          background-image: url("../../Multimedia/pinterest_white_icon.png");
         }
       }
 

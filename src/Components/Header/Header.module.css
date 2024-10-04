@@ -118,23 +118,14 @@
   display: flex;
   justify-content: center;
 }
-.header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_socialMediaButton button {
+.header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_socialMediaButton a img {
   background-position: center;
   background-size: contain;
-  width: 2em;
-  height: 2em;
+  width: 1.5em;
+  height: 1.5em;
   margin: 0.5em;
   max-width: 100%;
   background-color: #ffffff;
-}
-.header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_socialMediaButton .facebookButton {
-  background-image: url("../../Multimedia/104498_facebook_icon.png");
-}
-.header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_socialMediaButton .instagramButton {
-  background-image: url("../../Multimedia/7156617_instagram_social_media_icon.png");
-}
-.header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_socialMediaButton .pinterestButton {
-  background-image: url("../../Multimedia/7156612_pinterest_social_media_icon.png");
 }
 .header .whiteHead .whiteHead_container .whiteHead_menu .navigation {
   display: flex;

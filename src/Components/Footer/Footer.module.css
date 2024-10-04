@@ -88,24 +88,14 @@
   display: flex;
   justify-content: center;
 }
-.footer .footer_container .footer_mediumBlock .footer_mediumBlock_socialMediaButton button {
+.footer .footer_container .footer_mediumBlock .footer_mediumBlock_socialMediaButton a img {
   width: 25px;
   height: 25px;
   margin: 0.5em;
-  max-width: 100%;
   background-color: #232429;
   color: white;
   background-position: center;
   background-size: contain;
-}
-.footer .footer_container .footer_mediumBlock .footer_mediumBlock_socialMediaButton .footer_mediumBlock_socialMediaButton_facebookButton {
-  background-image: url("../../Multimedia/facebook_white_icon.png");
-}
-.footer .footer_container .footer_mediumBlock .footer_mediumBlock_socialMediaButton .footer_mediumBlock_socialMediaButton_instagramButton {
-  background-image: url("../../Multimedia/instagram_white_icon.png");
-}
-.footer .footer_container .footer_mediumBlock .footer_mediumBlock_socialMediaButton .footer_mediumBlock_socialMediaButton_pinterestButton {
-  background-image: url("../../Multimedia/pinterest_white_icon.png");
 }
 .footer .footer_container .footer_mediumBlock .footer_mediumBlock_a {
   display: inline-flex;

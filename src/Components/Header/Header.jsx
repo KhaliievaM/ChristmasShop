@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import styles from './Header.module.css';
 import {Link} from "react-router-dom";
 import Home from "../Menu/Home/Home";
+import facebookBlack from "../../Multimedia/104498_facebook_icon.png";
+import instagramBlack from "../../Multimedia/7156617_instagram_social_media_icon.png";
+import pinterestBlack from "../../Multimedia/7156612_pinterest_social_media_icon.png";
 
 const Header = (props) => {
      const handleClick = props.handleClick;
@@ -26,9 +29,18 @@ const Header = (props) => {
                     </div>
                     <div className={styles.whiteHead_menu}>
                     <div className={styles.whiteHead_menu_socialMediaButton}>
-                        <button className={styles.facebookButton}></button>
-                        <button className={styles.instagramButton}></button>
-                        <button className={styles.pinterestButton}></button>
+                        <a href="https://www.facebook.com/wix"  target="_blank" rel="noopener">
+                            <img src={facebookBlack} alt=""/>
+                        </a>
+                        <a href="https://www.instagram.com/wix/"  target="_blank" rel="noopener">
+                            <img src={instagramBlack} alt=""/>
+                        </a>
+                        <a href="https://www.pinterest.com/wixcom/"  target="_blank" rel="noopener">
+                            <img src={pinterestBlack} alt=""/>
+                        </a>
+                        {/*<button className={styles.facebookButton}></button>*/}
+                        {/*<button className={styles.instagramButton}></button>*/}
+                        {/*<button className={styles.pinterestButton}></button>*/}
                     </div>
                     <nav className={styles[menuActive ? 'open' : 'navigation']}>
                         <ul>
