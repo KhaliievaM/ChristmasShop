@@ -4,7 +4,7 @@ import ProductItems from "../TemplateFiles/ProductItems";
 
 const ChristmasTrees = () => {
     return(
-        <ProductItems  pageName={'Christmas ProductTemplate'}
+        <ProductItems  pageName={'Christmas Trees'}
                        bgImg={'https://static.wixstatic.com/media/11062b_6d0037f45bd74136b384b5cff2f0344d~mv2.jpg/v1/fill/w_2216,h_514,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_6d0037f45bd74136b384b5cff2f0344d~mv2.jpg'}
                        productsArray={products.productsChristmasTrees}
         />

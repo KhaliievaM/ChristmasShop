@@ -1,0 +1,198 @@
+
+@font-face {
+  font-family: 'proximaNova';
+  src: url("../../../../../Multimedia/ProximaNovaT-Thin.ttf");
+}
+@font-face {
+  font-family: 'didotLTPro';
+  src: url("../../../../../Multimedia/DidotLTPro-Italic.ttf");
+}
+
+.marginContainer_ProductPage{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 4em auto;
+  .container_ProductPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: proximaNova, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    width: 50%;
+    .navBlock_ProductPage{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      .wayFrom_ProductPage{}
+      .turnPages_ProductPage{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        color: #a7a5a9;
+        margin: 1em;
+        .btn_navBlock{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: transparent;
+          font-size: 16px;
+          padding: 5px;
+          color: #a7a5a9;
+        }
+      }
+    }
+    .product_Card{
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      column-gap: 2em;
+      align-items: flex-start;
+      color: #575757;
+      width: 100%;
+      .imgBlock_Product{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 1em;
+        width: 60%;
+        font-family: proximaNova, sans-serif;
+        font-size: 16px;
+        text-align: left;
+        word-spacing: 0.4em;
+        letter-spacing: 0.7px;
+        font-weight: 600;
+        color: #999CA6;
+      }
+      .infoBlock_Product{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 0.6em;
+        width: 40%;
+
+        .name_Product{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: transparent;
+          font-size: 30px;
+          font-weight: 400;
+          font-family: 'didotLTPro', sans-serif;
+        }
+        .SKU_Product {
+          font-size: 15px;
+          font-weight: 600;
+          font-family: 'proximaNova', sans-serif;
+        }
+        .price_Product {
+          font-size: 15px;
+          font-weight: 600;
+          font-family: 'proximaNova', sans-serif;
+          padding: 20px 0 0 0;
+        }
+        .Quantity_Product{
+          font-size: 14px;
+          color: #f73f23;
+          font-weight: 600;
+          font-family: 'proximaNova', sans-serif;
+
+        }
+        .button_Product{
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          row-gap: 1em;
+
+          .button_Add_to_Cart_Product{
+            padding: 10px;
+            border-radius: 1em;
+            width: 100%;
+            color: white;
+            font-family: proximaNova, sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            background-color: #f73f23;
+            &:hover{
+              background-color: rgba(247, 63, 35, 0.72);
+              transition: 0.3s ease;
+            }
+          }
+          .button_Buy_Now_Product{
+            background-color: #232429;
+            width: 100%;
+            border-radius: 1em;
+            font-family: proximaNova, sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            padding: 10px;
+            color: white;
+            &:hover{
+              background-color: rgba(35, 36, 41, 0.74);
+              transition: 0.3s ease;
+            }
+          }
+        }
+        .informSectionsBlock_Product{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+          .informSection_Product{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+            border-bottom: 1px solid #232429;
+            margin: 0.5em auto;
+            padding-bottom: 1.5em;
+            width: 100%;
+            .informSection_head{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+              .informSection_head_h3{
+                font-family: proximaNova, sans-serif;
+                font-size: 16px;
+                text-align: left;
+                word-spacing: 0.4em;
+                letter-spacing: 0.7px;
+                font-weight: 800;
+                text-transform: uppercase;
+                color: #232429;
+              }
+              .informSection_head_btn{
+                display: flex;
+                .informSection_head_btnPlus{
+                  display: flex;
+                }
+                .informSection_head_btnMinus{
+                  display: none;
+                }
+              }
+            }
+            .informSection_body{
+              font-family: proximaNova, sans-serif;
+              font-size: 16px;
+              text-align: left;
+              word-spacing: 0.4em;
+              letter-spacing: 0.7px;
+              font-weight: 600;
+              padding-top: 1em;
+              color: #999CA6;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -15,11 +15,11 @@ import ChristmasTrees from "./Components/Menu/ChristmasTrees/ChristmasTrees";
 import PrivacyPolicy from "./Components/Footer/InformationBlockFooter/PrivacyPolicy/PrivacyPolicy";
 import FAQ from "./Components/Footer/InformationBlockFooter/FAQ/FAQ";
 import ShippingAndReturns from "./Components/Footer/InformationBlockFooter/ShippingAndReturn/ShippingAndReturns";
+import ProductPage from "./Components/Menu/TemplateFiles/ProductTemplate/Product_Page/ProductPage";
 
 // import React from "@types/react";
 
 function App() {
-
     function handleClick(elementRef) {
         elementRef.current?.scrollIntoView({behavior: "smooth"})
     }
@@ -43,6 +43,8 @@ function App() {
                     <Route path="/privacyPolicy" element={<PrivacyPolicy/>}/>
                     <Route path="/FAQ" element={<FAQ/>}/>
                     <Route path="/shippingAndReturns" element={<ShippingAndReturns/>}/>
+                    <Route path="/product/:id" element={<ProductPage/>}/>
+
                     {/*<Route path="*" element={<NoPage />} />*/}
                 </Routes>
             </div>

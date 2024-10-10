@@ -25,7 +25,7 @@ class ProductItems extends React.Component {
             counterElements = this.productsArray.length;
             productsContainer = this.productsArray.map(p =>
                 <ProductTemplate name={p.name} img={p.img} oldprice={p.oldprice} price={p.price}  about={p.about}
-                                 info={p.info} SKU={p.SKU} key={p.id}/>);
+                                 info={p.info} SKU={p.SKU} id={p.id}/>);
 
         } else {
             let newArrayforShopAll = [];
@@ -37,7 +37,7 @@ class ProductItems extends React.Component {
                 counterElements = cloneOfProducts.length;
                 productsContainer = cloneOfProducts.map(p =>
                     <ProductTemplate name={p.name} img={p.img} oldprice={p.oldprice} price={p.price} about={p.about}
-                                     info={p.info} SKU={p.SKU} key={p.id}/>);
+                                     info={p.info} SKU={p.SKU} id={p.id}/>);
             }
         };
 
