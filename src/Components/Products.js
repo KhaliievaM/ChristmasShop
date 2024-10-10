@@ -7,8 +7,18 @@ let products = {
             oldprice: "",
             price: "400",
             about: "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.",
-            info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
             SKU: '0001',
+            infoSection:[
+                {info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
+                    name:'PRODUCT INFO',},
+                {info:'I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase.' +
+                        ' Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.',
+                    name:'RETURN & REFUND POLICY',},
+                {info:'I\'m a shipping policy. I\'m a great place to add more information about your shipping methods, packaging and cost. ' +
+                        'Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.',
+                    name:'SHIPPING INFO',
+                },
+            ],
         },
         {
             id: 2,
@@ -17,8 +27,18 @@ let products = {
             oldprice: 500,
             price: "425",
             about: "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.",
-            info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
             SKU: '0002',
+            infoSection:[
+                {info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
+                    name:'PRODUCT INFO',},
+                {info:'I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase.' +
+                        ' Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.',
+                    name:'RETURN & REFUND POLICY',},
+                {info:'I\'m a shipping policy. I\'m a great place to add more information about your shipping methods, packaging and cost. ' +
+                        'Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.',
+                    name:'SHIPPING INFO',
+                },
+            ],
         },
         {
             id: 3,
@@ -27,8 +47,18 @@ let products = {
             oldprice: "",
             price: "300",
             about: "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.",
-            info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
             SKU: '0003',
+            infoSection:[
+                {info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
+                    name:'PRODUCT INFO',},
+                {info:'I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase.' +
+                        ' Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.',
+                    name:'RETURN & REFUND POLICY',},
+                {info:'I\'m a shipping policy. I\'m a great place to add more information about your shipping methods, packaging and cost. ' +
+                        'Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.',
+                    name:'SHIPPING INFO',
+                },
+            ],
         },
         {
             id: 4,
@@ -37,8 +67,18 @@ let products = {
             oldprice: "",
             price: "150",
             about: "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.",
-            info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
             SKU: '0004',
+            infoSection:[
+                {info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
+                    name:'PRODUCT INFO',},
+                {info:'I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase.' +
+                        ' Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.',
+                    name:'RETURN & REFUND POLICY',},
+                {info:'I\'m a shipping policy. I\'m a great place to add more information about your shipping methods, packaging and cost. ' +
+                        'Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.',
+                    name:'SHIPPING INFO',
+                },
+            ],
         },
         {
             id: 5,
@@ -47,8 +87,18 @@ let products = {
             oldprice: 100,
             price: "85",
             about: "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.",
-            info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
             SKU: '0005',
+            infoSection:[
+                {info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
+                    name:'PRODUCT INFO',},
+                {info:'I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase.' +
+                        ' Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.',
+                    name:'RETURN & REFUND POLICY',},
+                {info:'I\'m a shipping policy. I\'m a great place to add more information about your shipping methods, packaging and cost. ' +
+                        'Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.',
+                    name:'SHIPPING INFO',
+                },
+            ],
         },
         {
             id: 6,
@@ -57,8 +107,18 @@ let products = {
             oldprice: "",
             price: "500",
             about: "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.",
-            info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
             SKU: '0006',
+            infoSection:[
+                {info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
+                    name:'PRODUCT INFO',},
+                {info:'I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase.' +
+                        ' Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.',
+                    name:'RETURN & REFUND POLICY',},
+                {info:'I\'m a shipping policy. I\'m a great place to add more information about your shipping methods, packaging and cost. ' +
+                        'Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.',
+                    name:'SHIPPING INFO',
+                },
+            ],
         },
     ],
     productsUniqueOrnaments: [
@@ -69,8 +129,18 @@ let products = {
             oldprice: "30",
             price: "25.50",
             about: "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.",
-            info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
             SKU: '0007',
+            infoSection:[
+                {info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
+                    name:'PRODUCT INFO',},
+                {info:'I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase.' +
+                        ' Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.',
+                    name:'RETURN & REFUND POLICY',},
+                {info:'I\'m a shipping policy. I\'m a great place to add more information about your shipping methods, packaging and cost. ' +
+                        'Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.',
+                    name:'SHIPPING INFO',
+                },
+            ],
         },
         {
             id: 8,
@@ -79,8 +149,18 @@ let products = {
             oldprice: "",
             price: "23",
             about: "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.",
-            info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
             SKU: '0008',
+            infoSection:[
+                {info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
+                    name:'PRODUCT INFO',},
+                {info:'I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase.' +
+                        ' Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.',
+                    name:'RETURN & REFUND POLICY',},
+                {info:'I\'m a shipping policy. I\'m a great place to add more information about your shipping methods, packaging and cost. ' +
+                        'Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.',
+                    name:'SHIPPING INFO',
+                },
+            ],
         },
         {
             id: 9,
@@ -89,8 +169,18 @@ let products = {
             oldprice: "",
             price: "2",
             about: "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.",
-            info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
             SKU: '0009',
+            infoSection:[
+                {info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
+                    name:'PRODUCT INFO',},
+                {info:'I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase.' +
+                        ' Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.',
+                    name:'RETURN & REFUND POLICY',},
+                {info:'I\'m a shipping policy. I\'m a great place to add more information about your shipping methods, packaging and cost. ' +
+                        'Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.',
+                    name:'SHIPPING INFO',
+                },
+            ],
         },
         {
             id: 10,
@@ -99,8 +189,18 @@ let products = {
             oldprice: "",
             price: "1",
             about: "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.",
-            info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
             SKU: '0010',
+            infoSection:[
+                {info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
+                    name:'PRODUCT INFO',},
+                {info:'I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase.' +
+                        ' Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.',
+                    name:'RETURN & REFUND POLICY',},
+                {info:'I\'m a shipping policy. I\'m a great place to add more information about your shipping methods, packaging and cost. ' +
+                        'Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.',
+                    name:'SHIPPING INFO',
+                },
+            ],
         },
         {
             id: 11,
@@ -109,8 +209,18 @@ let products = {
             oldprice: "35",
             price: "29.75",
             about: "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.",
-            info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
             SKU: '0011',
+            infoSection:[
+                {info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
+                    name:'PRODUCT INFO',},
+                {info:'I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase.' +
+                        ' Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.',
+                    name:'RETURN & REFUND POLICY',},
+                {info:'I\'m a shipping policy. I\'m a great place to add more information about your shipping methods, packaging and cost. ' +
+                        'Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.',
+                    name:'SHIPPING INFO',
+                },
+            ],
         },
         {
             id: 12,
@@ -119,8 +229,18 @@ let products = {
             oldprice: "",
             price: "5",
             about: "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.",
-            info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
             SKU: '0012',
+            infoSection:[
+                {info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
+                    name:'PRODUCT INFO',},
+                {info:'I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase.' +
+                        ' Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.',
+                    name:'RETURN & REFUND POLICY',},
+                {info:'I\'m a shipping policy. I\'m a great place to add more information about your shipping methods, packaging and cost. ' +
+                        'Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.',
+                    name:'SHIPPING INFO',
+                },
+            ],
         },
     ],
     productsHolidayLights: [
@@ -131,8 +251,18 @@ let products = {
             oldprice: "",
             price: "25",
             about: "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.",
-            info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
             SKU: '0013',
+            infoSection:[
+                {info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
+                    name:'PRODUCT INFO',},
+                {info:'I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase.' +
+                        ' Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.',
+                    name:'RETURN & REFUND POLICY',},
+                {info:'I\'m a shipping policy. I\'m a great place to add more information about your shipping methods, packaging and cost. ' +
+                        'Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.',
+                    name:'SHIPPING INFO',
+                },
+            ],
         },
         {
             id: 14,
@@ -141,8 +271,18 @@ let products = {
             oldprice: "",
             price: "5",
             about: "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.",
-            info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
             SKU: '0014',
+            infoSection:[
+                {info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
+                    name:'PRODUCT INFO',},
+                {info:'I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase.' +
+                        ' Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.',
+                    name:'RETURN & REFUND POLICY',},
+                {info:'I\'m a shipping policy. I\'m a great place to add more information about your shipping methods, packaging and cost. ' +
+                        'Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.',
+                    name:'SHIPPING INFO',
+                },
+            ],
         },
         {
             id: 15,
@@ -151,8 +291,18 @@ let products = {
             oldprice: "",
             price: "25",
             about: "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.",
-            info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
             SKU: '0015',
+            infoSection:[
+                {info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
+                    name:'PRODUCT INFO',},
+                {info:'I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase.' +
+                        ' Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.',
+                    name:'RETURN & REFUND POLICY',},
+                {info:'I\'m a shipping policy. I\'m a great place to add more information about your shipping methods, packaging and cost. ' +
+                        'Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.',
+                    name:'SHIPPING INFO',
+                },
+            ],
         },
         {
             id: 16,
@@ -161,8 +311,18 @@ let products = {
             oldprice: "15",
             price: "12.75",
             about: "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.",
-            info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
             SKU: '0016',
+            infoSection:[
+                {info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
+                    name:'PRODUCT INFO',},
+                {info:'I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase.' +
+                        ' Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.',
+                    name:'RETURN & REFUND POLICY',},
+                {info:'I\'m a shipping policy. I\'m a great place to add more information about your shipping methods, packaging and cost. ' +
+                        'Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.',
+                    name:'SHIPPING INFO',
+                },
+            ],
         },
         {
             id: 17,
@@ -171,8 +331,18 @@ let products = {
             oldprice: "",
             price: "15",
             about: "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.",
-            info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
             SKU: '0017',
+            infoSection:[
+                {info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
+                    name:'PRODUCT INFO',},
+                {info:'I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase.' +
+                        ' Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.',
+                    name:'RETURN & REFUND POLICY',},
+                {info:'I\'m a shipping policy. I\'m a great place to add more information about your shipping methods, packaging and cost. ' +
+                        'Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.',
+                    name:'SHIPPING INFO',
+                },
+            ],
         },
         {
             id: 18,
@@ -181,8 +351,18 @@ let products = {
             oldprice: "",
             price: "10",
             about: "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.",
-            info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
             SKU: '0018',
+            infoSection:[
+                {info: '12\' Deluxe Frasier Christmas tree approximately 84 inches in diameter.',
+                    name:'PRODUCT INFO',},
+                {info:'I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase.' +
+                        ' Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.',
+                    name:'RETURN & REFUND POLICY',},
+                {info:'I\'m a shipping policy. I\'m a great place to add more information about your shipping methods, packaging and cost. ' +
+                        'Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.',
+                    name:'SHIPPING INFO',
+                },
+            ],
         },
     ],
 }

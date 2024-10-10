@@ -2,10 +2,9 @@ import React from "react";
 import styles from "./ProductPage.module.css";
 import { GoChevronLeft } from "react-icons/go";
 import { GoChevronRight } from "react-icons/go";
-import { GoPlus } from "react-icons/go";
-import { GoDash } from "react-icons/go";
 import {useParams} from "react-router-dom";
 import products from "../../../../Products";
+import InformSection from "./InformSection_ProductPage";
 
 let getState = (id)=>{
     for(let obj in products){
@@ -24,6 +23,7 @@ const ProductPage = (props) =>{
         let number = parseInt(params.id);
         state = getState(number);
     }
+    let infoSections = state.infoSection.map(d => <InformSection info={d.info} name={d.name}/>)
     return(
         <div className={styles.marginContainer_ProductPage}>
             <div className={styles.container_ProductPage}>
@@ -50,43 +50,7 @@ const ProductPage = (props) =>{
                             <button className={styles.button_Buy_Now_Product}>Buy Now</button>
                         </div>
                         <div className={styles.informSectionsBlock_Product}>
-                            <section className={styles.informSection_Product}>
-                                <div className={styles.informSection_head}>
-                                    <h3 className={styles.informSection_head_h3}>Product Info</h3>
-                                    <div className={styles.informSection_head_btn}>
-                                    <GoPlus  className={styles.informSection_head_btnPlus}/>
-                                    <GoDash  className={styles.informSection_head_btnMinus}/>
-                                    </div>
-                                </div>
-                                    <p className={styles.informSection_body}>{state.info}</p>
-                            </section>
-                            <section className={styles.informSection_Product}>
-                                <div className={styles.informSection_head}>
-                                    <h3 className={styles.informSection_head_h3}>RETURN & REFUND POLICY</h3>
-                                    <div className={styles.informSection_head_btn}>
-                                    <GoPlus  className={styles.informSection_head_btnPlus}/>
-                                    <GoDash  className={styles.informSection_head_btnMinus}/>
-                                    </div>
-                                </div>
-                                    <p className={styles.informSection_body}>
-                                        I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase.
-                                        Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.
-                                    </p>
-                            </section>
-                             <section className={styles.informSection_Product}>
-                                 <div className={styles.informSection_head}>
-                                     <h3 className={styles.informSection_head_h3}>SHIPPING INFO</h3>
-                                     <div className={styles.informSection_head_btn}>
-                                     <GoPlus  className={styles.informSection_head_btnPlus}/>
-                                     <GoDash  className={styles.informSection_head_btnMinus}/>
-                                     </div>
-                                 </div>
-                                     <p className={styles.informSection_body}>
-                                         I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost.
-                                         Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers
-                                         that they can buy from you with confidence.
-                                     </p>
-                        </section>
+                            {infoSections}
                         </div>
                     </div>
                 </div>

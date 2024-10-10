@@ -145,50 +145,5 @@
   align-items: flex-start;
   width: 100%;
 }
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .informSectionsBlock_Product .informSection_Product {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
-  border-bottom: 1px solid #232429;
-  margin: 0.5em auto;
-  padding-bottom: 1.5em;
-  width: 100%;
-}
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .informSectionsBlock_Product .informSection_Product .informSection_head {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .informSectionsBlock_Product .informSection_Product .informSection_head .informSection_head_h3 {
-  font-family: proximaNova, sans-serif;
-  font-size: 16px;
-  text-align: left;
-  word-spacing: 0.4em;
-  letter-spacing: 0.7px;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #232429;
-}
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .informSectionsBlock_Product .informSection_Product .informSection_head .informSection_head_btn {
-  display: flex;
-}
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .informSectionsBlock_Product .informSection_Product .informSection_head .informSection_head_btn .informSection_head_btnPlus {
-  display: flex;
-}
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .informSectionsBlock_Product .informSection_Product .informSection_head .informSection_head_btn .informSection_head_btnMinus {
-  display: none;
-}
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .informSectionsBlock_Product .informSection_Product .informSection_body {
-  font-family: proximaNova, sans-serif;
-  font-size: 16px;
-  text-align: left;
-  word-spacing: 0.4em;
-  letter-spacing: 0.7px;
-  font-weight: 600;
-  padding-top: 1em;
-  color: #999CA6;
-}
 
 /*# sourceMappingURL=ProductPage.module.css.map */

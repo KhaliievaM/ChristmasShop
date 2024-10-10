@@ -1,6 +1,5 @@
 
 .marginContainer{
-  //margin-bottom: 3em;
   text-align: center;
   margin: 0 auto;
   width: 90%;
@@ -83,7 +82,7 @@
       grid-auto-flow: dense; //?
       gap: 1em;
       width: 100%;
-
+      margin-bottom: 3em;
     }
   }
 }
