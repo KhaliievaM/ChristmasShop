@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from "./ProductTemplate.module.css"
 import {Link} from "react-router-dom";
 import ProductPage from "./Product_Page/ProductPage";
+import QuickView from "./QuickView/QuickView";
 
 const ProductTemplate = (props) => {
     let isOldPrice;
@@ -11,12 +12,15 @@ const ProductTemplate = (props) => {
         isOldPrice= true;
     }
 
+    const [isProductQuickView,setProductQuickView] = useState(false);
+
+
     return (
         <div className={styles.container_ProductCard}>
             <div className={styles.img_quickView_ProductCard}>
                 <img src={props.img} alt=""  fetchPriority="high"/>
                 <div  className={styles.quickView_ProductCard}>
-                    <button  className={styles.quickView_ProductCard_text}>Quick View</button>
+                    <button  className={styles.quickView_ProductCard_text} onClick={()=>{setProductQuickView(true)}}>Quick View</button>
                 </div>
             </div>
             <div className={styles.productAction_ProductCard}>
@@ -30,6 +34,10 @@ const ProductTemplate = (props) => {
                     </a>
                 <button className={styles.addToCart_Button_ProductCard}>Add to Cart</button>
             </div>
+
+           <QuickView name={props.name} img={props.img} price={props.price}
+                      oldprice={props.oldprice} SKU={props.SKU} id={props.id} isOpen={isProductQuickView} onClose={()=>setProductQuickView(false)}/>
+
         </div>
     )
 }

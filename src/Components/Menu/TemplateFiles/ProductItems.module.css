@@ -9,7 +9,7 @@
   flex-direction: column;
   margin: 2em auto;
 }
-.marginContainer .container_ChristmasTrees .navBlock_ChristmasTrees {
+.marginContainer .container_ChristmasTrees .navBlock_DepartmentStore {
   display: flex;
   flex-direction: row;
   column-gap: 0.8em;
@@ -19,20 +19,21 @@
   color: #6c676a;
   line-height: 1.5;
 }
-.marginContainer .container_ChristmasTrees .headBlock_ChristmasTrees {
+.marginContainer .container_ChristmasTrees .headBlock_DepartmentStore {
   display: flex;
   flex-direction: column;
+  row-gap: 1em;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.marginContainer .container_ChristmasTrees .headBlock_ChristmasTrees .backImage {
+.marginContainer .container_ChristmasTrees .headBlock_DepartmentStore .backImage {
   margin: 1em auto;
   width: 100%;
   object-fit: cover;
   object-position: 50% 50%;
 }
-.marginContainer .container_ChristmasTrees .headBlock_ChristmasTrees .h2_ChristmasTrees {
+.marginContainer .container_ChristmasTrees .headBlock_DepartmentStore .h2_DepartmentStoreName {
   text-align: center;
   font-family: "CustomFont", sans-serif;
   letter-spacing: normal;

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./ProductPage.module.css";
 import { GoChevronLeft } from "react-icons/go";
 import { GoChevronRight } from "react-icons/go";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import products from "../../../../Products";
 import InformSection from "./InformSection_ProductPage";
 
@@ -19,16 +19,46 @@ let getState = (id)=>{
 const ProductPage = (props) =>{
     const params = useParams();
     let state = {};
+    let number;
     if (params.id !== undefined) {
-        let number = parseInt(params.id);
+        number = parseInt(params.id);
         state = getState(number);
     }
+    let id = parseInt(params.id);
+    let nameParentPage = '';
+    let link = '';
+    for(let obj in products){
+        for(let inObj of products[obj]){
+            if(inObj.id === id){
+                if(obj === 'productsChristmasTrees'){
+                    nameParentPage = 'Christmas Trees';
+                    link = '/christmasTrees';
+                }else if(obj === 'productsUniqueOrnaments'){
+                    nameParentPage = 'Unique Ornaments';
+                    link = '/uniqueOrnaments';
+                }else if(obj === 'productsHolidayLights'){
+                    nameParentPage = 'Holiday Lights';
+                    link = '/holidayLights';
+                }
+            }
+        }
+    }
+    // let nextPage = (num)=>{
+    //     let nextpage = num + 1;
+    //     state = getState(nextpage);
+    //     console.log(state)onClick={()=>{nextPage(number)}}
+    // }
+   // console.log(params.id);
     let infoSections = state.infoSection.map(d => <InformSection info={d.info} name={d.name}/>)
     return(
         <div className={styles.marginContainer_ProductPage}>
             <div className={styles.container_ProductPage}>
                 <div className={styles.navBlock_ProductPage}>
-                    <div className={styles.wayFrom_ProductPage}></div>
+                    <div className={styles.wayFrom_ProductPage}>
+                        <Link to="/" className={styles.path_links}>Home</Link> /
+                        <Link to={link} className={styles.path_links}> {nameParentPage}</Link> /
+                        <div className={styles.path_name}> {state.name}</div>
+                    </div>
                     <div className={styles.turnPages_ProductPage}>
                         <button className={styles.btn_navBlock}> <GoChevronLeft /> Prev </button>
                         <div>|</div>

@@ -9,7 +9,7 @@
   flex-direction: column;
   margin: 2em auto;
 
-  .navBlock_ChristmasTrees{
+  .navBlock_DepartmentStore{
     display: flex;
     flex-direction: row;
     column-gap: 0.8em;
@@ -20,9 +20,10 @@
     line-height: 1.5;
     .linkHome{}
   }
-  .headBlock_ChristmasTrees{
+  .headBlock_DepartmentStore{
     display: flex;
     flex-direction: column;
+    row-gap: 1em;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -34,7 +35,7 @@
       object-fit: cover;
       object-position: 50% 50%;
     }
-    .h2_ChristmasTrees{
+    .h2_DepartmentStoreName{
       text-align: center;
       font-family: 'CustomFont', sans-serif;
       letter-spacing: normal;

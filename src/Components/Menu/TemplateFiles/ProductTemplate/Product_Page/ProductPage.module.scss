@@ -29,7 +29,20 @@
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      .wayFrom_ProductPage{}
+      .wayFrom_ProductPage{
+        display: inline-flex;
+        font-family: proximaNova, sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        column-gap: 0.5em;
+        color: #999CA6;
+        .path_links{
+          color: #a7a5a9;
+        }
+        .path_name{
+          color: rgba(153, 156, 166, 0.67);
+        }
+      }
       .turnPages_ProductPage{
         display: flex;
         align-items: center;
@@ -93,7 +106,7 @@
           font-family: 'proximaNova', sans-serif;
         }
         .price_Product {
-          font-size: 15px;
+          font-size: 20px;
           font-weight: 600;
           font-family: 'proximaNova', sans-serif;
           padding: 20px 0 0 0;
