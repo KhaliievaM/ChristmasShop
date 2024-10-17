@@ -18,7 +18,7 @@ const ProductTemplate = (props) => {
     return (
         <div className={styles.container_ProductCard}>
             <div className={styles.img_quickView_ProductCard}>
-                <img src={props.img} alt=""  fetchPriority="high"/>
+                <a href={'/product/' + props.id}><img src={props.img} alt=""  fetchPriority="high"/></a>
                 <div  className={styles.quickView_ProductCard}>
                     <button  className={styles.quickView_ProductCard_text} onClick={()=>{setProductQuickView(true)}}>Quick View</button>
                 </div>

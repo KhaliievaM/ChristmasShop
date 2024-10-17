@@ -2,9 +2,11 @@ import React from "react";
 import styles from "./ProductPage.module.css";
 import { GoChevronLeft } from "react-icons/go";
 import { GoChevronRight } from "react-icons/go";
+import {GoDash, GoPlus} from "react-icons/go";
 import {Link, useParams} from "react-router-dom";
 import products from "../../../../Products";
 import InformSection from "./InformSection_ProductPage";
+import {useState} from "react";
 
 let getState = (id)=>{
     for(let obj in products){
@@ -49,6 +51,36 @@ const ProductPage = (props) =>{
     //     console.log(state)onClick={()=>{nextPage(number)}}
     // }
    // console.log(params.id);
+   //  let quantityValue = 1;
+   //  let quantity;
+   //  let increment = (value) =>{
+   //      value++;
+   //      quantity=value;
+   //      console.log('increment')
+   //  }
+   //  let decrement = (value) =>{
+   //      if(value >= 1){
+   //          value--;
+   //          quantity=value;
+   //          console.log('decrement')
+   //      }
+   //  }
+    let minValue = 0;
+    let maxValue = 20;
+    const [quantity, setQuantity] = useState(minValue);
+
+    const IncrementCounter = () => {
+        if(quantity < maxValue){
+            setQuantity((prevState) => prevState + 1);
+        }
+    }
+
+
+    const DecreaseItems = () => {
+        if(quantity > minValue) {
+            setQuantity((prevState) => prevState - 1);
+        }
+    };
     let infoSections = state.infoSection.map(d => <InformSection info={d.info} name={d.name}/>)
     return(
         <div className={styles.marginContainer_ProductPage}>
@@ -74,7 +106,14 @@ const ProductPage = (props) =>{
                         <div className={styles.name_Product}>{state.name}</div>
                         <div className={styles.SKU_Product}>SKU: {state.SKU}</div>
                         <div className={styles.price_Product}>${state.price}</div>
-                        <div className={styles.Quantity_Product}>Quantity</div>
+                        <div className={styles.Quantity_Product}>
+                            <div className={styles.quantity_Name}>Quantity</div>
+                            <div className={styles.quantity_Block}>
+                                <button className={styles.quantity_btn_Block} onClick={DecreaseItems}><GoDash/></button>
+                                <input type="text" className={styles.quantity_input_Block} value={quantity}/>
+                                <button className={styles.quantity_btn_Block} onClick={IncrementCounter}><GoPlus/></button>
+                            </div>
+                        </div>
                         <div className={styles.button_Product}>
                             <button className={styles.button_Add_to_Cart_Product}>Add to Cart</button>
                             <button className={styles.button_Buy_Now_Product}>Buy Now</button>

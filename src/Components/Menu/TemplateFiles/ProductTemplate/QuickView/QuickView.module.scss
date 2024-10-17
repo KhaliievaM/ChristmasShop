@@ -82,6 +82,43 @@
           color: #232429;
           font-weight: 600;
           font-family: 'proximaNova', sans-serif;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin-top: 1.5em;
+          margin-bottom: 1.5em;
+          row-gap: 1em;
+          width: 50%;
+          .quantity_Name_Quick_View{
+            font-size: 14px;
+            color: #f73f23;
+            font-weight: 600;
+            font-family: 'proximaNova', sans-serif;
+          }
+          .quantity_Block_Quick_View{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 3px rgba(0,0,0,0.16), 0 2px 3px rgba(0,0,0,0.23);
+            .quantity_btn_Block_Quick_View{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: .4rem;
+              width: 2rem;
+              font-size: 1.9rem;
+              color: #575757;
+            }
+            .quantity_input_Block_Quick_View{
+              width: 4rem;
+              padding: .7rem;
+              font-size: 1rem;
+              font-weight: 600;
+              text-align: center;
+              border: 0;
+            }
+          }
         }
         .button_Quick_View{
           padding: 10px;

@@ -44,22 +44,15 @@ class ProductItems extends React.Component {
         return (
             <div className={styles.marginContainer}>
                 <div className={styles.container_ChristmasTrees}>
-
                     <div className={styles.navBlock_DepartmentStore}>
-
                         <Link to="/" className={styles.linkHome}>Home</Link>
                         &#10095;
                         <div>{this.pageName}</div>
-
                     </div>
-
                     <div className={styles.headBlock_DepartmentStore}>
-
                         <img src={this.bgImg} alt="" fetchPriority="high" className={styles.backImage}/>
                         <h2 className={styles.h2_DepartmentStoreName}>{this.pageName}</h2>   {/*//Christmas ProductTemplate*/}
-
                     </div>
-
                 </div>
                 <div className={styles.mainBlock_products}>
                     <div className={styles.quantityAndSort_products}>
