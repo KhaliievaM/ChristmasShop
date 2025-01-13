@@ -60,7 +60,8 @@ const Cart_Menu_In_Header = () => {
     const toggleSidebar = () => {
         setIsOpen(!isOpen);
     };
-    let counterOfProducts = localStorage.length - 1;
+    //let counterOfProducts = localStorage.length - 1;
+    let counterOfProducts = localStorage.length;
 
     return (
         <div className={styles.app}>

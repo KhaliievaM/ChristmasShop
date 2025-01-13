@@ -27,6 +27,7 @@ const ProductPage = (props) =>{
         state = getState(number);
     }
 
+
     let id = parseInt(params.id);
     let nameParentPage = '';
     let link = '';
