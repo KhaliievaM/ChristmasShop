@@ -51,7 +51,7 @@ const Footer = (props) => {
                         <Link to="/FAQ" className={styles.informLink}>FAQ</Link>
                     </div>
                 </div>
-                <div className={styles.footer_footBlock}>&#169; 2035 by The Christmas Boutique . Powered and secured by <a href="src/Components/Footer/Footer"> Wix </a></div>
+                <div className={styles.footer_footBlock}>&#169; 2035 by The Christmas Boutique . Powered and secured by <a href="https://uk.wix.com/?utm_campaign=vir_created_with" target="_blank" rel="noopener"> Wix </a></div>
             </div>
         </footer>
     );

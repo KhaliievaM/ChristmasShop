@@ -21,6 +21,7 @@
   position: relative;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 .container_ProductCard .img_quickView_ProductCard img {
   display: block;
@@ -28,6 +29,10 @@
   height: 100%;
   object-fit: cover;
   object-position: 50% 50%;
+  transition: 1s ease;
+}
+.container_ProductCard .img_quickView_ProductCard img:hover {
+  transform: scale(1.2);
 }
 .container_ProductCard .img_quickView_ProductCard .quickView_ProductCard {
   position: absolute;

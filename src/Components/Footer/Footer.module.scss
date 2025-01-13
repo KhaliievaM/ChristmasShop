@@ -32,12 +32,13 @@ $greyLink: #838384;
   background-color: $bgColor;
   color: $lightColor;
 
+
   .footer_container {
     @include disFlxJus(flex, column, center);
     align-items: center;
     row-gap: 2em;
     //padding: 3em;
-    width: 980px;
+    width: 90%;
     margin: 2em auto;
 
     .footer_headBlock {
@@ -122,6 +123,7 @@ $greyLink: #838384;
 
       .footer_mediumBlock_a{
         display: inline-flex;
+        flex-wrap: wrap;
         column-gap: 1.1em;
 
         .informLink{

@@ -109,7 +109,6 @@
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 1em;
   max-width: 1800px;
   width: 100%;
   padding-top: 1em;
@@ -174,7 +173,7 @@
   font-size: 14px;
   font-family: "proximaNova", sans-serif;
   font-weight: 800;
-  margin: 0.5em;
+  width: 100%;
   background-color: #ffffff;
 }
 .header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart .logInImage {
@@ -190,14 +189,12 @@
   margin-right: 0.5em;
 }
 .header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart .cart {
+  background-color: rgba(253, 253, 253, 0.65);
+  overflow: hidden;
+  width: 100%;
+  margin-right: 10px;
+  transition: 0.5s ease;
   height: 2em;
-}
-.header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart .cart .cartCounter {
-  border-radius: 1em;
-  padding: 0.23em;
-  margin-left: 0.5em;
-  background-color: #2f2b29;
-  color: #ffffff;
 }
 
 @media screen and (min-width: 1200px) {
@@ -246,32 +243,32 @@
     row-gap: 1em;
     padding-top: 0;
   }
-  .header .whiteHead .whiteHead_header_title_burger {
+  .header .whiteHead .whiteHead_container .whiteHead_header_title_burger {
     display: flex;
     justify-content: flex-end;
     gap: 30%;
   }
-  .header .whiteHead .whiteHead_header_title_burger .header_burger_container {
+  .header .whiteHead .whiteHead_container .whiteHead_header_title_burger .header_burger_container {
     display: flex;
     margin-right: 2em;
     z-index: 100;
   }
-  .header .whiteHead .whiteHead_header_title_burger .header_burger_container .header_burger {
+  .header .whiteHead .whiteHead_container .whiteHead_header_title_burger .header_burger_container .header_burger {
     display: flex;
   }
-  .header .whiteHead .whiteHead_menu {
+  .header .whiteHead .whiteHead_container .whiteHead_menu {
     display: inline-flex;
     text-align: center;
     padding-top: 0;
   }
-  .header .whiteHead .whiteHead_menu .whiteHead_menu_socialMediaButton button {
+  .header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_socialMediaButton button {
     text-align: center;
     background-color: #f9fafa;
   }
-  .header .whiteHead .whiteHead_menu .navigation {
+  .header .whiteHead .whiteHead_container .whiteHead_menu .navigation {
     display: none;
   }
-  .header .whiteHead .whiteHead_menu .open {
+  .header .whiteHead .whiteHead_container .whiteHead_menu .open {
     display: flex !important;
     flex-direction: column;
     align-items: flex-start;
@@ -289,7 +286,7 @@
     background-color: #f1f0ec;
     animation: burgerAnimation 0.4s;
   }
-  .header .whiteHead .whiteHead_menu .open ul {
+  .header .whiteHead .whiteHead_container .whiteHead_menu .open ul {
     display: flex;
     text-align: start;
     flex-direction: column;
@@ -297,21 +294,21 @@
     justify-content: flex-start;
     row-gap: 30px;
   }
-  .header .whiteHead .whiteHead_menu .open ul .menu {
+  .header .whiteHead .whiteHead_container .whiteHead_menu .open ul .menu {
     cursor: pointer;
     padding: 0.5em;
     color: #232429;
   }
-  .header .whiteHead .whiteHead_menu .open ul .menu:hover {
+  .header .whiteHead .whiteHead_container .whiteHead_menu .open ul .menu:hover {
     color: #f63f25;
   }
-  .header .whiteHead .whiteHead_menu .open ul li .logIn {
+  .header .whiteHead .whiteHead_container .whiteHead_menu .open ul li .logIn {
     display: flex;
     align-items: center;
     font: 1em Arial, Helvetica, sans-serif;
     background-color: #f1f0ec;
   }
-  .header .whiteHead .whiteHead_menu .open ul li .logIn .logInImage {
+  .header .whiteHead .whiteHead_container .whiteHead_menu .open ul li .logIn .logInImage {
     background-image: url("../../Multimedia/9035990_person_circle_sharp_icon.png");
     max-width: 100%;
     background-position: center;
@@ -322,10 +319,10 @@
     width: 2em;
     margin-right: 0.5em;
   }
-  .header .whiteHead .whiteHead_menu .whiteHead_menu_logAndCart button .logIn {
+  .header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart button .logIn {
     display: none;
   }
-  .header .whiteHead .whiteHead_menu .whiteHead_menu_logAndCart .cart {
+  .header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart .cart {
     background-color: #f9fafa;
   }
 }

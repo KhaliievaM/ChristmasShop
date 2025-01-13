@@ -26,6 +26,7 @@ const ProductPage = (props) =>{
         number = parseInt(params.id);
         state = getState(number);
     }
+
     let id = parseInt(params.id);
     let nameParentPage = '';
     let link = '';
@@ -45,43 +46,19 @@ const ProductPage = (props) =>{
             }
         }
     }
-    // let nextPage = (num)=>{
-    //     let nextpage = num + 1;
-    //     state = getState(nextpage);
-    //     console.log(state)onClick={()=>{nextPage(number)}}
-    // }
-   // console.log(params.id);
-   //  let quantityValue = 1;
-   //  let quantity;
-   //  let increment = (value) =>{
-   //      value++;
-   //      quantity=value;
-   //      console.log('increment')
-   //  }
-   //  let decrement = (value) =>{
-   //      if(value >= 1){
-   //          value--;
-   //          quantity=value;
-   //          console.log('decrement')
-   //      }
-   //  }
     let minValue = 0;
     let maxValue = 20;
     const [quantity, setQuantity] = useState(minValue);
 
-    const IncrementCounter = () => {
-        if(quantity < maxValue){
-            setQuantity((prevState) => prevState + 1);
-        }
-    }
-
-
-    const DecreaseItems = () => {
-        if(quantity > minValue) {
-            setQuantity((prevState) => prevState - 1);
-        }
-    };
+    const IncrementCounter = () => { if(quantity < maxValue){ setQuantity((prevState) => prevState + 1);  }};
+    const DecreaseItems = () => {   if(quantity > minValue) {setQuantity((prevState) => prevState - 1);   }};
     let infoSections = state.infoSection.map(d => <InformSection info={d.info} name={d.name}/>)
+    let stateId = state.id;
+
+    let addProductToCart = () =>{
+        localStorage.setItem("product"+stateId, JSON.stringify(state));
+        window.location.reload();
+    }
     return(
         <div className={styles.marginContainer_ProductPage}>
             <div className={styles.container_ProductPage}>
@@ -115,7 +92,7 @@ const ProductPage = (props) =>{
                             </div>
                         </div>
                         <div className={styles.button_Product}>
-                            <button className={styles.button_Add_to_Cart_Product}>Add to Cart</button>
+                            <button className={styles.button_Add_to_Cart_Product} onClick={()=>addProductToCart()}>Add to Cart</button>
                             <button className={styles.button_Buy_Now_Product}>Buy Now</button>
                         </div>
                         <div className={styles.informSectionsBlock_Product}>

@@ -16,6 +16,7 @@ import PrivacyPolicy from "./Components/Footer/InformationBlockFooter/PrivacyPol
 import FAQ from "./Components/Footer/InformationBlockFooter/FAQ/FAQ";
 import ShippingAndReturns from "./Components/Footer/InformationBlockFooter/ShippingAndReturn/ShippingAndReturns";
 import ProductPage from "./Components/Menu/TemplateFiles/ProductTemplate/Product_Page/ProductPage";
+import Cart from "./Components/Menu/Cart/Cart";
 
 // import React from "@types/react";
 
@@ -44,6 +45,7 @@ function App() {
                     <Route path="/FAQ" element={<FAQ/>}/>
                     <Route path="/shippingAndReturns" element={<ShippingAndReturns/>}/>
                     <Route path="/product/:id" element={<ProductPage/>}/>
+                    <Route path="/cart" element={<Cart/>}/>
 
                     {/*<Route path="*" element={<NoPage />} />*/}
                 </Routes>

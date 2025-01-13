@@ -129,6 +129,7 @@ $transitionForButton: all 0.5s ease;
           @include disFlexHome(flex, center, center);
           column-gap: 2em;
           padding: 2em;
+
           box-sizing: content-box;
           position: relative;
           top: -90px;
@@ -139,7 +140,8 @@ $transitionForButton: all 0.5s ease;
             row-gap: 1em;
 
             img {
-              width: 18.9375em;
+              //width: 18.9375em;
+              width: 99%;
               height: 27em;
               object-fit: cover;
 
