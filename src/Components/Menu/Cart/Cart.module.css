@@ -1,0 +1,198 @@
+@font-face {
+  font-family: "proximaNova";
+  src: url("../../../Multimedia/ProximaNovaT-Thin.ttf");
+}
+.container_Cart {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 4em auto;
+}
+.container_Cart .margin_container_Cart {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  column-gap: 2em;
+  font-family: proximaNova, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  width: 50%;
+  padding: 2em;
+  background-color: #f3f2f2;
+}
+.container_Cart .margin_container_Cart .product_Block_Cart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  flex: 60%;
+}
+.container_Cart .margin_container_Cart .product_Block_Cart .name_Column_Block_Cart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  border-bottom: 1px solid #b6b8be;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+.container_Cart .margin_container_Cart .product_Block_Cart .name_Column_Block_Cart .h3_nameCart_Cart {
+  font-family: "proximaNova", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+.container_Cart .margin_container_Cart .product_Block_Cart .additional_opportunities_Section_Cart {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  align-items: flex-start;
+  width: 100%;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+.container_Cart .margin_container_Cart .product_Block_Cart .additional_opportunities_Section_Cart .add_Promo_Code_Cart {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  align-items: flex-start;
+}
+.container_Cart .margin_container_Cart .product_Block_Cart .additional_opportunities_Section_Cart .add_Promo_Code_Cart .btn_add_Promo_Code_Cart {
+  color: #f73f23;
+  background: transparent;
+  font-family: proximaNova, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+.container_Cart .margin_container_Cart .product_Block_Cart .additional_opportunities_Section_Cart .add_Promo_Code_Cart .hidden_Block_Promo_Code_Cart {
+  display: none;
+}
+.container_Cart .margin_container_Cart .product_Block_Cart .additional_opportunities_Section_Cart .add_Promo_Code_Cart .hidden_Block_Promo_Code_Cart .input_add_Promo {
+  border: 1px solid #6c676a;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+.container_Cart .margin_container_Cart .product_Block_Cart .additional_opportunities_Section_Cart .add_Promo_Code_Cart .hidden_Block_Promo_Code_Cart .btn_add_Promo {
+  border: 1px solid #f73f23;
+  color: #f73f23;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 9px 12px;
+}
+.container_Cart .margin_container_Cart .product_Block_Cart .additional_opportunities_Section_Cart .add_Promo_Code_Cart .active {
+  display: flex;
+  align-items: center;
+}
+.container_Cart .margin_container_Cart .product_Block_Cart .additional_opportunities_Section_Cart .add_a_Note_Cart {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  align-items: flex-start;
+}
+.container_Cart .margin_container_Cart .product_Block_Cart .additional_opportunities_Section_Cart .add_a_Note_Cart .btn_add_a_Note_Cart {
+  color: #f73f23;
+  background: transparent;
+  font-family: proximaNova, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+.container_Cart .margin_container_Cart .product_Block_Cart .additional_opportunities_Section_Cart .add_a_Note_Cart .hidden_Block_Note_Cart {
+  display: none;
+}
+.container_Cart .margin_container_Cart .product_Block_Cart .additional_opportunities_Section_Cart .add_a_Note_Cart .hidden_Block_Note_Cart .txtArea_add_Note {
+  border: 1px solid #6c676a;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+.container_Cart .margin_container_Cart .product_Block_Cart .additional_opportunities_Section_Cart .add_a_Note_Cart .hidden_Block_Note_Cart .btn_add_Note {
+  border: 1px solid #f73f23;
+  color: #f73f23;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  width: 5em;
+  padding: 8px;
+}
+.container_Cart .margin_container_Cart .product_Block_Cart .additional_opportunities_Section_Cart .add_a_Note_Cart .active {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+  align-items: flex-end;
+}
+.container_Cart .margin_container_Cart .inform_Block_Cart {
+  flex: 40%;
+}
+.container_Cart .margin_container_Cart .inform_Block_Cart .name_Column_Block_Cart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  border-bottom: 1px solid #b6b8be;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+.container_Cart .margin_container_Cart .inform_Block_Cart .name_Column_Block_Cart .h3_nameCart_Cart {
+  font-family: "proximaNova", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+.container_Cart .margin_container_Cart .inform_Block_Cart .price_delivery_Block_Cart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 1em;
+  width: 100%;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  border-bottom: 1px solid #b6b8be;
+}
+.container_Cart .margin_container_Cart .inform_Block_Cart .price_delivery_Block_Cart .price_Block_Cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.container_Cart .margin_container_Cart .inform_Block_Cart .price_delivery_Block_Cart .choose_delivery_Cart {
+  text-decoration: underline;
+}
+.container_Cart .margin_container_Cart .inform_Block_Cart .total_price_Block_Cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1em;
+  width: 100%;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  font-size: 20px;
+}
+.container_Cart .margin_container_Cart .inform_Block_Cart .total_price_Block_Cart .total_price_Cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.container_Cart .margin_container_Cart .inform_Block_Cart .total_price_Block_Cart .checkout_Block_Cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1em;
+  width: 100%;
+}
+.container_Cart .margin_container_Cart .inform_Block_Cart .total_price_Block_Cart .checkout_Block_Cart .btn_Checkout_Cart {
+  background: #f73f23;
+  color: white;
+  border-radius: 2em;
+  width: 100%;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+.container_Cart .margin_container_Cart .inform_Block_Cart .total_price_Block_Cart .checkout_Block_Cart .secure_Checkout_Cart {
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=Cart.module.css.map */

@@ -1,0 +1,77 @@
+.container_product_Cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 1em;
+  width: 100%;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  border-bottom: 1px solid white;
+}
+.container_product_Cart .infoBlock_product_Cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 1em;
+}
+.container_product_Cart .infoBlock_product_Cart .img_product_Cart {
+  width: 100px;
+}
+.container_product_Cart .infoBlock_product_Cart .name_price_Cart {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+}
+.container_product_Cart .infoBlock_product_Cart .name_price_Cart .price_product_Cart {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.5em;
+}
+.container_product_Cart .infoBlock_product_Cart .name_price_Cart .price_product_Cart .old_price_product_Cart {
+  display: flex;
+  text-decoration: line-through;
+}
+.container_product_Cart .infoBlock_product_Cart .name_price_Cart .price_product_Cart .noActive {
+  display: none;
+}
+.container_product_Cart .infoBlock_product_Cart .name_price_Cart .quantity_product_Cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: inherit;
+  border: 1px solid white;
+}
+.container_product_Cart .infoBlock_product_Cart .name_price_Cart .quantity_product_Cart .quantity_btn_Cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  font-family: Arial, sans-serif;
+  font-size: 1.4rem;
+  color: white;
+  background: inherit;
+}
+.container_product_Cart .infoBlock_product_Cart .name_price_Cart .quantity_product_Cart .quantity_input_Cart {
+  width: 2rem;
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  border: 0;
+  color: white;
+  background: inherit;
+}
+.container_product_Cart .delete_product_Cart {
+  width: 2em;
+  background: inherit;
+  color: white;
+}
+.container_product_Cart .delete_product_Cart img {
+  background: inherit;
+  width: 2em;
+}
+
+/*# sourceMappingURL=ProductBlockCartHeader.module.css.map */
