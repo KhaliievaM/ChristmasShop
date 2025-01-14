@@ -47,19 +47,39 @@ const ProductPage = (props) =>{
             }
         }
     }
-    let minValue = 0;
-    let maxValue = 20;
+    let minValue = 1;                                                                                                   //мінімальна кількість продукту
+    let maxValue = 20;                                                                                                  //максимальна кількість продукту
+    let totalPrice;
+    let incrementedQuantity;
+    let decrementQuantity;
+    let stateId = state.id;
     const [quantity, setQuantity] = useState(minValue);
 
-    const IncrementCounter = () => { if(quantity < maxValue){ setQuantity((prevState) => prevState + 1);  }};
-    const DecreaseItems = () => {   if(quantity > minValue) {setQuantity((prevState) => prevState - 1);   }};
-    let infoSections = state.infoSection.map(d => <InformSection info={d.info} name={d.name}/>)
-    let stateId = state.id;
+    const IncrementCounter = () => {                                                                                    //Increment
+        incrementedQuantity = quantity + 1;                                                                             //додавання одиниці до quantity продукту
+        if (incrementedQuantity <= maxValue) {                                                                          //якщо оновлена кількість менша за максимальну кількість
+            setQuantity(incrementedQuantity);                                                                           //оновлення стану(збільшення кількості)
+        }
+    };
+    const DecrementItems = () => {
+        decrementQuantity = quantity - 1;                                                                               //віднімання одиниці від quantity продукту
+        if (decrementQuantity >= minValue) {                                                                            //якщо оновлена кількість більша за мінімальну кількість
+            setQuantity(decrementQuantity);                                                                             //оновлення стану(зменшення кількості)
+        }
+    };
 
-    let addProductToCart = () =>{
-        localStorage.setItem("product"+stateId, JSON.stringify(state));
-        window.location.reload();
+    let infoSections = state.infoSection.map(d => <InformSection info={d.info} name={d.name}/>)
+
+    let addProductToCart = () =>{                                                                                       //функція додавання продукту в кошик(та в localStorage)
+        if(stateId !== null && stateId !== undefined){                            //перевірка чи 'id'!== null і чи id цього продукту = продукту,який ми додаємо в кошик
+            totalPrice = Number(state.price) * quantity;                                                                //обчислення totalPrice продукту
+            state.totalPrice = String(totalPrice);                                                                      //оновлення totalPrice продукту
+            state.quantity = quantity;                                                                                  //оновлення quantity продукту
+            localStorage.setItem("product"+stateId, JSON.stringify(state));                                //додавання продукту в localStorage (ключ(напр."product5") і значення(об'єкт))
+            window.location.reload();                                                                                   //оновлення сторінки
+        }
     }
+
     return(
         <div className={styles.marginContainer_ProductPage}>
             <div className={styles.container_ProductPage}>
@@ -87,7 +107,7 @@ const ProductPage = (props) =>{
                         <div className={styles.Quantity_Product}>
                             <div className={styles.quantity_Name}>Quantity</div>
                             <div className={styles.quantity_Block}>
-                                <button className={styles.quantity_btn_Block} onClick={DecreaseItems}><GoDash/></button>
+                                <button className={styles.quantity_btn_Block} onClick={DecrementItems}><GoDash/></button>
                                 <input type="text" className={styles.quantity_input_Block} value={quantity}/>
                                 <button className={styles.quantity_btn_Block} onClick={IncrementCounter}><GoPlus/></button>
                             </div>

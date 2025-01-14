@@ -16,8 +16,6 @@ const ProductsInCart = (props) => {
     let productKey = "product"+ prodId;
     let productObj;
     let totalPrice;
-
-
     let totalSumKey = "totalSum";
 
     let productString = localStorage[productKey];                                                                       //продукт(рядок,ще не об'єкт) в localStorage
@@ -63,8 +61,6 @@ const ProductsInCart = (props) => {
             reloadComponent();                                                                                          //оновлення даних в компоненті
         }
     };
-
-
 
     return (
         <div className={styles.products_Section_Cart} key={reloadKey}>

@@ -7,6 +7,10 @@ import ProductBlockCartHeader from "./ProductBlock_InCart/ProductBlockCartHeader
 
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
+    const [reloadTotalSum, setReloadTotalSum] = useState(0);
+    const reloadComponent = (newTotalSum) => {                                                                          // функція оновлення загальної суми
+        setReloadTotalSum(newTotalSum);
+    };
     let totalSumKey = 'totalSum';
     let productsInCart_Header = [];
     let totalSum = 0;
@@ -23,11 +27,12 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 localStorage.setItem(totalSumKey, String(totalSum));
             }
 
-            productsInCart_Header.push(<ProductBlockCartHeader name={prodObj.name} img={prodObj.img} id={prodObj.id} quantity={prodObj.quantity} oldprice={prodObj.oldprice} totalPrice={prodObj.totalPrice} price={prodObj.price}/>)
+            productsInCart_Header.push(<ProductBlockCartHeader onChange={reloadComponent} name={prodObj.name} img={prodObj.img} id={prodObj.id} quantity={prodObj.quantity} oldprice={prodObj.oldprice} totalPrice={prodObj.totalPrice} price={prodObj.price}/>)
         }
 
     }
-    //console.log(localStorage)
+
+
     return (
         // <div className={styles.container_sidebar_Cart}> </div>
         <div className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
@@ -60,8 +65,13 @@ const Cart_Menu_In_Header = () => {
     const toggleSidebar = () => {
         setIsOpen(!isOpen);
     };
-    //let counterOfProducts = localStorage.length - 1;
-    let counterOfProducts = localStorage.length;
+    let counterOfProducts = 0 ;
+    for (let a in localStorage) {
+        if (!localStorage.hasOwnProperty(a)) continue;
+        if (a.startsWith('product')) {
+            counterOfProducts++;
+        }
+    };
 
     return (
         <div className={styles.app}>

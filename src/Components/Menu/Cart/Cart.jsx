@@ -13,7 +13,6 @@ const Cart = () => {
         setReloadTotalSum(newTotalSum);
     };
 
-
     let productsInCart = [];
     let totalSum = 0;                                                                                                   //загальна сума
     for (let a in localStorage) {
@@ -24,7 +23,6 @@ const Cart = () => {
             totalSum += Number(prodObj.totalPrice);                                                                     //розрахунок(додавання) загальної суми
             productsInCart.push(<ProductsInCart onChange={reloadComponent} name={prodObj.name} img={prodObj.img} id={prodObj.id} quantity={prodObj.quantity} oldprice={prodObj.oldprice} totalPrice={prodObj.totalPrice} price={prodObj.price}/>)
         }
-
     }
 
     return(
