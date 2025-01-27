@@ -6,54 +6,61 @@ import {GoDash, GoPlus} from "react-icons/go";
 import {Link, useParams} from "react-router-dom";
 import products from "../../../../Products";
 import InformSection from "./InformSection_ProductPage";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
-let getState = (id)=>{
-    for(let obj in products){
-        for(let inObj of products[obj]){
-            if(inObj.id === id){
-                return inObj;
-            }
-        }
-    }
-}
+// let getState = (id)=>{
+//     for(let obj in products){
+//         for(let inObj of products[obj]){
+//             if(inObj.id === id){
+//                 return inObj;
+//             }
+//         }
+//     }
+// }
 
 const ProductPage = (props) =>{
-    const params = useParams();
-    let state = {};
-    let number;
-    if (params.id !== undefined) {
-        number = parseInt(params.id);
-        state = getState(number);
-    }
+    // const params = useParams();
+    // let state = {};
+    // let number;
+    // if (params.id !== undefined) {
+    //     number = parseInt(params.id);
+    //     state = getState(number);
+    // }
+    // //console.log(props.prod.infoSection)
+    // let id = parseInt(params.id);
 
-
-    let id = parseInt(params.id);
-    let nameParentPage = '';
-    let link = '';
-    for(let obj in products){
-        for(let inObj of products[obj]){
-            if(inObj.id === id){
-                if(obj === 'productsChristmasTrees'){
-                    nameParentPage = 'Christmas Trees';
-                    link = '/christmasTrees';
-                }else if(obj === 'productsUniqueOrnaments'){
-                    nameParentPage = 'Unique Ornaments';
-                    link = '/uniqueOrnaments';
-                }else if(obj === 'productsHolidayLights'){
-                    nameParentPage = 'Holiday Lights';
-                    link = '/holidayLights';
-                }
-            }
-        }
-    }
+    //console.log(id)
+    // let nameParentPage = '';
+    // let link = '';
+    // for(let obj in products){
+    //     for(let inObj of products[obj]){
+    //         if(inObj.id === id){
+    //             if(obj === 'productsChristmasTrees'){
+    //                 nameParentPage = 'Christmas Trees';
+    //                 link = '/christmasTrees';
+    //             }else if(obj === 'productsUniqueOrnaments'){
+    //                 nameParentPage = 'Unique Ornaments';
+    //                 link = '/uniqueOrnaments';
+    //             }else if(obj === 'productsHolidayLights'){
+    //                 nameParentPage = 'Holiday Lights';
+    //                 link = '/holidayLights';
+    //             }
+    //         }
+    //     }
+    // }
     let minValue = 1;                                                                                                   //мінімальна кількість продукту
     let maxValue = 20;                                                                                                  //максимальна кількість продукту
     let totalPrice;
     let incrementedQuantity;
     let decrementQuantity;
-    let stateId = state.id;
+    //let prodId = props.id;
+    let thisProd = props.prod;
     const [quantity, setQuantity] = useState(minValue);
+    const [data, setData] = useState(props.data);
+
+    useEffect( () => {
+        setData(props.data);
+    }, [props.data]);
 
     const IncrementCounter = () => {                                                                                    //Increment
         incrementedQuantity = quantity + 1;                                                                             //додавання одиниці до quantity продукту
@@ -68,58 +75,42 @@ const ProductPage = (props) =>{
         }
     };
 
-    let infoSections = state.infoSection.map(d => <InformSection info={d.info} name={d.name}/>)
+    let infoSections = thisProd.infoSection.map(d => <InformSection info={d.info} name={d.name}/>)
 
     let addProductToCart = () =>{                                                                                       //функція додавання продукту в кошик(та в localStorage)
-        if(stateId !== null && stateId !== undefined){                            //перевірка чи 'id'!== null і чи id цього продукту = продукту,який ми додаємо в кошик
-            totalPrice = Number(state.price) * quantity;                                                                //обчислення totalPrice продукту
-            state.totalPrice = String(totalPrice);                                                                      //оновлення totalPrice продукту
-            state.quantity = quantity;                                                                                  //оновлення quantity продукту
-            localStorage.setItem("product"+stateId, JSON.stringify(state));                                //додавання продукту в localStorage (ключ(напр."product5") і значення(об'єкт))
+        if(thisProd.id !== null && thisProd.id !== undefined){                            //перевірка чи 'id'!== null і чи id цього продукту = продукту,який ми додаємо в кошик
+            totalPrice = Number(thisProd.price) * quantity;                                                                //обчислення totalPrice продукту
+            thisProd.totalPrice = String(totalPrice);                                                                      //оновлення totalPrice продукту
+            thisProd.quantity = quantity;                                                                                  //оновлення quantity продукту
+            localStorage.setItem("product"+thisProd.id, JSON.stringify(thisProd));                                //додавання продукту в localStorage (ключ(напр."product5") і значення(об'єкт))
             window.location.reload();                                                                                   //оновлення сторінки
         }
     }
 
     return(
-        <div className={styles.marginContainer_ProductPage}>
-            <div className={styles.container_ProductPage}>
-                <div className={styles.navBlock_ProductPage}>
-                    <div className={styles.wayFrom_ProductPage}>
-                        <Link to="/" className={styles.path_links}>Home</Link> /
-                        <Link to={link} className={styles.path_links}> {nameParentPage}</Link> /
-                        <div className={styles.path_name}> {state.name}</div>
-                    </div>
-                    <div className={styles.turnPages_ProductPage}>
-                        <button className={styles.btn_navBlock}> <GoChevronLeft /> Prev </button>
-                        <div>|</div>
-                        <button className={styles.btn_navBlock}> Next <GoChevronRight /> </button>
+        <div className={styles.product_Card} >
+            <div className={styles.imgBlock_Product}>
+                <img src={thisProd.img} alt="Product image"  fetchPriority="high"/>                                     {/*зображення продукту*/}
+                <div>{thisProd.about}</div>                                                                             {/*про товар*/}
+            </div>
+            <div className={styles.infoBlock_Product}>
+                <div className={styles.name_Product}>{thisProd.name}</div>                                              {/*назва товару*/}
+                <div className={styles.SKU_Product}>SKU: {thisProd.SKU}</div>                                           {/*SKU товару*/}
+                <div className={styles.price_Product}>${thisProd.price}</div>                                           {/*price товару*/}
+                <div className={styles.Quantity_Product}>
+                    <div className={styles.quantity_Name}>Quantity</div>
+                    <div className={styles.quantity_Block}>
+                        <button className={styles.quantity_btn_Block} onClick={DecrementItems}><GoDash/></button>       {/*зменшення кількості товару*/}
+                        <input type="text" className={styles.quantity_input_Block} value={quantity}/>                   {/*кількість товару*/}
+                        <button className={styles.quantity_btn_Block} onClick={IncrementCounter}><GoPlus/></button>     {/*збільшення кількості товару*/}
                     </div>
                 </div>
-                <div className={styles.product_Card}>
-                    <div className={styles.imgBlock_Product}>
-                        <img src={state.img} alt=""  fetchPriority="high"/>
-                        <div>{state.about}</div>
-                    </div>
-                    <div className={styles.infoBlock_Product}>
-                        <div className={styles.name_Product}>{state.name}</div>
-                        <div className={styles.SKU_Product}>SKU: {state.SKU}</div>
-                        <div className={styles.price_Product}>${state.price}</div>
-                        <div className={styles.Quantity_Product}>
-                            <div className={styles.quantity_Name}>Quantity</div>
-                            <div className={styles.quantity_Block}>
-                                <button className={styles.quantity_btn_Block} onClick={DecrementItems}><GoDash/></button>
-                                <input type="text" className={styles.quantity_input_Block} value={quantity}/>
-                                <button className={styles.quantity_btn_Block} onClick={IncrementCounter}><GoPlus/></button>
-                            </div>
-                        </div>
-                        <div className={styles.button_Product}>
-                            <button className={styles.button_Add_to_Cart_Product} onClick={()=>addProductToCart()}>Add to Cart</button>
-                            <button className={styles.button_Buy_Now_Product}>Buy Now</button>
-                        </div>
-                        <div className={styles.informSectionsBlock_Product}>
+                <div className={styles.button_Product}>
+                    <button className={styles.button_Add_to_Cart_Product} onClick={()=>addProductToCart()}>Add to Cart</button>{/*додати в кошик*/}
+                    <button className={styles.button_Buy_Now_Product}>Buy Now</button>                                  {/*купити зараз*/}
+                </div>
+                <div className={styles.informSectionsBlock_Product}>                                                    {/*інформація про товар*/}
                             {infoSections}
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

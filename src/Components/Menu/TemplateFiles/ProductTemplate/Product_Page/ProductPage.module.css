@@ -6,62 +6,7 @@
   font-family: "didotLTPro";
   src: url("../../../../../Multimedia/DidotLTPro-Italic.ttf");
 }
-.marginContainer_ProductPage {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 4em auto;
-}
-.marginContainer_ProductPage .container_ProductPage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: proximaNova, sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  width: 50%;
-}
-.marginContainer_ProductPage .container_ProductPage .navBlock_ProductPage {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-.marginContainer_ProductPage .container_ProductPage .navBlock_ProductPage .wayFrom_ProductPage {
-  display: inline-flex;
-  font-family: proximaNova, sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  column-gap: 0.5em;
-  color: #999CA6;
-}
-.marginContainer_ProductPage .container_ProductPage .navBlock_ProductPage .wayFrom_ProductPage .path_links {
-  color: #a7a5a9;
-}
-.marginContainer_ProductPage .container_ProductPage .navBlock_ProductPage .wayFrom_ProductPage .path_name {
-  color: rgba(153, 156, 166, 0.67);
-}
-.marginContainer_ProductPage .container_ProductPage .navBlock_ProductPage .turnPages_ProductPage {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  color: #a7a5a9;
-  margin: 1em;
-}
-.marginContainer_ProductPage .container_ProductPage .navBlock_ProductPage .turnPages_ProductPage .btn_navBlock {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  font-size: 16px;
-  padding: 5px;
-  color: #a7a5a9;
-}
-.marginContainer_ProductPage .container_ProductPage .product_Card {
+.product_Card {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -70,7 +15,7 @@
   color: #575757;
   width: 100%;
 }
-.marginContainer_ProductPage .container_ProductPage .product_Card .imgBlock_Product {
+.product_Card .imgBlock_Product {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -84,7 +29,7 @@
   font-weight: 600;
   color: #999CA6;
 }
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product {
+.product_Card .infoBlock_Product {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -92,7 +37,7 @@
   row-gap: 0.6em;
   width: 40%;
 }
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .name_Product {
+.product_Card .infoBlock_Product .name_Product {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,18 +46,18 @@
   font-weight: 400;
   font-family: "didotLTPro", sans-serif;
 }
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .SKU_Product {
+.product_Card .infoBlock_Product .SKU_Product {
   font-size: 15px;
   font-weight: 600;
   font-family: "proximaNova", sans-serif;
 }
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .price_Product {
+.product_Card .infoBlock_Product .price_Product {
   font-size: 20px;
   font-weight: 600;
   font-family: "proximaNova", sans-serif;
   padding: 20px 0 0 0;
 }
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .Quantity_Product {
+.product_Card .infoBlock_Product .Quantity_Product {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -121,20 +66,20 @@
   row-gap: 1em;
   width: 50%;
 }
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .Quantity_Product .quantity_Name {
+.product_Card .infoBlock_Product .Quantity_Product .quantity_Name {
   font-size: 14px;
   color: #f73f23;
   font-weight: 600;
   font-family: "proximaNova", sans-serif;
 }
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .Quantity_Product .quantity_Block {
+.product_Card .infoBlock_Product .Quantity_Product .quantity_Block {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16), 0 2px 3px rgba(0, 0, 0, 0.23);
 }
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .Quantity_Product .quantity_Block .quantity_btn_Block {
+.product_Card .infoBlock_Product .Quantity_Product .quantity_Block .quantity_btn_Block {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,7 +88,7 @@
   font-size: 1.9rem;
   color: #575757;
 }
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .Quantity_Product .quantity_Block .quantity_input_Block {
+.product_Card .infoBlock_Product .Quantity_Product .quantity_Block .quantity_input_Block {
   width: 4rem;
   padding: 0.7rem;
   font-size: 1rem;
@@ -151,13 +96,13 @@
   text-align: center;
   border: 0;
 }
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .button_Product {
+.product_Card .infoBlock_Product .button_Product {
   display: flex;
   width: 100%;
   flex-direction: column;
   row-gap: 1em;
 }
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .button_Product .button_Add_to_Cart_Product {
+.product_Card .infoBlock_Product .button_Product .button_Add_to_Cart_Product {
   padding: 10px;
   border-radius: 1em;
   width: 100%;
@@ -167,11 +112,11 @@
   font-weight: 800;
   background-color: #f73f23;
 }
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .button_Product .button_Add_to_Cart_Product:hover {
+.product_Card .infoBlock_Product .button_Product .button_Add_to_Cart_Product:hover {
   background-color: rgba(247, 63, 35, 0.72);
   transition: 0.3s ease;
 }
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .button_Product .button_Buy_Now_Product {
+.product_Card .infoBlock_Product .button_Product .button_Buy_Now_Product {
   background-color: #232429;
   width: 100%;
   border-radius: 1em;
@@ -181,11 +126,11 @@
   padding: 10px;
   color: white;
 }
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .button_Product .button_Buy_Now_Product:hover {
+.product_Card .infoBlock_Product .button_Product .button_Buy_Now_Product:hover {
   background-color: rgba(35, 36, 41, 0.74);
   transition: 0.3s ease;
 }
-.marginContainer_ProductPage .container_ProductPage .product_Card .infoBlock_Product .informSectionsBlock_Product {
+.product_Card .infoBlock_Product .informSectionsBlock_Product {
   display: flex;
   justify-content: center;
   flex-direction: column;
