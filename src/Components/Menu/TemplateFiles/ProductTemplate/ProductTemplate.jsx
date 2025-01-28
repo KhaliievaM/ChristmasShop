@@ -5,30 +5,30 @@ import { Link } from 'react-router-dom';
 
 const ProductTemplate = (props) => {
     let isOldPrice;
-    if(props.oldprice === ''){                                                                   //перевірка чи існує стара ціна
+    if(props.oldprice === ''){                                                                                          //перевірка чи існує стара ціна
         isOldPrice= false;
     }else{
         isOldPrice= true;
     }
 
-    const [isProductQuickView,setProductQuickView] = useState(false);                    //стан(відкритий\закритий) сторінки QuickView
-    let prodId = props.id;                                                                        //id продукту
-    let arrayOfProducts = props.productsArray;                                                    //масив продуктів(масив ялинок,прикрас,освітлення,тощо)
-    let shopAllProducts = props.cloneOfProducts;                                                  //весь масив продуктів(об'єктів) shopAll
-    let actualArray = [];                                                                          //актуальний масив продуктів
+    const [isProductQuickView,setProductQuickView] = useState(false);                                           //стан(відкритий\закритий) сторінки QuickView
+    let prodId = props.id;                                                                                              //id продукту
+    let arrayOfProducts = props.productsArray;                                                                          //масив продуктів(масив ялинок,прикрас,освітлення,тощо)
+    let shopAllProducts = props.cloneOfProducts;                                                                        //весь масив продуктів(об'єктів) shopAll
+    let actualArray = [];                                                                                               //актуальний масив продуктів
     let isShopAll = false;
-    if(shopAllProducts !== undefined){                                                             //перевірка чи масив є масивом об'єктів shopAll
-        actualArray = shopAllProducts.slice();                                                     //копіювання елементів масиву shopAll в новий масив
+    if(shopAllProducts !== undefined){                                                                                  //перевірка чи масив є масивом об'єктів shopAll
+        actualArray = shopAllProducts.slice();                                                                          //копіювання елементів масиву shopAll в новий масив
         isShopAll = true;
     }else{
-        actualArray = arrayOfProducts;                                                              //копіювання елементів масиву в новий масив
+        actualArray = arrayOfProducts;                                                                                  //копіювання елементів масиву в новий масив
     }
-    let addProductToCart = () =>{                                                                 //додавання продуктів в кошик
-        for(let prod of actualArray){                                                         //перебір елементів масиву
-            for(let item in prod){                                                            //перебір елементів об'єкта
-                if (item === 'id' && prod[item] === prodId) {                                 //перевірка чи елемент = id і чи цей id = id продукту,на кнопку якого було натиснуто
-                    localStorage.setItem("product" + prodId, JSON.stringify(prod));           //додавання продукту в  localStorage
-                    window.location.reload();                                                 //оновлення сторінки
+    let addProductToCart = () =>{                                                                                       //додавання продуктів в кошик
+        for(let prod of actualArray){                                                                                   //перебір елементів масиву
+            for(let item in prod){                                                                                      //перебір елементів об'єкта
+                if (item === 'id' && prod[item] === prodId) {                                      //перевірка чи елемент = id і чи цей id = id продукту,на кнопку якого було натиснуто
+                    localStorage.setItem("product" + prodId, JSON.stringify(prod));                                     //додавання продукту в  localStorage
+                    window.location.reload();                                                                           //оновлення сторінки
                 }
             }
         }
@@ -41,7 +41,7 @@ const ProductTemplate = (props) => {
             <div className={styles.img_quickView_ProductCard}>
                 <Link to='/productPageSwitcher' state= {{dataToPass}}>
                     <img src={props.img} alt="Product image" />
-                </Link>   {/*!!!!!!!!*/} {/*зображення продукту\перехід на сторінку продукту*/}
+                </Link>                                                                                                  {/*зображення продукту\перехід на сторінку продукту*/}
                 <div  className={styles.quickView_ProductCard}>
                     <button  className={styles.quickView_ProductCard_text} onClick={()=>{setProductQuickView(true)}}>Quick View</button>   {/*швидкий огляд*/}
                 </div>

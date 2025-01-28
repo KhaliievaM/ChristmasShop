@@ -9,13 +9,13 @@ import {useState} from "react";
 
 
 const ProductPageSwitcher = ()=>{
-    const location = useLocation();
-    const { state } = location;
-    let prodId = state.dataToPass.id;
-    let productsArray = state.dataToPass.productsArray;
-    let isShopAll = state.dataToPass.isShopAll;
-    let prod;
-    for(let obj in products){
+    const location = useLocation();                                                                                     //витягування даних переданих
+    const { state } = location;                                                                                         // з батьківської компоненти
+    let prodId = state.dataToPass.id;                                                                                   //id продукту
+    let productsArray = state.dataToPass.productsArray;                                                                 //масив, в якому знаходиться продукт
+    let isShopAll = state.dataToPass.isShopAll;                                                                         //булеве значення(чи масив ShopAll, чи ні)
+    let prod;                                                                                                           //поточний продукт(об'єкт)
+    for(let obj in products){                                                                                           //пошук продукту, за заданим id
         for(let inObj of products[obj]){
             if(inObj.id === prodId){
                 if (prod === undefined) {
@@ -24,25 +24,25 @@ const ProductPageSwitcher = ()=>{
             }
         }
     }
-    const [productToSend, setProductToSend] = useState(prod);
-    let nameParentPage = '';
-    let link = '';
-    let isProductsChristmasTrees = false;
+    const [productToSend, setProductToSend] = useState(prod);                                                           //State для оновлення продукту,для відправки дочірній компоненті
+    let nameParentPage = '';                                                                                            //назва батьківської сторінки(категорії товарів)
+    let link = '';                                                                                                      //посилання на сторінку категорії товарів
+    let isProductsChristmasTrees = false;                                                                               //булеве значення для перевірки категорії товарів
     let isProductsUniqueOrnaments = false;
     let isProductsHolidayLights = false;
-    let currentProductArrayName = '';
-    if(isShopAll){
-        nameParentPage = 'Shop All';
-        link = '/shopAll';
-    }else{
-        for(let obj in products){
-            for(let inObj of products[obj]){
-                if(inObj.id === prodId){
-                    if(obj === 'productsChristmasTrees'){
-                        isProductsChristmasTrees = true;
-                        currentProductArrayName = 'productsChristmasTrees';
-                        nameParentPage = 'Christmas Trees';
-                        link = '/christmasTrees';
+    let currentProductArrayName = '';                                                                                   //назва категорії товарів(ключ в об'єкті products)
+    if(isShopAll){                                                                                                      //якщо масив продуктів ShopAll, то...
+        nameParentPage = 'Shop All';                                                                                    //'Shop All' - назва батьківської сторінки(категорії товарів)
+        link = '/shopAll';                                                                                              //адреса для переходу на сторінку 'Shop All'
+    }else{                                                                                                              //масив продуктів НЕ ShopAll...
+        for(let obj in products){                                                                                       //перебір масивів продуктів в products
+            for(let inObj of products[obj]){                                                                            //перебір продуктів в масиві
+                if(inObj.id === prodId){                                                                                //перевірка,чи id продукту = id обраного продукту
+                    if(obj === 'productsChristmasTrees'){                                                               //якщо назва продукту = 'productsChristmasTrees',тощо
+                        isProductsChristmasTrees = true;                                                                //булева змінна для цієї категорії = true
+                        currentProductArrayName = 'productsChristmasTrees';                                             //назва категорії товарів = 'productsChristmasTrees',тощо
+                        nameParentPage = 'Christmas Trees';                                                             //назва батьківської сторінки(категорії товарів)
+                        link = '/christmasTrees';                                                                       //адреса для переходу на сторінку категорії товарів
                     }else if(obj === 'productsUniqueOrnaments'){
                         isProductsUniqueOrnaments = true;
                         currentProductArrayName = 'productsUniqueOrnaments';
@@ -59,70 +59,43 @@ const ProductPageSwitcher = ()=>{
         }
     }
 
-    const nextProductPage=()=>{
-        // if(isShopAll){
-        //     for(let i = 0; i < productsArray.length; i++){
-        //         if(productsArray[i].id === productToSend.id){
-        //             if(i+1 < productsArray.length){
-        //                 let nextProduct = productsArray[i+1];
-        //                 prod = nextProduct;
-        //                 prodId = nextProduct.id;
-        //                 setProductToSend(prod);
-        //                 break;
-        //             }
-        //         }
-        //     }
-        // }else{
-        //     let currentProductArray = products[currentProductArrayName];
-        //     for(let i = 0; i < currentProductArray.length; i++){
-        //         if(currentProductArray[i].id === productToSend.id){
-        //             if(i+1 < currentProductArray.length){
-        //                 let nextProduct = currentProductArray[i+1];
-        //                 prod = nextProduct;
-        //                 prodId = nextProduct.id;
-        //                 setProductToSend(prod);
-        //                 break;
-        //             }
-        //         }
-        //     }
-        // }
+    const nextProductPage=()=>{                                                                                         //перехід на сторінку наступного товару
         let currentProductArray;
-        if(isShopAll){
-            currentProductArray = productsArray;
+        if(isShopAll){                                                                                                  //якщо масив продуктів ShopAll, то...
+            currentProductArray = productsArray;                                                                //новий масив=масиву,який прийшов від батьк. комп.(в даному вип. ShopAll)
         }else{
-            currentProductArray = products[currentProductArrayName];
+            currentProductArray = products[currentProductArrayName];                                                   //новий масив=масиву,з products,під іменем currentProductArrayName
         }
-        for(let i = 0; i < currentProductArray.length; i++){
-            if(currentProductArray[i].id === productToSend.id){
-                if(i+1 < currentProductArray.length){
-                    let nextProduct = currentProductArray[i+1];
-                    prod = nextProduct;
-                    prodId = nextProduct.id;
-                    setProductToSend(prod);
-                    break;
+        for(let i = 0; i < currentProductArray.length; i++){                                                            //цикл по масиву currentProductArray
+            if(currentProductArray[i].id === productToSend.id){                                                         //пошук продукту по id,який зараз відмальовується
+                if(i+1 < currentProductArray.length){                                                                   //якщо наступний продукт не останній в масиві
+                    let nextProduct = currentProductArray[i+1];                                                         //nextProduct = наступному продукту, відносно поточного
+                    prod = nextProduct;                                                                                 //поточний продукт = наступному
+                    prodId = nextProduct.id;                                                                            //поточний id = id наступного продукту
+                    setProductToSend(prod);                                                              //(оновлення поточного продукту)відправлення нового продукту дочірньому елементу
+                    break;                                                                                              //вихід з циклу(завершення змін)
                 }
             }
         }
     }
-    const previousProductPage=()=>{
+    const previousProductPage=()=>{                                                                                     //перехід на сторінку попереднього товару
         let currentProductArray;
-        if(isShopAll){
-            currentProductArray = productsArray;
+        if(isShopAll){                                                                                                  //якщо масив продуктів ShopAll, то...
+            currentProductArray = productsArray;                                                                //новий масив=масиву,який прийшов від батьк. комп.(в даному вип. ShopAll)
         }else{
-            currentProductArray = products[currentProductArrayName];
+            currentProductArray = products[currentProductArrayName];                                                   //новий масив=масиву,з products,під іменем currentProductArrayName
         }
-        for(let i = 0; i < currentProductArray.length; i++){
-            if(currentProductArray[i].id === productToSend.id){
-                if(i-1 >= 0){
-                    let previousProduct = currentProductArray[i-1];
-                    prod = previousProduct;
-                    prodId = previousProduct.id;
-                    setProductToSend(prod);
-                    break;
+        for(let i = 0; i < currentProductArray.length; i++){                                                            //цикл по масиву currentProductArray
+            if(currentProductArray[i].id === productToSend.id){                                                         //пошук продукту по id,який зараз відмальовується
+                if(i-1 >= 0){                                                                                           //якщо поточний продукт не перший в масиві
+                    let previousProduct = currentProductArray[i-1];                                                     //previousProduct = попередньому продукту, відносно поточного
+                    prod = previousProduct;                                                                             //поточний продукт = попередньому
+                    prodId = previousProduct.id;                                                                        //поточний id = id попереднього продукту
+                    setProductToSend(prod);                                                             //(оновлення поточного продукту)відправлення нового продукту дочірньому елементу
+                    break;                                                                                              //вихід з циклу(завершення змін)
                 }
             }
         }
-
     }
 
     return(
@@ -141,7 +114,7 @@ const ProductPageSwitcher = ()=>{
                     </div>
                 </div>
                 <div className={styles.productOnThePage}>
-                    <ProductPage prod={productToSend}/>
+                    <ProductPage prod={productToSend}/>                                                                 {/*сторінка продукту / передача потрібного об'єкту продукту*/}
                 </div>
             </div>
         </div>

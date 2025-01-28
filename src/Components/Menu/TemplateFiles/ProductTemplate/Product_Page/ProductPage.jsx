@@ -1,66 +1,22 @@
 import React from "react";
 import styles from "./ProductPage.module.css";
-import { GoChevronLeft } from "react-icons/go";
-import { GoChevronRight } from "react-icons/go";
 import {GoDash, GoPlus} from "react-icons/go";
-import {Link, useParams} from "react-router-dom";
-import products from "../../../../Products";
 import InformSection from "./InformSection_ProductPage";
 import {useState, useEffect} from "react";
 
-// let getState = (id)=>{
-//     for(let obj in products){
-//         for(let inObj of products[obj]){
-//             if(inObj.id === id){
-//                 return inObj;
-//             }
-//         }
-//     }
-// }
-
 const ProductPage = (props) =>{
-    // const params = useParams();
-    // let state = {};
-    // let number;
-    // if (params.id !== undefined) {
-    //     number = parseInt(params.id);
-    //     state = getState(number);
-    // }
-    // //console.log(props.prod.infoSection)
-    // let id = parseInt(params.id);
-
-    //console.log(id)
-    // let nameParentPage = '';
-    // let link = '';
-    // for(let obj in products){
-    //     for(let inObj of products[obj]){
-    //         if(inObj.id === id){
-    //             if(obj === 'productsChristmasTrees'){
-    //                 nameParentPage = 'Christmas Trees';
-    //                 link = '/christmasTrees';
-    //             }else if(obj === 'productsUniqueOrnaments'){
-    //                 nameParentPage = 'Unique Ornaments';
-    //                 link = '/uniqueOrnaments';
-    //             }else if(obj === 'productsHolidayLights'){
-    //                 nameParentPage = 'Holiday Lights';
-    //                 link = '/holidayLights';
-    //             }
-    //         }
-    //     }
-    // }
     let minValue = 1;                                                                                                   //мінімальна кількість продукту
     let maxValue = 20;                                                                                                  //максимальна кількість продукту
     let totalPrice;
     let incrementedQuantity;
     let decrementQuantity;
-    //let prodId = props.id;
     let thisProd = props.prod;
     const [quantity, setQuantity] = useState(minValue);
-    const [data, setData] = useState(props.data);
-
-    useEffect( () => {
-        setData(props.data);
-    }, [props.data]);
+    // const [data, setData] = useState(props.data);
+    //
+    // useEffect( () => {
+    //     setData(props.data);
+    // }, [props.data]);
 
     const IncrementCounter = () => {                                                                                    //Increment
         incrementedQuantity = quantity + 1;                                                                             //додавання одиниці до quantity продукту
@@ -78,11 +34,11 @@ const ProductPage = (props) =>{
     let infoSections = thisProd.infoSection.map(d => <InformSection info={d.info} name={d.name}/>)
 
     let addProductToCart = () =>{                                                                                       //функція додавання продукту в кошик(та в localStorage)
-        if(thisProd.id !== null && thisProd.id !== undefined){                            //перевірка чи 'id'!== null і чи id цього продукту = продукту,який ми додаємо в кошик
-            totalPrice = Number(thisProd.price) * quantity;                                                                //обчислення totalPrice продукту
-            thisProd.totalPrice = String(totalPrice);                                                                      //оновлення totalPrice продукту
-            thisProd.quantity = quantity;                                                                                  //оновлення quantity продукту
-            localStorage.setItem("product"+thisProd.id, JSON.stringify(thisProd));                                //додавання продукту в localStorage (ключ(напр."product5") і значення(об'єкт))
+        if(thisProd.id !== null && thisProd.id !== undefined){                                      //перевірка чи 'id'!== null і чи id цього продукту = продукту,який ми додаємо в кошик
+            totalPrice = Number(thisProd.price) * quantity;                                                             //обчислення totalPrice продукту
+            thisProd.totalPrice = String(totalPrice);                                                                   //оновлення totalPrice продукту
+            thisProd.quantity = quantity;                                                                               //оновлення quantity продукту
+            localStorage.setItem("product"+thisProd.id, JSON.stringify(thisProd));                         //додавання продукту в localStorage (ключ(напр."product5") і значення(об'єкт))
             window.location.reload();                                                                                   //оновлення сторінки
         }
     }
