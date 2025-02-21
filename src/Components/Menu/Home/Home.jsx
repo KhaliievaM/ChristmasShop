@@ -1,13 +1,12 @@
 import React from 'react';
 import Contacts from "../Contacts/Contacts";
-import {forwardRef} from "react";
 import styles from './Home.module.css';
 import zigzag from "../../../Multimedia/12997-2001.png";
 import {Link} from "react-router-dom";
 
 
 const Home = (props) => {
-    const contacts = props.contacts;
+
     return (
         <div className={styles.wrapper}>
             <main className={styles.containerOfHomePage}>
@@ -41,7 +40,6 @@ const Home = (props) => {
                                 <a href="src/Components/Menu/Home/Home">Christmas Trees</a>
                                 <hr/>
                                 <Link to="/christmasTrees" className={styles.linkShop}>Shop Collection</Link>
-                                {/*<button>Shop Collection</button>*/}
 
                             </div>
 
@@ -54,7 +52,6 @@ const Home = (props) => {
                                 <a href="src/Components/Menu/Home/Home">Unique Ornaments</a>
                                 <hr/>
                                 <Link to="/uniqueOrnaments" className={styles.linkShop}>Shop Collection</Link>
-                                {/*<button>Shop Collection</button>*/}
 
                             </div>
 
@@ -67,7 +64,6 @@ const Home = (props) => {
                                 <a href="src/Components/Menu/Home/Home">Holiday Lights</a>
                                 <hr/>
                                 <Link to="/holidayLights" className={styles.linkShop}>Shop Collection</Link>
-                                {/*<button>Shop Collection</button>*/}
 
                             </div>
                         </div>
@@ -93,21 +89,10 @@ const Home = (props) => {
                         </div>
                         <Link to="/shopAll" className={styles.linkShopNow}>Shop Now</Link>
                     </div>
-
                 </section>
-                <Contacts contacts={contacts}/>
+                <Contacts/>
             </main>
         </div>
     )
 }
-export default forwardRef(Home)
-// const [count, setCount] = useState(0);
-//
-// function handleClick() {
-//     setCount(count + 1);
-// }
-// return (
-//     <button onClick={handleClick}>
-//         Clicked {count} times
-//     </button>
-// );
+export default Home

@@ -5,7 +5,7 @@ import {GoDash, GoPlus} from "react-icons/go";
 import {useState} from "react";
 
 
-const QuickView = (props,{isOpen, onClose}) => {
+const QuickView = (props) => {                                                                                          //const QuickView = (props,{isOpen, onClose})
     let doesOldPriceExist;
     if(props.oldprice === ''){                                                                                          //перевірка чи існує стара ціна
         doesOldPriceExist= false;
@@ -36,21 +36,21 @@ const QuickView = (props,{isOpen, onClose}) => {
     };
 
     let addProductToCart = () =>{                                                                                       //функція додавання продукту в кошик(та в localStorage)
-        if(props.shopAllProducts !== undefined){                                                    //перевірка чи масив продуктів shopAll(загальна сторінка продуктів) не є undefined
-            for(let prod of props.shopAllProducts){                                                             //перебір об'єктів (shopAll),пошук продукту, який ми хочемо додати в кошик
+        if(props.shopAllProducts !== undefined){                                                   //перевірка чи масив продуктів shopAll(загальна сторінка продуктів) не є undefined
+            for(let prod of props.shopAllProducts){                                                        //перебір об'єктів (shopAll),пошук продукту, який ми хочемо додати в кошик
                 let thisProductId = prod.id;                                                                            //id продукту
-                if(thisProductId !== null && thisProductId === props.id){                            //перевірка чи 'id'!== null і чи id цього продукту = продукту,який ми додаємо в кошик
+                if(thisProductId !== null && thisProductId === props.id){                        //перевірка чи 'id'!== null і чи id цього продукту = продукту,який ми додаємо в кошик
                     totalPrice = Number(props.price) * quantity;                                                        //обчислення totalPrice продукту
                     prod.totalPrice = String(totalPrice);                                                               //оновлення totalPrice продукту
                     prod.quantity = quantity;                                                                           //оновлення quantity продукту
-                    localStorage.setItem(productKey, JSON.stringify(prod));                                 //додавання продукту в localStorage (ключ(напр."product5") і значення(об'єкт))
+                    localStorage.setItem(productKey, JSON.stringify(prod));                             //додавання продукту в localStorage (ключ(напр."product5") і значення(об'єкт))
                         window.location.reload();                                                                       //оновлення сторінки
                 }
             }
         }else {
-            for (let thisProd of props.arrayOfProducts) {         //перебір об'єктів(продуктів) в масиві сторінки(сторінка з ялинками, тощо) пошук продукту, який ми хочемо додати в кошик
+            for (let thisProd of props.arrayOfProducts) {       //перебір об'єктів(продуктів) в масиві сторінки(сторінка з ялинками, тощо) пошук продукту, який ми хочемо додати в кошик
                 let thisProductId = thisProd.id;                                                                        //id продукту
-                if(thisProductId !== null && thisProductId === props.id){                            //перевірка чи 'id'!== null і чи id цього продукту = продукту,який ми додаємо в кошик
+                if(thisProductId !== null && thisProductId === props.id){                          //перевірка чи 'id'!== null і чи id цього продукту = продукту,який ми додаємо в кошик
                     totalPrice = Number(props.price) * quantity;                                                        //обчислення totalPrice продукту
                     thisProd.totalPrice = String(totalPrice);                                                           //оновлення totalPrice продукту
                     thisProd.quantity = quantity;                                                                       //оновлення quantity продукту

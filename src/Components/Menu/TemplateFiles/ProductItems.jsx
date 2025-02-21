@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "./ProductItems.module.css";
 import {Link} from "react-router-dom";
+import DropdownMenu from "./DropdownMenu/DropdownMenu";
 import ProductTemplate from "./ProductTemplate/ProductTemplate";
 
 class ProductItems extends React.Component {                                       //класовий компонент
@@ -8,38 +9,63 @@ class ProductItems extends React.Component {                                    
     pageName;
     bgImg;
     productsArray;
+    sortingType = 'Recommended';
 
     constructor(props) {
         super(props);
-        this.pageName = props.pageName;                                             //назва цієї сторінки
-        this.bgImg = props.bgImg;                                                   //фон для цієї сторінки
-        this.productsArray = props.productsArray;                                   //масив, або об'єкт продуктів для сторінки
+        this.pageName = props.pageName;                                                                                 //назва цієї сторінки
+        this.bgImg = props.bgImg;                                                                                       //фон для цієї сторінки
+        this.productsArray = props.productsArray;                                                                       //масив, або об'єкт продуктів для сторінки
+        this.state = {typeOfSorting: 'Recommended'};                                                                    // state для сортування замість useState
     }
+    changeSort = (type) => {                                                                                // callback для оновлення типу сортування/взаємодія з дочірнім компонентом
+        this.setState({ typeOfSorting: type });                                                                    //зміна типу сортування на обраний
+        this.sortingType = type;                                                                                        //зміна НАЗВИ типу сортування
+    };
 
     render() {
         let productsContainer = "";
-        let cloneOfProducts = [];
+        let cloneOfProducts=[];
         let counterElements;
-        if (Array.isArray(this.productsArray)) {                                     //перевірка, чи це масив(сторінка з ялинками, прикрасами, тощо)
-            counterElements = this.productsArray.length;                             //довжина масиву
-            productsContainer = this.productsArray.map(p =>                          //викликає функцію для кожного елемента масиву, повертає масив результатів із заданами значеннями
-                <ProductTemplate name={p.name} img={p.img} oldprice={p.oldprice} price={p.price} totalPrice={p.totalPrice} about={p.about}
-                                 info={p.info} SKU={p.SKU} quantity={p.quantity} id={p.id} productsArray={this.productsArray}/>);
 
-        } else {                                                                     //якщо це не масив, то це об'єкт масивів(всі сторінки продуктів - Shop All)
-            let newArrayforShopAll = [];
-            for (let i in this.productsArray) {                                      //перебирає елементи(масиви) об'єкта
-                newArrayforShopAll[i] = this.productsArray[i];                       //копіювання масивів об'єкта в новий масив newArrayforShopAll
-                for (let key in newArrayforShopAll[i]) {                             //перебирає елементи масиву newArrayforShopAll
-                    cloneOfProducts.push(newArrayforShopAll[i][key]);                //додає елементи(об'єкти) в новостворений масив
-                }
-                counterElements = cloneOfProducts.length;                            //довжина об'єкта
-                productsContainer = cloneOfProducts.map(p =>                         //викликає функцію для кожного елемента масиву, повертає масив результатів із заданами значеннями
-                    <ProductTemplate name={p.name} img={p.img} oldprice={p.oldprice} price={p.price} totalPrice={p.totalPrice} about={p.about}
-                                     info={p.info} SKU={p.SKU} quantity={p.quantity} id={p.id} cloneOfProducts={cloneOfProducts}/>);
+        let productsArrayWithSorting;                                                                                   //оновлений(сортований) масив продуктів
+        let sortFunction = (arr) =>{                                                                                    //сортування продуктів
+            if(this.sortingType === 'Recommended'){
+                productsArrayWithSorting = arr;
+            }else if(this.sortingType === "Newest"){
+                productsArrayWithSorting = arr;
+            }else if(this.sortingType === "Price (low to high)"){
+                productsArrayWithSorting = arr.sort((a, b) => a.price - b.price);
+            }else if(this.sortingType === "Price (high to low)"){
+                productsArrayWithSorting = arr.sort((a, b) => b.price - a.price);
+            }else if(this.sortingType === "Name A-Z"){
+                productsArrayWithSorting = arr.sort((a, b) => a.name.localeCompare(b.name));
+            }else if(this.sortingType === "Name Z-A"){
+                productsArrayWithSorting = arr.sort((a, b) => b.name.localeCompare(a.name));
             }
         }
 
+        if (!Array.isArray(this.productsArray)){                                                                        //перевірка, чи це об'єкт ShopAll
+            let newArrayForShopAll = [];
+            for (let i in this.productsArray) {                                                                         //перебирає елементи(масиви) об'єкта
+                newArrayForShopAll[i] = this.productsArray[i];                                                          //копіювання масивів об'єкта в новий масив newArrayForShopAll
+                for (let key in newArrayForShopAll[i]) {                                                                //перебирає елементи масиву newArrayForShopAll
+                    cloneOfProducts.push(newArrayForShopAll[i][key]);                                                   //додає елементи(об'єкти) в новостворений масив
+                }
+            }
+            counterElements = cloneOfProducts.length;                                                                   //довжина об'єкта
+            sortFunction(cloneOfProducts);
+            productsContainer = productsArrayWithSorting.map(p =>                         //викликає функцію для кожного елемента масиву, повертає масив результатів із заданими значеннями
+                <ProductTemplate name={p.name} img={p.img} oldprice={p.oldprice} price={p.price} totalPrice={p.totalPrice} about={p.about}
+                                 info={p.info} SKU={p.SKU} quantity={p.quantity} id={p.id} cloneOfProducts={cloneOfProducts}/>);
+
+        }else{
+            counterElements = this.productsArray.length;                                                                //довжина масиву
+            sortFunction(this.productsArray);
+            productsContainer = productsArrayWithSorting.map(p =>                    //викликає функцію для кожного елемента масиву, повертає масив результатів із заданими значеннями
+                <ProductTemplate name={p.name} img={p.img} oldprice={p.oldprice} price={p.price} totalPrice={p.totalPrice} about={p.about}
+                                 info={p.info} SKU={p.SKU} quantity={p.quantity} id={p.id} productsArray={this.productsArray}/>);
+        }
         return (
             <div className={styles.marginContainer}>
                 <div className={styles.container_ChristmasTrees}>
@@ -56,16 +82,7 @@ class ProductItems extends React.Component {                                    
                 <div className={styles.mainBlock_products}>
                     <div className={styles.quantityAndSort_products}>
                         <div>{counterElements} products</div>                                                           {/*кількість продуктів на сторінці*/}
-                        <div>Sort by:                                                                                   {/*сортування */}
-                            <select name="sort" id="type" className={styles.select}>
-                                <option value="Recommended">Recommended</option>
-                                <option value="Newest">Newest</option>
-                                <option value="Price (low to high)">Price (low to high)</option>
-                                <option value="Price (high to low)">Price (high to low)</option>
-                                <option value="Name A-Z">Name A-Z</option>
-                                <option value="Name Z-A">Name Z-A</option>
-                            </select>
-                        </div>
+                            <DropdownMenu onChange={this.changeSort}/>                                                  {/*сортувальне меню*/}
                     </div>
                     <div className={styles.container_products}>
                         {productsContainer}                                                                             {/*блок продуктів сторінки*/}

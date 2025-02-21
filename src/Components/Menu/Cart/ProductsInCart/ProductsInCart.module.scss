@@ -11,10 +11,20 @@
     border: 1px solid #b6b8be;
   }
   .name_price_product_Section_Cart{
-    .name_product_Cart{}
-    .price_product_Cart{}
+    margin: 0 0.5em;
+    text-align: start;
+    flex:6;
+    .name_product_Cart{
+      text-decoration: none;
+      letter-spacing: 0.2px;
+      color: #252525;
+    }
+    .price_product_Cart{
+      margin: 0.8em 0 ;
+    }
   }
   .quantity_product_Section{
+    flex:2;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -38,8 +48,12 @@
       border: 0;
     }
   }
-  .price_Sum_product_Section{}
+  .price_Sum_product_Section{
+    flex:2;
+    margin: 0.3em 0 ;
+  }
   .delete_product_Section{
+    flex:1;
     width: 2em;
     img{
       background: inherit;

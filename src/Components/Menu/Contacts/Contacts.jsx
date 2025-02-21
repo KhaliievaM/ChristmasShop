@@ -5,9 +5,10 @@ import {forwardRef} from "react";
 //import {Link} from "react-router-dom";
 
 const Contacts = (props) => {
-    const contacts = props.contacts;
+   // const contacts = props.contacts;
+
     return(
-        <div className={styles.container_size} ref={contacts}>
+        <div className={styles.container_size} id="contactsID_1">
         <div className={styles.bottomOfHomePage_containerFeedbackFormContacts}>
             <div className={styles.feedbackForm}>
 
@@ -47,4 +48,4 @@ const Contacts = (props) => {
     </div>
     )
 }
-export default React.forwardRef(Contacts);
+export default Contacts;

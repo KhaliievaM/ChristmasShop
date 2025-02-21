@@ -1,10 +1,11 @@
-
+import photo from "../Multimedia/lavender-7638368_1280.jpg";
 let products = {
     productsChristmasTrees: [
         {
             id: 1,
             img: "https://static.wixstatic.com/media/84770f_87ce07af00b54500899015d9de6f0c69~mv2_d_1500_1500_s_2.jpg/v1/fill/w_428,h_428,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_87ce07af00b54500899015d9de6f0c69~mv2_d_1500_1500_s_2.jpg",
-            name: 'I`m a product',
+            // img: photo,
+            name: 'Artificial "Viennese" Christmas tree with decorations',
             oldprice: "",
             price: "400.00",
             totalPrice:"400",
@@ -26,7 +27,7 @@ let products = {
         {
             id: 2,
             img: "https://static.wixstatic.com/media/84770f_b0aad5af51b54bda937415b47907945f~mv2_d_1500_1500_s_2.jpg/v1/fill/w_500,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_b0aad5af51b54bda937415b47907945f~mv2_d_1500_1500_s_2.jpg",
-            name: 'I`m a product',
+            name: 'Artificial snowy "Lapland" Christmas tree with cones',
             oldprice: "500.00",
             price: "425.00",
             totalPrice:"425",
@@ -48,7 +49,7 @@ let products = {
         {
             id: 3,
             img: "https://static.wixstatic.com/media/84770f_54f0ae285e01488684756fb3a72246c6~mv2_d_1500_1500_s_2.jpg/v1/fill/w_500,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_54f0ae285e01488684756fb3a72246c6~mv2_d_1500_1500_s_2.jpg",
-            name: 'I`m a product',
+            name: 'Artificial Christmas tree with decorations',
             oldprice: "",
             price: "300.00",
             totalPrice:"300",
@@ -70,7 +71,7 @@ let products = {
         {
             id: 4,
             img: "https://static.wixstatic.com/media/84770f_71f71914ad3446c2af6bfb8cd40900c0~mv2_d_1500_1500_s_2.jpg/v1/fill/w_500,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_71f71914ad3446c2af6bfb8cd40900c0~mv2_d_1500_1500_s_2.jpg",
-            name: 'I`m a product',
+            name: 'Artificial Christmas tree "Lapland" in Pot',
             oldprice: "",
             price: "150.00",
             totalPrice:"150",
@@ -92,7 +93,7 @@ let products = {
         {
             id: 5,
             img: "https://static.wixstatic.com/media/84770f_a67ae9b05c6345b69cbaa49b1867fe0e~mv2_d_1500_1500_s_2.jpg/v1/fill/w_500,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_a67ae9b05c6345b69cbaa49b1867fe0e~mv2_d_1500_1500_s_2.jpg",
-            name: 'I`m a product',
+            name: 'Artificial pine in Pot',
             oldprice: "100.00",
             price: "85.00",
             totalPrice:"85",
@@ -114,7 +115,7 @@ let products = {
         {
             id: 6,
             img: "https://static.wixstatic.com/media/84770f_b7be9d76dbeb41359b3bd46d47817a61~mv2_d_1500_1500_s_2.jpg/v1/fill/w_500,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_b7be9d76dbeb41359b3bd46d47817a61~mv2_d_1500_1500_s_2.jpg",
-            name: 'I`m a product',
+            name: 'Artificial "Milan" Christmas tree with LED lamps',
             oldprice: "",
             price: "500.00",
             totalPrice:"500",

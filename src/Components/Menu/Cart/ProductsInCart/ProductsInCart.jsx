@@ -21,7 +21,7 @@ const ProductsInCart = (props) => {
     let productString = localStorage[productKey];                                                                       //продукт(рядок,ще не об'єкт) в localStorage
     if(productString !== null && productString !== ''){                                                                 //якщо продукт !== null і !== порожньому рядку
         productObj = JSON.parse(productString);                                                                         //переведення рядка в об'єкт
-        totalPrice = productObj.totalPrice;                                                                           //загальна ціна(totalPrice) = загальній ціні продукту в localStorage
+        totalPrice = productObj.totalPrice;                                                                       //загальна ціна(totalPrice) = загальній ціні продукту в localStorage
     }
     const [quantity, setQuantity] = useState(productObj != null ? productObj.quantity : 1);                    //якщо об'єкт != null,то кількість
     // продукту(quantity) беремо з localStorage, else quantity = 1
@@ -30,35 +30,33 @@ const ProductsInCart = (props) => {
         localStorage.removeItem(productKey);
         window.location.reload();
     }
+    let totalSum = Number(localStorage.getItem("totalSum"));                                                        //отримання даних totalSum з localStorage
+
+    let dataUpdateLocalStorage = (quantity) => {
+        props.onChange(totalSum);                                                                                 //оновлення(передача) зміни загальної до батьківського компонента
+        productObj['totalPrice'] = String(totalPrice);                                                    //присвоєння властивості об'єкту totalPrice нового розрахованого значення
+        productObj['quantity'] = quantity;                                                                  //присвоєння властивості об'єкту quantity нового розрахованого значення
+        localStorage.setItem(productKey, JSON.stringify(productObj));                                                   //передача оновлених даних в localStorage
+        localStorage.setItem(totalSumKey, JSON.stringify(totalSum));                                                    //передача оновленої загальної суми в localStorage
+        reloadComponent();                                                                                              //оновлення даних в компоненті
+
+    }
     const IncrementCounter = () => {                                                                                    //Increment
-        let totalSum = Number(localStorage.getItem("totalSum"));                                                    //отримання даних totalSum з localStorage
         let incrementedQuantity = quantity + 1;                                                                         //додавання одиниці до quantity продукту
         if (incrementedQuantity <= maxValue) {                                                                          //якщо оновлена кількість менша за максимальну кількість
             setQuantity(incrementedQuantity);                                                                           //оновлення стану(збільшення кількості)
             totalPrice = Number(props.price) * incrementedQuantity;                                                     //розрахунок оновленого totalPrice
             totalSum = totalSum + Number(props.price);                                                                  //оновлення загальної суми при збільшенні кількості товару
-            props.onChange(totalSum);                                                                                   //оновлення(передача) зміни загальної до батьківського компонента
-            productObj['totalPrice'] = String(totalPrice);                                                       //присвоєння властивості об'єкту totalPrice нового розрахованого значення
-            productObj['quantity'] = incrementedQuantity;                                                          //присвоєння властивості об'єкту quantity нового розрахованого значення
-            localStorage.setItem(productKey, JSON.stringify(productObj));                                               //передача оновлених даних в localStorage
-            localStorage.setItem(totalSumKey, JSON.stringify(totalSum));                                                //передача оновленої загальної суми в localStorage
-            reloadComponent();                                                                                          //оновлення даних в компоненті
+            dataUpdateLocalStorage(incrementedQuantity);
         }
-
     };
     const DecrementItems = () => {
-        let totalSum = Number(localStorage.getItem("totalSum"));                                                    //отримання даних totalSum з localStorage
         let decrementQuantity = quantity - 1;                                                                           //віднімання одиниці від quantity продукту
         if (decrementQuantity >= minValue) {                                                                            //якщо оновлена кількість більша за мінімальну кількість
             setQuantity(decrementQuantity);                                                                             //оновлення стану(зменшення кількості)
             totalPrice = Number(props.price) * decrementQuantity;                                                       //розрахунок оновленого totalPrice
             totalSum = totalSum - Number(props.price);                                                                  //оновлення загальної суми при зменшенні кількості товару
-            props.onChange(totalSum);                                                                                   //оновлення(передача) зміни загальної до батьківського компонента
-            productObj['totalPrice'] = String(totalPrice);                                                       //присвоєння властивості об'єкту totalPrice нового розрахованого значення
-            productObj['quantity'] = decrementQuantity;                                                          //присвоєння властивості об'єкту quantity нового розрахованого значення
-            localStorage.setItem(productKey, JSON.stringify(productObj))                                                //передача оновлених даних в localStorage
-            localStorage.setItem(totalSumKey, JSON.stringify(totalSum));                                                //передача оновленої загальної суми в localStorage
-            reloadComponent();                                                                                          //оновлення даних в компоненті
+            dataUpdateLocalStorage(decrementQuantity);
         }
     };
 

@@ -53,7 +53,7 @@
     align-items: center;
     width: 100%;
 
-    .quantityAndSort_products {
+    .quantityAndSort_products {///////////////
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -65,16 +65,17 @@
       font-size: 16px;
       font-weight: 800;
       color: #48494e;
-      div{
-        .select{
-          font-family: 'proximaNova', sans-serif;
-          font-size: 16px;
-          font-weight: 800;
-          color: #48494e;
+      //div{
+      //  .select{
+      //    font-family: 'proximaNova', sans-serif;
+      //    font-size: 16px;
+      //    font-weight: 800;
+      //    color: #48494e;
+      //
+      //    option:checked { color: green; }
+      //  }
+      //}
 
-          option:checked { color: green; }
-        }
-      }
     }
     .container_products {
       display: grid;

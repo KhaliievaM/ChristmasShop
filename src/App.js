@@ -19,24 +19,27 @@ import ProductPage from "./Components/Menu/TemplateFiles/ProductTemplate/Product
 import Cart from "./Components/Menu/Cart/Cart";
 import ProductPageSwitcher
     from "./Components/Menu/TemplateFiles/ProductTemplate/ProductPageSwitcher_ProductPage/ProductPageSwitcher";
+import {logDOM} from "@testing-library/react";
 
 // import React from "@types/react";
 
 function App() {
-    function handleClick(elementRef) {
-        elementRef.current?.scrollIntoView({behavior: "smooth"})
-    }
+    // function handleClick(elementRef) {
+    //     elementRef.current?.scrollIntoView({behavior: "smooth"})
+    // }
 
-    const contacts = useRef(0);
+
     return (
         <div className="App">
             <div className="header">
-                <Header className="header" handleClick={handleClick} contacts={contacts}/>
+                {/*<Header className="header" handleClick={handleClick} contacts={contacts}/>*/}
+                <Header className="header"/>
             </div>
             <ScrollToTop/>
             <div className="mainBlock">
                 <Routes>
-                    <Route path="/" element={<Home contacts={contacts}/>}/>
+                    {/*<Route path="/" element={<Home contacts={contacts}/>}/>*/}
+                    <Route path="/" element={<Home/>}/>
                     <Route path="/shopAll" element={<ShopAll/>}/>
                     <Route path="/christmasTrees" element={<ChristmasTrees/>}/>
                     <Route path="/uniqueOrnaments" element={<UniqueOrnaments/>}/>
