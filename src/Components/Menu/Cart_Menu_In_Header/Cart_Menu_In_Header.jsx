@@ -76,8 +76,8 @@ const Cart_Menu_In_Header = () => {
     return (
         <div className={styles.app}>
             <div className={styles.cart_counter_button} onClick={toggleSidebar}>
-                <button className={styles.cart_button}>CART</button>
-                <div className={styles.cartCounter}>{counterOfProducts}</div>
+                <button className={styles.cart_button}>CART<div className={styles.cartCounter}>{counterOfProducts}</div></button>
+
             </div>
             <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
         </div>

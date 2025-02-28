@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import styles from './Header.module.css';
 import {Link} from "react-router-dom";
 import facebookBlack from "../../Multimedia/104498_facebook_icon.png";
@@ -8,10 +8,22 @@ import Cart_Menu_In_Header from "../Menu/Cart_Menu_In_Header/Cart_Menu_In_Header
  const Header = (props) => {
         const [cartMenuActive, setCartMenuActive] = useState(false);
         const [menuActive, setMenuActive] = useState(false);
+        const [showFirstText, setShowFirstText] = useState(true);                                       //useState для зберігання стану, який визначає, який текст відображати
+        useEffect(() => {                                                                             //useEffect для створення інтервалу, який буде змінювати стан кожну секунду
+            const interval = setInterval(() => {
+                setShowFirstText(prev => !prev);                                                                  //рендеримо текст в залежності від значення showFirstText
+            }, 5000);
+            return () => clearInterval(interval);                                                                       // Очищення інтервалу при демонтажі компонента
+        }, []);
         return (
             <header className={styles.header}>
-                <div className={styles.redHead}>ORDER ONLINE today</div>
-                {/*<div>free shipping on orders over $50</div>*/}
+                <div className={styles.redHead}>
+                    {showFirstText ? (
+                        <h1>ORDER ONLINE today</h1>
+                    ) : (
+                        <h1>Free shipping on orders over $50</h1>
+                    )}
+                </div>
                 <div className={styles.whiteHead}>
                     <div className={styles.whiteHead_container}>
                         <div className={styles.whiteHead_header_title_burger}>
@@ -37,12 +49,10 @@ import Cart_Menu_In_Header from "../Menu/Cart_Menu_In_Header/Cart_Menu_In_Header
                             </div>
                             <nav className={styles[menuActive ? 'open' : 'navigation']}>
                                 <ul>
-                                    <li>
-                                        <button className={styles.logIn}>
-                                            <div className={styles.logInImage}></div>
-                                            Log In
-                                        </button>
-                                    </li>
+                                    <button className={styles.logIn}>
+                                        <div className={styles.logInImage}></div>
+                                        Log In
+                                    </button>
                                     <Link to="/" className={styles.menu}>HOME</Link>
                                     <Link to="/shopAll" className={styles.menu}>SHOP ALL</Link>
                                     <Link to="/christmasTrees" className={styles.menu}>CHRISTMAS TREES</Link>
@@ -59,10 +69,9 @@ import Cart_Menu_In_Header from "../Menu/Cart_Menu_In_Header/Cart_Menu_In_Header
                             <div className={styles.whiteHead_menu_logAndCart}>
                                 <button className={styles.logIn}>
                                     <div className={styles.logInImage}></div>
-                                    <p>Log In</p>
+                                    <div>Log In</div>
                                 </button>
                                 <button className={styles.cart}>   {/* onClick={() => {setCartMenuActive(true)}}*/}
-
                                     <Cart_Menu_In_Header onClose={()=>setCartMenuActive(false)} isActiveCart={cartMenuActive}/>
                                 </button>
                             </div>

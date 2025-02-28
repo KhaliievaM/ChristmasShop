@@ -44,7 +44,7 @@ $greyLink: #838384;
     .footer_headBlock {
       @include disFlxJusAli(flex, column, center, center);
       row-gap: 1.438em;
-      width: 100%;
+      width: 90%;
 
       .footer_headBlock_deer {
         width: 85px;
@@ -79,7 +79,8 @@ $greyLink: #838384;
           width: 100%;
 
           .menu {
-            font-size: 14px;
+            font-size: clamp(0.6rem, calc(0.7vw + 0.3rem),1em);
+            text-align: center;
             font-family: 'proximaNova', sans-serif;
             font-weight: 600;
             color: white;
@@ -88,7 +89,9 @@ $greyLink: #838384;
           }
 
           span {
-            margin: 0 1em;
+            //margin: 0 1em;
+            margin-right: min(1%, 1em) ;
+            margin-left: min(1%, 1em) ;
           }
         }
 
@@ -103,7 +106,7 @@ $greyLink: #838384;
       font-weight: 600;
       letter-spacing: 0.05em;
       text-align: center;
-      width: 100%;
+      width: 90%;
 
       .footer_mediumBlock_socialMediaButton {
         display: flex;
@@ -125,6 +128,7 @@ $greyLink: #838384;
         display: inline-flex;
         flex-wrap: wrap;
         column-gap: 1.1em;
+        justify-content: center;
 
         .informLink{
           text-decoration: none;

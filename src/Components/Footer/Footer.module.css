@@ -26,7 +26,7 @@
   justify-content: center;
   align-items: center;
   row-gap: 1.438em;
-  width: 100%;
+  width: 90%;
 }
 .footer .footer_container .footer_headBlock .footer_headBlock_deer {
   width: 85px;
@@ -62,7 +62,8 @@
   width: 100%;
 }
 .footer .footer_container .footer_headBlock .footer_headBlock_nav ul .menu {
-  font-size: 14px;
+  font-size: clamp(0.6rem, 0.7vw + 0.3rem, 1em);
+  text-align: center;
   font-family: "proximaNova", sans-serif;
   font-weight: 600;
   color: white;
@@ -70,7 +71,8 @@
   cursor: pointer;
 }
 .footer .footer_container .footer_headBlock .footer_headBlock_nav ul span {
-  margin: 0 1em;
+  margin-right: min(1%, 1em);
+  margin-left: min(1%, 1em);
 }
 .footer .footer_container .footer_mediumBlock {
   display: inline-flex;
@@ -82,7 +84,7 @@
   font-weight: 600;
   letter-spacing: 0.05em;
   text-align: center;
-  width: 100%;
+  width: 90%;
 }
 .footer .footer_container .footer_mediumBlock .footer_mediumBlock_socialMediaButton {
   display: flex;
@@ -101,6 +103,7 @@
   display: inline-flex;
   flex-wrap: wrap;
   column-gap: 1.1em;
+  justify-content: center;
 }
 .footer .footer_container .footer_mediumBlock .footer_mediumBlock_a .informLink {
   text-decoration: none;

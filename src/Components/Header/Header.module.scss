@@ -1,47 +1,4 @@
-//html, body, div, span, applet, object, iframe,
-//h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-//a, abbr, acronym, address, big, cite, code,
-//del, dfn, em, font, img, ins, kbd, q, s, samp,
-//small, strike, strong, sub, sup, tt, var,
-//dl, dt, dd, ol, ul, li,
-//fieldset, form, label, legend,
-//table, caption, tbody, tfoot, thead, tr, th, td {
-//  margin: 0;
-//  padding: 0;
-//  border: 0;
-//  outline: 0;
-//  font-weight: inherit;
-//  font-style: inherit;
-//  font-size: 100%;
-//  font-family: inherit;
-//  vertical-align: baseline;
-//}
-//:focus {
-//  outline: 0;
-//}
-//body {
-//  line-height: 1;
-//  color: black;
-//  background: white;
-//}
-//ol, ul {
-//  list-style: none;
-//}
-//table {
-//  border-collapse: separate;
-//  border-spacing: 0;
-//}
-//caption, th, td {
-//  text-align: left;
-//  font-weight: normal;
-//}
-//blockquote:before, blockquote:after,
-//q:before, q:after {
-//  content: "";
-//}
-//blockquote, q {
-//  quotes: "" "";
-//}
+
 $font-stack: 1em Arial, Helvetica, sans-serif;
 $font-family-title: "Oswald", sans-serif;
 $whiteColor: #ffffff;
@@ -183,10 +140,7 @@ $colors: (
       }
 
       .whiteHead_menu {
-        @include disJusAli(inline-flex, space-between, center);
-        //column-gap: 1em;
-        //margin-right: 10px;
-        max-width: 1800px;
+        @include disJusAli(inline-flex, center, center);
         width: 100%;
         padding-top: 1em;
 
@@ -195,13 +149,12 @@ $colors: (
           justify-content: center;
 
           & a img {
-            background-position: center;
             background-size: contain;
             width: 1.5em;
             height: 1.5em;
             margin: 0.5em;
             max-width: 100%;
-            background-color: $whiteColor;
+            background: center inherit;
           }
 
         }
@@ -212,7 +165,8 @@ $colors: (
 
           ul {
             @include disFlex(flex, row wrap, center);
-            font-size: 14px;
+            //font-size: 14px;
+            font-size: 1rem;
             font-family: 'proximaNova', sans-serif;
             font-weight: 600;
             align-content: center;
@@ -231,7 +185,6 @@ $colors: (
 
             li {
               cursor: pointer;
-              padding: 0.5em;
 
               &:hover {
                 color: $redColor;
@@ -251,8 +204,8 @@ $colors: (
           .logIn, .cart {
             display: flex;
             align-items: center;
-            position: relative;
-            font-size: 14px;
+            //position: relative;
+            font-size: 0.8rem;
             font-family: 'proximaNova', sans-serif;
             font-weight: 800;
             width: 100%;
@@ -275,10 +228,6 @@ $colors: (
 
           .cart {
             background-color: rgba(253, 253, 253, 0.65);
-            overflow: hidden;
-            width: 100%;
-            margin-right: 10px;
-            //height: 0;
             transition: .5s ease;
             height: 2em;
 
@@ -294,30 +243,205 @@ $colors: (
     @include disFlex(flex, column nowrap, center);
     text-align: center;
     font: $font-stack;
-    //min-width: 1200px;
-    width: 100%;
-    //width: inherit;
-    //min-height: 100px;
-    //margin: 0 auto;
-    //padding-bottom: 1em;
-    //position: fixed;
-    //top: 0;
-    //left: 0;
-    //z-index: 50;
-    //background-color: map-get($colors, "white");
+    width: inherit;
+    background-color: map-get($colors, "white");
+
+    .redHead {
+      font-size: 16px;
+      font-family: 'proximaNova', sans-serif;
+      font-weight: 600;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.7em;
+      padding: 1em;
+      background-color: $redColor;
+      color: $whiteColor;
+    }
 
     .whiteHead {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       padding-top: 2em;
+      padding-bottom: 2em;
+      width: 100%;
 
-      .whiteHead_menu {
-        @include disJusAli(inline-flex, space-evenly, center);
-        column-gap: 1em;
-        //min-width: 1400px;
-        width: 100%;
-        padding-top: 1em;
-        margin: 0 auto;
+      .whiteHead_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+
+        .whiteHead_header_title_burger {
+          h1 {
+            text-align: center;
+            font-size: 1.8em; // Arial Narrow, sans-serif
+            font-weight: 600;
+            cursor: pointer;
+            color: $double-color;
+          }
+
+          .whiteHead_header_title_h1 {
+            font-family: $font-family-title;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            text-transform: uppercase;
+          }
+
+          .header_burger_container {
+            @include disJusAli(none, flex-end, center);
+
+            .header_burger {
+              @include disJusAli(none, flex-end, center);
+              position: relative;
+              z-index: 50;
+              width: 30px;
+              height: 18px;
+
+              & span {
+                height: 2px;
+                width: 80%;
+                transform: scale(1);
+                background-color: $double-color;
+              }
+
+              &:before, &:after {
+                content: '';
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                background-color: $double-color;
+                transition: all 0.3s ease 0s;
+              }
+
+              &:before {
+                top: 0;
+              }
+
+              &:after {
+                bottom: 0;
+              }
+
+              &.active span {
+                transform: scale(0);
+              }
+
+              &.active:before {
+                top: 50%;
+                transform: rotate(-45deg) translate(0, -50%);
+              }
+
+              &.active:after {
+                bottom: 50%;
+                transform: rotate(45deg) translate(0, 50%);
+              }
+            }
+          }
+        }
+
+        .whiteHead_menu {
+          @include disJusAli(inline-flex, space-between, center);
+          width: 100%;
+          padding-top: 1em;
+
+          .whiteHead_menu_socialMediaButton {
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+            flex: 2;
+
+            & a img {
+              background-position: center;
+              background-size: contain;
+              width: 1.5em;
+              height: 1.5em;
+              margin: 0.5em;
+              max-width: 100%;
+              background-color: $whiteColor;
+            }
+
+          }
+
+          .navigation {
+            @include disFlex(flex, row wrap, center);
+            align-content: center;
+            flex: 6;
+            ul {
+              @include disFlex(flex, row wrap, center);
+              font-size: 1rem;
+              font-family: 'proximaNova', sans-serif;
+              font-weight: 600;
+              align-content: center;
+              column-gap: 2.3em;
+              row-gap: 1em;
+
+              .menu {
+                cursor: pointer;
+                padding: 0.5em;
+                color: #232429;
+
+                &:hover {
+                  color: $redColor;
+                }
+              }
+
+              .logIn {
+                display: none;
+                color: black;
+                cursor: pointer;
+                &:hover {
+                  color: $redColor;
+                }
+              }
+            }
+
+          }
+
+          .whiteHead_menu_logAndCart {
+            @include disJusAli(flex, center, center);
+            flex-direction: row;
+            flex: 2;
+            margin: 0 auto;
+            .logIn, .cart {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              //position: relative;
+              box-sizing: border-box;
+              font-size: 0.8rem;
+              white-space: nowrap;
+              height: 2em;
+              font-family: 'proximaNova', sans-serif;
+              font-weight: 800;
+              width: 50%;
+              background-color: $whiteColor;
+            }
+
+            .logInImage {
+              background-image: url("../../Multimedia/9035990_person_circle_sharp_icon.png");
+              background-color: $whiteColor;
+              background-position: center;
+              background-size: contain;
+              background-repeat: no-repeat;
+              position: center;
+              max-width: 100%;
+              height: 2em;
+              width: 2em;
+              margin-right: 0.5em;
+            }
+
+            .cart {
+              background-color: rgba(253, 253, 253, 0.65);
+              margin-right: 10px;
+              transition: .5s ease;
+              height: 2em;
+
+            }
+          }
+        }
       }
     }
   }
@@ -340,25 +464,39 @@ $colors: (
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .header {
-    background-color: #f9fafa;
+    //background-color: #f9fafa;
+    //@include disFlex(flex, column nowrap, center);
+    display: flex;
+    align-items: center;
+    background-color: #dcc465;
     padding: 1.5em 0;
-
+    width: 100%;
     .redHead {
       display: none;
     }
 
     .whiteHead {
-      flex-direction: column-reverse;
-      row-gap: 1em;
+      display: flex;
+      justify-content: space-between;
+
       padding-top: 0;
+      padding-bottom: 0;
+      width: 80%;
       .whiteHead_container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        width: 100%;
+
         .whiteHead_header_title_burger {
           display: flex;
           justify-content: flex-end;
           gap: 30%;
+          width: 100%;
+          margin: 0.5em auto;
 
           .header_burger_container {
-            display: flex;
+            @include disJusAli(flex, flex-end, center);
             margin-right: 2em;
             z-index: 100;
 
@@ -371,6 +509,7 @@ $colors: (
           display: inline-flex;
           text-align: center;
           padding-top: 0;
+          margin: 0.5em auto;
 
           .whiteHead_menu_socialMediaButton button {
             text-align: center;
@@ -397,6 +536,7 @@ $colors: (
             overflow-y: auto;
             padding: 50px 40px;
             background-color: #f1f0ec;
+
             animation: burgerAnimation 0.4s;
 
             ul {
@@ -443,13 +583,19 @@ $colors: (
           }
 
           .whiteHead_menu_logAndCart {
+            @include disJusAli(flex, center, center);
+            flex-direction: row;
 
-            button .logIn {
+             .logIn {
               display: none;
             }
 
             .cart {
-              background-color: #f9fafa;
+              background: inherit;
+              width: 100%;
+              margin-right: 10px;
+              transition: .5s ease;
+              height: 2em;
             }
 
           }

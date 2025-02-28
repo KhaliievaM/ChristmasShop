@@ -142,22 +142,34 @@
 
 .app {
   padding: 10px;
+  display: flex;
   .cart_counter_button{
     display: flex;
     flex-direction: row;
-    //column-gap: 0.5em;
+    column-gap: 0.5em;
     .cart_button{
+      display: flex;
+      flex-direction: row;
+      column-gap: 0.5em;
+      align-items: center;
+      padding: 0.3em;
       background-color: inherit;
       font-size: 1em;
       font-family: Arial, sans-serif;
+      .cartCounter {
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 0.2em 0.4em;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 50%;
+        box-sizing: border-box;
+      }
     }
-    .cartCounter {
-      width: 1.8em;
-      border-radius: 50%;
-      padding: 0.23em;
-      margin-left: 0.5em;
-      background-color: black;
-      color: white;
-    }
+
   }
 }
