@@ -5,6 +5,7 @@ import facebookBlack from "../../Multimedia/104498_facebook_icon.png";
 import instagramBlack from "../../Multimedia/7156617_instagram_social_media_icon.png";
 import pinterestBlack from "../../Multimedia/7156612_pinterest_social_media_icon.png";
 import Cart_Menu_In_Header from "../Menu/Cart_Menu_In_Header/Cart_Menu_In_Header";
+import Burger_menu_Header from "./Burger_menu_Header/Burger_menu_Header";
  const Header = (props) => {
         const [cartMenuActive, setCartMenuActive] = useState(false);
         const [menuActive, setMenuActive] = useState(false);
@@ -29,9 +30,11 @@ import Cart_Menu_In_Header from "../Menu/Cart_Menu_In_Header/Cart_Menu_In_Header
                         <div className={styles.whiteHead_header_title_burger}>
                             <h1 className={styles.whiteHead_header_title_h1}>THE CHRISTMAS BOUTIQUE</h1>
                             <div className={styles.header_burger_container}>
+                                <Burger_menu_Header menuActive={menuActive} setMenuActive={setMenuActive}/>
                                 <div className={`${styles.header_burger} ${menuActive ? styles.active : ''}`}
                                      onClick={() => setMenuActive(!menuActive)}>   {/*className={styles.header_burger}{styles[menuActive ? `${class1} ${class2}` : 'header_burger']}>{styles[`header_burger ${menuActive ? 'active' : ''}`]}*/}
                                     <span></span>
+
                                 </div>
                             </div>
                         </div>
@@ -47,26 +50,19 @@ import Cart_Menu_In_Header from "../Menu/Cart_Menu_In_Header/Cart_Menu_In_Header
                                     <img src={pinterestBlack} alt=""/>
                                 </a>
                             </div>
-                            <nav className={styles[menuActive ? 'open' : 'navigation']}>
-                                <ul>
-                                    <button className={styles.logIn}>
-                                        <div className={styles.logInImage}></div>
-                                        Log In
-                                    </button>
-                                    <Link to="/" className={styles.menu}>HOME</Link>
-                                    <Link to="/shopAll" className={styles.menu}>SHOP ALL</Link>
-                                    <Link to="/christmasTrees" className={styles.menu}>CHRISTMAS TREES</Link>
-                                    <Link to="/uniqueOrnaments" className={styles.menu}>UNIQUE ORNAMENTS</Link>
-                                    <Link to="/holidayLights" className={styles.menu}>HOLIDAY LIGHTS</Link>
-                                    <Link to="/about" className={styles.menu}>ABOUT</Link>
-
-                                    <Link to="/contacts" className={styles.menu}>CONTACTS</Link>
-                                    {/*<li ><a href="../Menu/Home/Home.jsx#contactsID_1">CONTACTS</a></li>*/}
-                                    {/*<li ><a href="../Menu/Home/Home.jsx#contactsID_1">CONTACTS</a></li>*/}
-                                    {/*<li onClick={() => handleClick(ref)}>CONTACTS</li>*/}
+                            <nav className={styles.navigation}>
+                                <ul className={styles.menu}>
+                                    <Link to="/">HOME</Link>
+                                    <Link to="/shopAll">SHOP ALL</Link>
+                                    <Link to="/christmasTrees">CHRISTMAS TREES</Link>
+                                    <Link to="/uniqueOrnaments">UNIQUE ORNAMENTS</Link>
+                                    <Link to="/holidayLights">HOLIDAY LIGHTS</Link>
+                                    <Link to="/about">ABOUT</Link>
+                                    <Link to="/contacts" >CONTACTS</Link>
                                 </ul>
                             </nav>
                             <div className={styles.whiteHead_menu_logAndCart}>
+                                <div className={styles.container_logAndCart}>
                                 <button className={styles.logIn}>
                                     <div className={styles.logInImage}></div>
                                     <div>Log In</div>
@@ -74,6 +70,7 @@ import Cart_Menu_In_Header from "../Menu/Cart_Menu_In_Header/Cart_Menu_In_Header
                                 <button className={styles.cart}>   {/* onClick={() => {setCartMenuActive(true)}}*/}
                                     <Cart_Menu_In_Header onClose={()=>setCartMenuActive(false)} isActiveCart={cartMenuActive}/>
                                 </button>
+                                </div>
                             </div>
                         </div>
 

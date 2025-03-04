@@ -11,9 +11,10 @@
   .infoBlock_product_Cart{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     column-gap: 1em;
+    width: 100%;
     .img_product_Cart{
       width: 100px;
     }
@@ -40,21 +41,21 @@
         justify-content: center;
         align-items: center;
         background: inherit;
-
         border: 1px solid white;
+        width: 6em;
         .quantity_btn_Cart{
           display: flex;
           justify-content: center;
           align-items: center;
           //padding: 0.2rem;
-          width: 1rem;
+          width: 1em;
           font-family: Arial, sans-serif;
           font-size: 1.4rem;
           color: white;
           background: inherit;
         }
         .quantity_input_Cart{
-          width: 2rem;
+          width: 2em;
           padding: .4rem;
           font-size: 0.8rem;
           font-weight: 600;
@@ -62,6 +63,7 @@
           border: 0;color: white;
           background: inherit;
         }
+
       }
     }
   }

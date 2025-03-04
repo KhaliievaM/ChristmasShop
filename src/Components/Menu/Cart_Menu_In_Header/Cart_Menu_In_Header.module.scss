@@ -22,7 +22,7 @@
     overflow: hidden;
     transition: right 0.5s ease;
     padding: 2em;
-
+    white-space: normal;
 
     .container_Cart_Menu_block{
       display: flex;
@@ -73,6 +73,7 @@
         .center_Cart_Menu_block {
           display: flex;
           justify-content: flex-start;
+          width: 100%;
           .products_inCart_Cart_center {
             width: 100%;
           }
