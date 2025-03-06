@@ -34,7 +34,6 @@ import Burger_menu_Header from "./Burger_menu_Header/Burger_menu_Header";
                                 <div className={`${styles.header_burger} ${menuActive ? styles.active : ''}`}
                                      onClick={() => setMenuActive(!menuActive)}>   {/*className={styles.header_burger}{styles[menuActive ? `${class1} ${class2}` : 'header_burger']}>{styles[`header_burger ${menuActive ? 'active' : ''}`]}*/}
                                     <span></span>
-
                                 </div>
                             </div>
                         </div>
@@ -63,13 +62,13 @@ import Burger_menu_Header from "./Burger_menu_Header/Burger_menu_Header";
                             </nav>
                             <div className={styles.whiteHead_menu_logAndCart}>
                                 <div className={styles.container_logAndCart}>
-                                <button className={styles.logIn}>
-                                    <div className={styles.logInImage}></div>
-                                    <div>Log In</div>
-                                </button>
-                                <button className={styles.cart}>   {/* onClick={() => {setCartMenuActive(true)}}*/}
-                                    <Cart_Menu_In_Header onClose={()=>setCartMenuActive(false)} isActiveCart={cartMenuActive}/>
-                                </button>
+                                    <button className={styles.logIn}>
+                                        <div className={styles.logInImage}></div>
+                                        <div>Log In</div>
+                                    </button>
+                                    <button className={styles.cart}>   {/* onClick={() => {setCartMenuActive(true)}}*/}
+                                        <Cart_Menu_In_Header onClose={()=>setCartMenuActive(false)} isActiveCart={cartMenuActive}/>
+                                    </button>
                                 </div>
                             </div>
                         </div>

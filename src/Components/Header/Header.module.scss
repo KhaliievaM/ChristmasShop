@@ -83,8 +83,11 @@ $colors: (
           text-transform: uppercase;
         }
         .header_burger_container {
-           @include disJusAli(none, flex-end, center);
-           margin-right: 2em;
+          @include disJusAli(none, flex-end, center);
+          margin-right: 2em;
+          position: absolute;
+          top: 6.3em;
+          right: 2em;
            .header_burger {
              @include disJusAli(none, flex-end, center);
              position: relative;
@@ -314,7 +317,7 @@ $colors: (
         width: 100%;
         .whiteHead_header_title_burger {
           display: flex;
-          justify-content: flex-end;
+          justify-content: center;
           gap: 30%;
           width: 100%;
           margin: 0.5em auto;
@@ -333,8 +336,10 @@ $colors: (
           }
          }
         .whiteHead_menu {
-          display: inline-flex;
-          text-align: center;
+          display: flex;
+          justify-content: center;
+          position: relative;
+          width: 100%;
           padding-top: 0;
           margin: 0.5em auto;
           .whiteHead_menu_socialMediaButton button {
@@ -345,8 +350,11 @@ $colors: (
             display: none;
           }
           .whiteHead_menu_logAndCart {
-            @include disJusAli(flex, center, center);
-            flex-direction: row;
+            //@include disJusAli(flex, center, center);
+            //flex-direction: row;
+            position: absolute;
+            top: 0.5em;
+            right: -7%;
             .container_logAndCart{
               .logIn {
                 display: none;
@@ -387,11 +395,16 @@ $colors: (
         width: 100%;
         .whiteHead_header_title_burger {
           display: flex;
-          justify-content: flex-end;
+          justify-content: center;
           gap: 30%;
           width: 100%;
           margin: 0.5em auto;
+          .whiteHead_header_title_h1{
+            font-size: 1.5em;
+          }
           .header_burger_container {
+            top: 5.5em;
+            right: -1em;
             @include disJusAli(flex, flex-end, center);
             .header_burger {
               @include disJusAli(flex, flex-end, center);
@@ -406,25 +419,34 @@ $colors: (
           }
         }
         .whiteHead_menu {
-          display: inline-flex;
-          text-align: center;
+          display: flex;
+          justify-content: center;
+          position: relative;
+          width: 100%;
           padding-top: 0;
           margin: 0.5em auto;
+          font-size: 0.8rem;
           .whiteHead_menu_socialMediaButton button {
             text-align: center;
+
             background-color: #f9fafa;
           }
           .navigation {
             display: none;
           }
           .whiteHead_menu_logAndCart {
-            @include disJusAli(flex, center, center);
-            flex-direction: row;
+            //@include disJusAli(flex, center, center);
+            //flex-direction: row;
+            position: absolute;
+            top: 0.5em;
+            right: -13%;
             .container_logAndCart{
+              position: relative;
               .logIn {
                 display: none;
               }
               .cart {
+                font-size: 0.7rem;
                 background: inherit;
                 width: 100%;
                 margin-right: 10px;

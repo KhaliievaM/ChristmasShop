@@ -13,22 +13,20 @@ const Footer = (props) => {
                     <div className={styles.footer_headBlock_deer}></div>
                     <h2 className={styles.footer_headBlock_h2}>The Christmas Boutique</h2>
                     <nav className={styles.footer_headBlock_nav}>
-                        <ul>
-                            {/*<li><button className={styles.logIn}><div className={styles.logInImage}></div>Log In</button></li>*/}
-                            <Link to="/" className={styles.menu}>HOME</Link>
+                        <ul className={styles.menu}>
+                            <Link to="/">HOME</Link>
                             <span>&#10072;</span>
-                            <Link to="/shopAll" className={styles.menu}>SHOP ALL</Link>
+                            <Link to="/shopAll">SHOP ALL</Link>
                             <span>&#10072;</span>
-                            <Link to="/christmasTrees" className={styles.menu}>CHRISTMAS TREES</Link>
+                            <Link to="/christmasTrees">CHRISTMAS TREES</Link>
                             <span>&#10072;</span>
-                            <Link to="/uniqueOrnaments" className={styles.menu}>UNIQUE ORNAMENTS</Link>
+                            <Link to="/uniqueOrnaments">UNIQUE ORNAMENTS</Link>
                             <span>&#10072;</span>
-                            <Link to="/holidayLights" className={styles.menu}>HOLIDAY LIGHTS</Link>
+                            <Link to="/holidayLights">HOLIDAY LIGHTS</Link>
                             <span>&#10072;</span>
-                            <Link to="/about" className={styles.menu}>ABOUT</Link>
+                            <Link to="/about">ABOUT</Link>
                             <span>&#10072;</span>
-                            <Link to="/contacts" className={styles.menu}>CONTACTS</Link>
-                            {/*<li onClick={()=>handleClick(ref)}>CONTACTS</li>*/}
+                            <Link to="/contacts">CONTACTS</Link>
                         </ul>
                     </nav>
                 </div>

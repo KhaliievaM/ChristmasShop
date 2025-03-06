@@ -52,7 +52,7 @@
   border-top: 1px solid #eaf7ef;
   width: 100%;
 }
-.footer .footer_container .footer_headBlock .footer_headBlock_nav ul {
+.footer .footer_container .footer_headBlock .footer_headBlock_nav .menu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -60,17 +60,18 @@
   margin-top: 1.438em;
   margin-bottom: 1.438em;
   width: 100%;
-}
-.footer .footer_container .footer_headBlock .footer_headBlock_nav ul .menu {
   font-size: clamp(0.6rem, 0.7vw + 0.3rem, 1em);
   text-align: center;
   font-family: "proximaNova", sans-serif;
   font-weight: 600;
-  color: white;
   letter-spacing: 0.1em;
   cursor: pointer;
 }
-.footer .footer_container .footer_headBlock .footer_headBlock_nav ul span {
+.footer .footer_container .footer_headBlock .footer_headBlock_nav .menu a {
+  color: white;
+  text-decoration: none;
+}
+.footer .footer_container .footer_headBlock .footer_headBlock_nav .menu span {
   margin-right: min(1%, 1em);
   margin-left: min(1%, 1em);
 }
@@ -78,7 +79,7 @@
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  color: #f73f23;
+  color: #ff462a;
   font-size: 16px;
   font-family: "proximaNova", sans-serif;
   font-weight: 600;
@@ -107,7 +108,7 @@
 }
 .footer .footer_container .footer_mediumBlock .footer_mediumBlock_a .informLink {
   text-decoration: none;
-  color: #f73f23;
+  color: #ff462a;
 }
 .footer .footer_container .footer_footBlock {
   display: flex;
@@ -122,6 +123,50 @@
   text-decoration: underline;
   padding-left: 5px;
   color: #838384;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .footer .footer_container .footer_headBlock .footer_headBlock_nav .menu {
+    font-size: 1rem;
+    flex-wrap: wrap;
+    column-gap: 1em;
+    row-gap: 1em;
+  }
+  .footer .footer_container .footer_headBlock .footer_headBlock_nav .menu span {
+    display: none;
+  }
+  .footer .footer_container .footer_footBlock {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .footer .footer_container .footer_headBlock .footer_headBlock_nav .menu {
+    display: none;
+  }
+  .footer .footer_container .footer_mediumBlock {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    font-size: 1.5rem;
+    justify-content: center;
+    line-height: 1.3;
+  }
+  .footer .footer_container .footer_mediumBlock .footer_mediumBlock_socialMediaButton {
+    order: 3;
+    margin: 0.4em auto;
+  }
+  .footer .footer_container .footer_mediumBlock .footer_mediumBlock_a {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  }
+  .footer .footer_container .footer_mediumBlock .footer_mediumBlock_a .informLink {
+    text-decoration: none;
+    margin: 0.4em auto;
+  }
+  .footer .footer_container .footer_footBlock {
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=Footer.module.css.map */

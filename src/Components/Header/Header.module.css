@@ -65,6 +65,9 @@
   justify-content: flex-end;
   align-items: center;
   margin-right: 2em;
+  position: absolute;
+  top: 6.3em;
+  right: 2em;
 }
 .header .whiteHead .whiteHead_container .whiteHead_header_title_burger .header_burger_container .header_burger {
   display: none;
@@ -261,7 +264,7 @@
   }
   .header .whiteHead .whiteHead_container .whiteHead_header_title_burger {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 30%;
     width: 100%;
     margin: 0.5em auto;
@@ -277,8 +280,10 @@
     align-items: center;
   }
   .header .whiteHead .whiteHead_container .whiteHead_menu {
-    display: inline-flex;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
     padding-top: 0;
     margin: 0.5em auto;
   }
@@ -290,10 +295,9 @@
     display: none;
   }
   .header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    position: absolute;
+    top: 0.5em;
+    right: -7%;
   }
   .header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart .container_logAndCart .logIn {
     display: none;
@@ -330,12 +334,17 @@
   }
   .header .whiteHead .whiteHead_container .whiteHead_header_title_burger {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 30%;
     width: 100%;
     margin: 0.5em auto;
   }
+  .header .whiteHead .whiteHead_container .whiteHead_header_title_burger .whiteHead_header_title_h1 {
+    font-size: 1.5em;
+  }
   .header .whiteHead .whiteHead_container .whiteHead_header_title_burger .header_burger_container {
+    top: 5.5em;
+    right: -1em;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -346,10 +355,13 @@
     align-items: center;
   }
   .header .whiteHead .whiteHead_container .whiteHead_menu {
-    display: inline-flex;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
     padding-top: 0;
     margin: 0.5em auto;
+    font-size: 0.8rem;
   }
   .header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_socialMediaButton button {
     text-align: center;
@@ -359,15 +371,18 @@
     display: none;
   }
   .header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    position: absolute;
+    top: 0.5em;
+    right: -13%;
+  }
+  .header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart .container_logAndCart {
+    position: relative;
   }
   .header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart .container_logAndCart .logIn {
     display: none;
   }
   .header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart .container_logAndCart .cart {
+    font-size: 0.7rem;
     background: inherit;
     width: 100%;
     margin-right: 10px;
