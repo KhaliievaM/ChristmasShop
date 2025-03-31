@@ -20,24 +20,25 @@
     width: 100%;
     min-height: 100%;
     .content_ProductCard_Quick_View{
-
       position: relative;
       z-index: 50;
       column-gap: 2em;
-      margin: 20px;
       padding: 2em;
       background-color: white;
       color: #575757;
-      width: 50%;
+      width: 70%;
       display: flex;
       justify-content: center;
       flex-direction: row;
       align-items: flex-start;
       .imgBlock_Quick_View{
-        display: flex;
-        justify-content: center;
         width: 60%;
-
+        img{
+          background-repeat: no-repeat;
+          background-size: contain;
+          object-fit: cover;
+          width: 100%;
+        }
       }
       .infoBlock_Quick_View{
         display: flex;
@@ -55,68 +56,81 @@
           font-weight: 400;
           font-family: 'didotLTPro', sans-serif;
         }
-        .price_Quick_View{
-          display: inline-flex;
-          column-gap: 0.5em;
-          font-size: 20px;
-          font-weight: 600;
-          font-family: 'proximaNova', sans-serif;
-          padding: 20px 0 0 0;
-          .oldPrice_Quick_View{
-            display: flex;
-            text-decoration:  line-through;}
-          .noActive{
-            display: none;
-          }
-          .newPrice_Quick_View{
-            display: flex;
-          }
-        }
-        .SKU_Quick_View{
-          font-size: 13px;
-          font-weight: 600;
-          font-family: 'proximaNova', sans-serif;
-        }
-        .quantity_Quick_View{
-          font-size: 14px;
-          color: #232429;
-          font-weight: 600;
-          font-family: 'proximaNova', sans-serif;
+        .container_price_SKU_Quantity_Quick_View{
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          margin-top: 1.5em;
-          margin-bottom: 1.5em;
-          row-gap: 1em;
-          width: 50%;
-          .quantity_Name_Quick_View{
-            font-size: 14px;
-            color: #f73f23;
-            font-weight: 600;
-            font-family: 'proximaNova', sans-serif;
-          }
-          .quantity_Block_Quick_View{
+          .block_price_SKU_Quick_View{
             display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 2px 3px rgba(0,0,0,0.16), 0 2px 3px rgba(0,0,0,0.23);
-            .quantity_btn_Block_Quick_View{
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              padding: .4rem;
-              width: 2rem;
-              font-size: 1.9rem;
-              color: #575757;
-            }
-            .quantity_input_Block_Quick_View{
-              width: 4rem;
-              padding: .7rem;
-              font-size: 1rem;
+            flex-direction: column;
+            row-gap: 0.5em;
+            .price_Quick_View{
+              display: inline-flex;
+              column-gap: 0.5em;
+              font-size: 20px;
               font-weight: 600;
-              text-align: center;
-              border: 0;
+              font-family: 'proximaNova', sans-serif;
+              padding: 20px 0 0 0;
+              .oldPrice_Quick_View{
+                display: flex;
+                text-decoration:  line-through;
+              }
+              .noActive{
+                display: none;
+              }
+              .newPrice_Quick_View{
+                display: flex;
+              }
+            }
+            .SKU_Quick_View{
+              font-size: 13px;
+              font-weight: 600;
+              font-family: 'proximaNova', sans-serif;
+            }
+          }
+          .block_Quantity_Quick_View{
+            .quantity_Quick_View{
+              font-size: 14px;
+              color: #232429;
+              font-weight: 600;
+              font-family: 'proximaNova', sans-serif;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              margin-top: 1.5em;
+              margin-bottom: 1.5em;
+              row-gap: 1em;
+              //width: 50%;
+              .quantity_Name_Quick_View{
+                font-size: 14px;
+                color: #f73f23;
+                font-weight: 600;
+                font-family: 'proximaNova', sans-serif;
+              }
+              .quantity_Block_Quick_View{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 2px 3px rgba(0,0,0,0.16), 0 2px 3px rgba(0,0,0,0.23);
+                .quantity_btn_Block_Quick_View{
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  padding: .4rem;
+                  width: 2rem;
+                  font-size: 1.9rem;
+                  color: #575757;
+                }
+                .quantity_input_Block_Quick_View{
+                  width: 4rem;
+                  padding: .7rem;
+                  font-size: 1rem;
+                  font-weight: 600;
+                  text-align: center;
+                  border: 0;
+                }
+              }
             }
           }
         }
@@ -149,7 +163,156 @@
         color: #575757;
       }
     }
-
   }
+}
 
+@media screen and (min-width: 1200px){
+  .container{
+    .block_ProductCard_Quick_View{
+      .content_ProductCard_Quick_View{
+        width: 50%;
+        .imgBlock_Quick_View{
+          img{}
+        }
+        .infoBlock_Quick_View{
+          .name_Quick_View{}
+          .container_price_SKU_Quantity_Quick_View{
+            .block_price_SKU_Quick_View{
+              .price_Quick_View{
+                .oldPrice_Quick_View{}
+                .noActive{}
+                .newPrice_Quick_View{}
+              }
+              .SKU_Quick_View{}
+            }
+            .block_Quantity_Quick_View{
+              .quantity_Quick_View{
+                .quantity_Name_Quick_View{}
+                .quantity_Block_Quick_View{
+                  .quantity_btn_Block_Quick_View{}
+                  .quantity_input_Block_Quick_View{}
+                }
+              }
+            }
+          }
+          .button_Quick_View{}
+          .viewMoreDetails_Quick_View{
+
+          }
+        }
+        .close_btn_Quick_View{}
+      }
+    }
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){}
+@media screen and (min-width: 768px) and (max-width: 991px){
+  .container{
+    .block_ProductCard_Quick_View{
+      .content_ProductCard_Quick_View{
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        row-gap: 1em;
+        .imgBlock_Quick_View{
+          width: 100%;
+          img{
+            width: 70%;
+          }
+        }
+        .infoBlock_Quick_View{
+          width: 100%;
+          align-items: center;
+          .name_Quick_View{}
+          .container_price_SKU_Quantity_Quick_View{
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .block_price_SKU_Quick_View{
+              row-gap: 1em;
+              .price_Quick_View{
+                padding:0;
+                .oldPrice_Quick_View{}
+                .noActive{}
+                .newPrice_Quick_View{}
+              }
+              .SKU_Quick_View{}
+            }
+            .block_Quantity_Quick_View{
+              display: flex;
+              .quantity_Quick_View{
+                align-items: center;
+                .quantity_Name_Quick_View{}
+                .quantity_Block_Quick_View{
+                  .quantity_btn_Block_Quick_View{}
+                  .quantity_input_Block_Quick_View{}
+                }
+              }
+            }
+          }
+          .button_Quick_View{}
+          .viewMoreDetails_Quick_View{
+
+          }
+        }
+        .close_btn_Quick_View{}
+      }
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px){
+  .container{
+    .block_ProductCard_Quick_View{
+      .content_ProductCard_Quick_View{
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        row-gap: 1em;
+        .imgBlock_Quick_View{
+          width: 100%;
+          img{
+            width: 70%;
+          }
+        }
+        .infoBlock_Quick_View{
+          width: 100%;
+          align-items: center;
+          .name_Quick_View{}
+          .container_price_SKU_Quantity_Quick_View{
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .block_price_SKU_Quick_View{
+              row-gap: 1em;
+              .price_Quick_View{
+                padding:0;
+                .oldPrice_Quick_View{}
+                .noActive{}
+                .newPrice_Quick_View{}
+              }
+              .SKU_Quick_View{}
+            }
+            .block_Quantity_Quick_View{
+              display: flex;
+              .quantity_Quick_View{
+                align-items: center;
+                .quantity_Name_Quick_View{}
+                .quantity_Block_Quick_View{
+                  .quantity_btn_Block_Quick_View{}
+                  .quantity_input_Block_Quick_View{}
+                }
+              }
+            }
+          }
+          .button_Quick_View{}
+          .viewMoreDetails_Quick_View{
+
+          }
+        }
+        .close_btn_Quick_View{}
+      }
+    }
+  }
 }

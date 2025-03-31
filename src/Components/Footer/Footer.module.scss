@@ -47,8 +47,8 @@ $greyLink: #838384;
       width: 90%;
 
       .footer_headBlock_deer {
-        width: 85px;
-        height: 85px;
+        width: 5.3125em;
+        height: 5.3125em;
         max-width: 100%;
         object-fit: contain;
         object-position: center center;
@@ -58,7 +58,7 @@ $greyLink: #838384;
       }
 
       .footer_headBlock_h2 {
-        font: 26px "Oswald", sans-serif;
+        font: 1.625em "Oswald", sans-serif;
         font-weight: 400;
         font-optical-sizing: auto;
         letter-spacing: 0.05em;
@@ -94,14 +94,13 @@ $greyLink: #838384;
             margin-left: min(1%, 1em) ;
           }
         }
-
       }
     }
 
     .footer_mediumBlock {
       @include disJusAli(inline-flex, space-between, center);
       color: $redText;
-      font-size: 16px;
+      font-size: 1em;
       font-family: 'proximaNova', sans-serif;
       font-weight: 600;
       letter-spacing: 0.05em;
@@ -113,8 +112,8 @@ $greyLink: #838384;
         justify-content: center;
 
         & a  img{
-          width: 25px;
-          height: 25px;
+          width: 1.5625em;
+          height: 1.5625em;
           margin: 0.5em;
           //max-width: 100%;
           background-color: $bgColor;
@@ -141,11 +140,11 @@ $greyLink: #838384;
       @include disJusAli(flex, center, center);
       margin-top: 5em;
       font: $mainFont;
-      font-size: 14px;
+      font-size: 0.875em;
       color: $greyLink;
       a{
         text-decoration: underline;
-        padding-left: 5px;
+        padding-left: 0.3125em;
         color: $greyLink;
       }
     }
@@ -167,18 +166,20 @@ $greyLink: #838384;
         .footer_headBlock_nav {
 
           .menu  {
+            justify-content: center;
             font-size: 1rem;
             flex-wrap: wrap;
             column-gap: 1em;
             row-gap: 1em;
-            & span{
-              display: none;
-            }
+            //& span{
+            //  display: none;
+            //}
           }
         }
       }
       .footer_mediumBlock {
-
+        column-gap: 1em;
+        line-height: 1.3;
         .footer_mediumBlock_socialMediaButton {
         }
 
@@ -200,9 +201,9 @@ $greyLink: #838384;
   .footer {
 
     .footer_container {
-
+      row-gap: 1em;
       .footer_headBlock {
-
+        row-gap: 1em;
         .footer_headBlock_deer {}
 
         .footer_headBlock_h2 {}
@@ -217,10 +218,10 @@ $greyLink: #838384;
       .footer_mediumBlock {
         display: flex;
         flex-direction: column;
-        row-gap: 1em;
-        font-size: 1.5rem;
+        row-gap: 0.5em;
+        font-size: 1.2rem;
         justify-content: center;
-        line-height:1.3;
+        line-height:1;
 
         .footer_mediumBlock_socialMediaButton {
           order: 3;

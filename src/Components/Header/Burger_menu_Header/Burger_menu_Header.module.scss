@@ -6,6 +6,7 @@
     opacity: 1
   }
 }
+$font-family-title: "Oswald", sans-serif;
 .open {
   display: flex;
   flex-direction: column;
@@ -19,52 +20,69 @@
   left: 0;
   right: 0;
   overflow-y: auto;
-  padding: 50px 40px;
+  padding: 3.125em 2.5em;
   background-color: #f1f0ec;
   transition: all 0.4s ease 0s;
   animation: burgerAnimation 0.4s;
 
   .container_Burger_menu {
     display: flex;
-    text-align: start;
+    //text-align: start;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
-    row-gap: 30px;
+    //justify-content: flex-start;
+    row-gap: 2em;
+    padding: 3em 2em;
+    width: 100%;
 
     .menu {
       display: flex;
-      text-align: start;
+      //text-align: start;
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
-      row-gap: 30px;
+      row-gap: 1.875em;
       cursor: pointer;
-      padding: 0.5em;
-      & a{
+      font: 1.2em "Poppins", sans-serif;
+      font-weight: 600;
+      a{
         color: #232429;
-        &:hover {
+      }
+      a:hover{
+        color: red;
+      }
+      //a:visited{color: red;}
+      .active {
           color: red;
         }
-      }
+      //.links{
+      //  color: #232429;
+      //  &:hover {
+      //    color: red;
+      //  }
+      //}
+      //
     }
 
     .logIn {
       display: flex;
       align-items: center;
-      font: 1em Arial, Helvetica, sans-serif;
+      font: 1.2em Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      color: red;
       background-color: #f1f0ec;
 
       .logInImage {
-        background-image: url("../../../Multimedia/9035990_person_circle_sharp_icon.png");
         max-width: 100%;
-        background-position: center;
-        background-size: contain;
         background-color: #f1f0ec;
-        position: center;
-        height: 2em;
-        width: 2em;
-        margin-right: 0.5em;
+
+        svg{
+          height: 2em;
+          width: 2em;
+          color: red;
+          margin-right: 0.5em;
+          position: center;
+        }
       }
     }
 
@@ -72,4 +90,5 @@
 }
 .none{
   display: none;
+  transition: all 0.5s ease 0s;
 }

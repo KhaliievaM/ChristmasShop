@@ -4,13 +4,14 @@ import redZigzag from "../../../Multimedia/12997-20010.png";
 
 const About = () => {
     return(
-        <section className={styles.containerOfAboutPage}>
-            <h2 className={styles.h2_AboutPage}>About</h2>
-            <img src={redZigzag} alt="" className={styles.zigzag_AboutPage}/>
-            <img
-                src="https://static.wixstatic.com/media/84770f_2c07b0bcb1374a05a3cef0a792b0aee3~mv2_d_1920_1281_s_2.jpg/v1/fill/w_980,h_400,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_2c07b0bcb1374a05a3cef0a792b0aee3~mv2_d_1920_1281_s_2.jpg"
-                className={styles.image_AboutPage}/>
-            <article className={styles.article_AboutPage}>
+        <section className={styles.mainBlockAboutPage}>
+            <div className={styles.containerOfAboutPage}>
+                <h2 className={styles.h2_AboutPage}>About</h2>
+                <img src={redZigzag} alt="" className={styles.zigzag_AboutPage}/>
+                <img
+                    src="https://static.wixstatic.com/media/84770f_2c07b0bcb1374a05a3cef0a792b0aee3~mv2_d_1920_1281_s_2.jpg/v1/fill/w_980,h_400,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_2c07b0bcb1374a05a3cef0a792b0aee3~mv2_d_1920_1281_s_2.jpg"
+                    className={styles.image_AboutPage}/>
+                <article className={styles.article_AboutPage}>
                 <div className={styles.container_article_AboutPage}>
                     <h3 className={styles.article_h3_AboutPage}>I'm a paragraph. Click here to add your own text and edit me. It's easy.</h3>
                     {/*<hr/>*/}
@@ -33,6 +34,7 @@ const About = () => {
                     </p>
                 </div>
             </article>
+            </div>
         </section>
     )
 }

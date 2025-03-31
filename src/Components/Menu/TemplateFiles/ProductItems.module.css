@@ -30,6 +30,7 @@
 .marginContainer .container_ChristmasTrees .headBlock_DepartmentStore .backImage {
   margin: 1em auto;
   width: 100%;
+  height: 400px;
   object-fit: cover;
   object-position: 50% 50%;
 }
@@ -63,7 +64,7 @@
 }
 .marginContainer .mainBlock_products .container_products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-flow: dense;
   gap: 1em;
   width: 100%;

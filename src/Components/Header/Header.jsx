@@ -7,8 +7,8 @@ import pinterestBlack from "../../Multimedia/7156612_pinterest_social_media_icon
 import Cart_Menu_In_Header from "../Menu/Cart_Menu_In_Header/Cart_Menu_In_Header";
 import Burger_menu_Header from "./Burger_menu_Header/Burger_menu_Header";
  const Header = (props) => {
-        const [cartMenuActive, setCartMenuActive] = useState(false);
-        const [menuActive, setMenuActive] = useState(false);
+        const [cartMenuActive, setCartMenuActive] = useState(false);                                           //useState для стану активний/неактивний кошик
+        const [menuActive, setMenuActive] = useState(false);                                                   //useState для стану відкрите/закрите Burger_menu
         const [showFirstText, setShowFirstText] = useState(true);                                       //useState для зберігання стану, який визначає, який текст відображати
         useEffect(() => {                                                                             //useEffect для створення інтервалу, який буде змінювати стан кожну секунду
             const interval = setInterval(() => {
@@ -18,7 +18,7 @@ import Burger_menu_Header from "./Burger_menu_Header/Burger_menu_Header";
         }, []);
         return (
             <header className={styles.header}>
-                <div className={styles.redHead}>
+                <div className={styles.redHead}>                                                                        {/*ЧЕРВОНИЙ БЛОК*/}
                     {showFirstText ? (
                         <h1>ORDER ONLINE today</h1>
                     ) : (
@@ -28,17 +28,17 @@ import Burger_menu_Header from "./Burger_menu_Header/Burger_menu_Header";
                 <div className={styles.whiteHead}>
                     <div className={styles.whiteHead_container}>
                         <div className={styles.whiteHead_header_title_burger}>
-                            <h1 className={styles.whiteHead_header_title_h1}>THE CHRISTMAS BOUTIQUE</h1>
+                            <h1 className={styles.whiteHead_header_title_h1}>THE CHRISTMAS BOUTIQUE</h1>                {/*НАЗВА*/}
                             <div className={styles.header_burger_container}>
-                                <Burger_menu_Header menuActive={menuActive} setMenuActive={setMenuActive}/>
+                                <Burger_menu_Header menuActive={menuActive} setMenuActive={setMenuActive}/>             {/*Burger_menu*/}
                                 <div className={`${styles.header_burger} ${menuActive ? styles.active : ''}`}
                                      onClick={() => setMenuActive(!menuActive)}>   {/*className={styles.header_burger}{styles[menuActive ? `${class1} ${class2}` : 'header_burger']}>{styles[`header_burger ${menuActive ? 'active' : ''}`]}*/}
-                                    <span></span>
+                                    <span></span>                                                                       {/*Burger_menu значок*/}
                                 </div>
                             </div>
                         </div>
                         <div className={styles.whiteHead_menu}>
-                            <div className={styles.whiteHead_menu_socialMediaButton}>
+                            <div className={styles.whiteHead_menu_socialMediaButton}>                                   {/*SocialMediaButton*/}
                                 <a href="https://www.facebook.com/wix" target="_blank" rel="noopener">
                                     <img src={facebookBlack} alt=""/>
                                 </a>
@@ -49,7 +49,7 @@ import Burger_menu_Header from "./Burger_menu_Header/Burger_menu_Header";
                                     <img src={pinterestBlack} alt=""/>
                                 </a>
                             </div>
-                            <nav className={styles.navigation}>
+                            <nav className={styles.navigation}>                                                         {/*МЕНЮ*/}
                                 <ul className={styles.menu}>
                                     <Link to="/">HOME</Link>
                                     <Link to="/shopAll">SHOP ALL</Link>
@@ -62,12 +62,12 @@ import Burger_menu_Header from "./Burger_menu_Header/Burger_menu_Header";
                             </nav>
                             <div className={styles.whiteHead_menu_logAndCart}>
                                 <div className={styles.container_logAndCart}>
-                                    <button className={styles.logIn}>
+                                    <button className={styles.logIn}>                                                   {/*Log In*/}
                                         <div className={styles.logInImage}></div>
                                         <div>Log In</div>
                                     </button>
                                     <button className={styles.cart}>   {/* onClick={() => {setCartMenuActive(true)}}*/}
-                                        <Cart_Menu_In_Header onClose={()=>setCartMenuActive(false)} isActiveCart={cartMenuActive}/>
+                                        <Cart_Menu_In_Header onClose={()=>setCartMenuActive(false)} isActiveCart={cartMenuActive}/>             {/*КОШИК*/}
                                     </button>
                                 </div>
                             </div>
@@ -75,7 +75,6 @@ import Burger_menu_Header from "./Burger_menu_Header/Burger_menu_Header";
 
                     </div>
                 </div>
-
             </header>
         )
     }

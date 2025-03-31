@@ -10,25 +10,25 @@ const Home = (props) => {
     return (
         <div className={styles.wrapper}>
             <main className={styles.containerOfHomePage}>
-                <section className={styles.topOfHomePage}>
+                <section className={styles.topOfHomePage}>                                                              {/*ВЕРХНІЙ БЛОК сторінки Home*/}
 
-                    <div className={styles.topOfHomePage_deer}>
+                    <div className={styles.topOfHomePage_deer}>                                                         {/*емблема магазину/олень*/}
                         <span>EST.</span>
                         <div className={styles.topOfHomePage_deer_image}></div>
                         <span>2035</span>
                     </div>
 
-                    <div className={styles.topOfHomePage_title}>
+                    <div className={styles.topOfHomePage_title}>                                                        {/*заголовок*/}
                         <h1>Holiday Specials</h1>
                         <span>YOUR SOURCE FOR ALL THINGS CHRISTMAS</span>
                     </div>
 
-                    <Link to="/shopAll" className={styles.link}>Start Shopping</Link>
+                    <Link to="/shopAll" className={styles.link}>Start Shopping</Link>                                   {/*кнопка Start Shopping*/}
 
                 </section>
 
-                <section className={styles.middleOfHomePage}>
-                    <div className={styles.middleOfHomePage_whiteBlock}>
+                <section className={styles.middleOfHomePage}>                                                           {/*СЕРЕДНІЙ БЛОК сторінки Home*/}
+                    <div className={styles.middleOfHomePage_whiteBlock}>                                                {/*білий блок/ три категорії товарів*/}
                         <div className={styles.middleOfHomePage_whiteBlock_containerOfThreeCategories}>
                             <div
                                 className={styles.middleOfHomePage_whiteBlock_containerOfThreeCategories_threeCategories}>
@@ -68,29 +68,30 @@ const Home = (props) => {
                             </div>
                         </div>
                     </div>
-
-                    <div className={styles.middleOfHomePageContainer_promoCodeBlock}>
+                    <div className={styles.middleOfHomePageContainer_promoCodeBlock}>                                   {/*червоний блок/promoCodeBlock*/}
                         <div className={styles.middleOfHomePage_promoCodeBlock}>
                             <img
                                 src='https://static.wixstatic.com/media/84770f_2d42248cf58941ffbaf7635cc5104abe~mv2_d_1920_1280_s_2.jpg/v1/fill/w_595,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_2d42248cf58941ffbaf7635cc5104abe~mv2_d_1920_1280_s_2.jpg'/>
-                            <div className={styles.middleOfHomePage_promoCodeBlock_redBlock}></div>
+                            <div className={styles.middleOfHomePage_promoCodeBlock_redBlock}>                           {/*блок з промокодом*/}
+                                <div className={styles.middleOfHomePage_promoCodeBlock_redBlockText_container}>
+                                    <div className={styles.border_redBlock_text}>
+                                        <div className={styles.middleOfHomePage_promoCodeBlock_redBlock_text}>
+                                            BUY ONLINE NOW <br/> AND GET 10% OFF
+                                            <div>
+                                                <img src={zigzag} alt="" className={styles.zigzag}/>
+                                            </div>
+                                            USE PROMO CODE <br/> HOHOHO
+                                        </div>
+                                    </div>
+                                    <Link to="/shopAll" className={styles.linkShopNow}>Shop Now</Link>                  {/*кнопка Shop Now*/}
+                                </div>
+                            </div>
                             <img
                                 src="https://static.wixstatic.com/media/84770f_7dd192db00dc4d219b7fcad2061e2fcb~mv2_d_1920_1920_s_2.jpg/v1/fill/w_595,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_7dd192db00dc4d219b7fcad2061e2fcb~mv2_d_1920_1920_s_2.jpg"/>
                         </div>
-                        <div className={styles.middleOfHomePage_promoCodeBlock_redBlockText_container}>
-                                <div className={styles.middleOfHomePage_promoCodeBlock_redBlock_text}>
-
-                                        BUY ONLINE NOW <br/> AND GET 10% OFF
-                                        <div>
-                                            <img src={zigzag} alt="" className={styles.zigzag}/>
-                                        </div>
-                                        USE PROMO CODE <br/> HOHOHO
-                                </div>
-                        </div>
-                        <Link to="/shopAll" className={styles.linkShopNow}>Shop Now</Link>
                     </div>
                 </section>
-                <Contacts/>
+                <Contacts className={styles.bottomOfHomePage}/>                                                         {/*НИЖНІЙ БЛОК сторінки Home/КОНТАКТИ*/}
             </main>
         </div>
     )

@@ -1,17 +1,19 @@
 import React from 'react';
 import products from "../../Products";
 import ProductItems from "../TemplateFiles/ProductItems";
+import bcImage from "../../../Multimedia/tessa-rampersad-5toRIWF2GUY-unsplash.jpg";
 
 const UniqueOrnaments = () => {
 
     return(
         <ProductItems pageName={'Unique Ornaments'}
-                      bgImg={'https://static.wixstatic.com/media/84770f_6d3cbb8d2eee4cecb35fa530aa6a3a1d~mv2.jpeg/v1/fill/w_2216,h_514,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_6d3cbb8d2eee4cecb35fa530aa6a3a1d~mv2.jpeg'}
+                      bgImg={bcImage}
                       productsArray={products.productsUniqueOrnaments}
         />
     )
 }
 export default UniqueOrnaments;
+//bgImg={'https://static.wixstatic.com/media/84770f_6d3cbb8d2eee4cecb35fa530aa6a3a1d~mv2.jpeg/v1/fill/w_2216,h_514,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_6d3cbb8d2eee4cecb35fa530aa6a3a1d~mv2.jpeg'}
 // let productsContainer = products.productsUniqueOrnaments.map(p => <Ornaments name={p.name} img={p.img} oldprice={p.about} price={p.price} about={p.about} info={p.info} SKU={p.SKU} key={p.id}/>);
 // return (
 //     <div className={styles.marginContainer}>

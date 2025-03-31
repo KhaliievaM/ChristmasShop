@@ -29,8 +29,8 @@
   width: 90%;
 }
 .footer .footer_container .footer_headBlock .footer_headBlock_deer {
-  width: 85px;
-  height: 85px;
+  width: 5.3125em;
+  height: 5.3125em;
   max-width: 100%;
   object-fit: contain;
   object-position: center center;
@@ -39,7 +39,7 @@
   background-size: contain;
 }
 .footer .footer_container .footer_headBlock .footer_headBlock_h2 {
-  font: 26px "Oswald", sans-serif;
+  font: 1.625em "Oswald", sans-serif;
   font-weight: 400;
   font-optical-sizing: auto;
   letter-spacing: 0.05em;
@@ -80,7 +80,7 @@
   justify-content: space-between;
   align-items: center;
   color: #ff462a;
-  font-size: 16px;
+  font-size: 1em;
   font-family: "proximaNova", sans-serif;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -92,8 +92,8 @@
   justify-content: center;
 }
 .footer .footer_container .footer_mediumBlock .footer_mediumBlock_socialMediaButton a img {
-  width: 25px;
-  height: 25px;
+  width: 1.5625em;
+  height: 1.5625em;
   margin: 0.5em;
   background-color: #232429;
   color: white;
@@ -116,40 +116,48 @@
   align-items: center;
   margin-top: 5em;
   font: 1em Arial, sans-serif;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #838384;
 }
 .footer .footer_container .footer_footBlock a {
   text-decoration: underline;
-  padding-left: 5px;
+  padding-left: 0.3125em;
   color: #838384;
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .footer .footer_container .footer_headBlock .footer_headBlock_nav .menu {
+    justify-content: center;
     font-size: 1rem;
     flex-wrap: wrap;
     column-gap: 1em;
     row-gap: 1em;
   }
-  .footer .footer_container .footer_headBlock .footer_headBlock_nav .menu span {
-    display: none;
+  .footer .footer_container .footer_mediumBlock {
+    column-gap: 1em;
+    line-height: 1.3;
   }
   .footer .footer_container .footer_footBlock {
     margin: 0;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
+  .footer .footer_container {
+    row-gap: 1em;
+  }
+  .footer .footer_container .footer_headBlock {
+    row-gap: 1em;
+  }
   .footer .footer_container .footer_headBlock .footer_headBlock_nav .menu {
     display: none;
   }
   .footer .footer_container .footer_mediumBlock {
     display: flex;
     flex-direction: column;
-    row-gap: 1em;
-    font-size: 1.5rem;
+    row-gap: 0.5em;
+    font-size: 1.2rem;
     justify-content: center;
-    line-height: 1.3;
+    line-height: 1;
   }
   .footer .footer_container .footer_mediumBlock .footer_mediumBlock_socialMediaButton {
     order: 3;

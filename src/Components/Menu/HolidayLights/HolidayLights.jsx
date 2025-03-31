@@ -1,17 +1,19 @@
-
 import React from 'react';
 import ProductItems from "../TemplateFiles/ProductItems";
 import products from "../../Products";
+import bgImage from "../../../Multimedia/alisa-anton-ujKXJFlENXg-unsplash.jpg";
 
 const HolidayLights = () => {
     return (
         <ProductItems pageName={'Holiday Lights'}
-                      bgImg={'https://static.wixstatic.com/media/84770f_cf7bb02cf94645eaa6437c7dbcb7ba50~mv2.jpeg/v1/fill/w_1920,h_445,al_c,q_85,enc_auto/84770f_cf7bb02cf94645eaa6437c7dbcb7ba50~mv2.jpeg'}
+                      bgImg={bgImage}
                       productsArray={products.productsHolidayLights}
         />
     )
 }
 export default HolidayLights;
+//bgImg={'https://static.wixstatic.com/media/84770f_cf7bb02cf94645eaa6437c7dbcb7ba50~mv2.jpeg/v1/fill/w_1920,h_445,al_c,q_85,enc_auto/84770f_cf7bb02cf94645eaa6437c7dbcb7ba50~mv2.jpeg'}
+//
 // <div className={styles.marginContainer}>
 //     <div className={styles.container_HolidayLights}>
 //         <div className={styles.navBlock_HolidayLights}>

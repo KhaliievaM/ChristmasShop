@@ -70,17 +70,23 @@ const QuickView = (props) => {                                                  
                             <div className={styles.imgBlock_Quick_View}><img src={props.img} alt=""/></div>             {/*зображення продукту*/}
                             <div className={styles.infoBlock_Quick_View}>                                               {/*інфо блок*/}
                                 <div className={styles.name_Quick_View}>{props.name}</div>                              {/*назва продукту*/}
-                                <div className={styles.price_Quick_View}>                                               {/*блок цін(стара, нова)*/}
-                                    <span className={`${styles.oldPrice_Quick_View} ${doesOldPriceExist ? '' : styles.noActive}`}>${props.oldprice}</span>{/*перевірка чи є стара ціна*/}
-                                    <span className={styles.newPrice_Quick_View}>${props.price}</span>                  {/*ціна*/}
-                                </div>
-                                <div className={styles.SKU_Quick_View}>SKU: {props.SKU}</div>                           {/*SKU*/}
-                                <div className={styles.quantity_Quick_View}>                                            {/*блок quantity*/}
-                                    <div className={styles.quantity_Name_Quick_View}>Quantity</div>
-                                    <div className={styles.quantity_Block_Quick_View}>
-                                        <button className={styles.quantity_btn_Block_Quick_View} onClick={DecrementItems}><GoDash/></button>    {/*зменшення кількості продукту*/}
-                                        <input type="text" className={styles.quantity_input_Block_Quick_View} value={quantity}/>               {/* quantity */}
-                                        <button className={styles.quantity_btn_Block_Quick_View} onClick={IncrementCounter}><GoPlus/></button> {/*збільшення кількості продукту*/}
+                                <div className={styles.container_price_SKU_Quantity_Quick_View}>
+                                    <div className={styles.block_price_SKU_Quick_View}>
+                                        <div className={styles.price_Quick_View}>                                               {/*блок цін(стара, нова)*/}
+                                            <span className={`${styles.oldPrice_Quick_View} ${doesOldPriceExist ? '' : styles.noActive}`}>${props.oldprice}</span>{/*перевірка чи є стара ціна*/}
+                                            <span className={styles.newPrice_Quick_View}>${props.price}</span>                  {/*ціна*/}
+                                        </div>
+                                        <div className={styles.SKU_Quick_View}>SKU: {props.SKU}</div>                           {/*SKU*/}
+                                    </div>
+                                    <div className={styles.block_Quantity_Quick_View}>
+                                        <div className={styles.quantity_Quick_View}>                                            {/*блок quantity*/}
+                                            <div className={styles.quantity_Name_Quick_View}>Quantity</div>
+                                            <div className={styles.quantity_Block_Quick_View}>
+                                                <button className={styles.quantity_btn_Block_Quick_View} onClick={DecrementItems}><GoDash/></button>    {/*зменшення кількості продукту*/}
+                                                <input type="text" className={styles.quantity_input_Block_Quick_View} value={quantity}/>               {/* quantity */}
+                                                <button className={styles.quantity_btn_Block_Quick_View} onClick={IncrementCounter}><GoPlus/></button> {/*збільшення кількості продукту*/}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <button className={styles.button_Quick_View} onClick={()=>addProductToCart()}>Add to Cart</button>             {/* кнопка додати в кошик */}

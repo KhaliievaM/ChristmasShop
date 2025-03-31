@@ -4,31 +4,38 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 100%;
-  background-image: url("https://static.wixstatic.com/media/84770f_bc1d493819db4d27891a877ce0063d2a~mv2_d_1920_1280_s_2.jpg/v1/fill/w_1903,h_801,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_bc1d493819db4d27891a877ce0063d2a~mv2_d_1920_1280_s_2.jpg");
+}
+.container_size .background_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-image: url("/src/Multimedia/joanna-kosinska-dka5C8Ct2Fw-unsplash.jpg");
   background-attachment: fixed;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
 }
-.container_size .bottomOfHomePage_containerFeedbackFormContacts {
+.container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 50%;
+  row-gap: 5em;
+  margin: 4em auto;
 }
-.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm {
+.container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 5em auto;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.73);
+  padding: 1em;
+  border-radius: 0.7em;
 }
-.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_sendAMess {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_sendAMess {
   text-align: center;
   margin: 1em auto;
   font: 18px "Poppins", sans-serif;
@@ -37,37 +44,38 @@
   letter-spacing: 3.5px;
   color: red;
 }
-.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_sendAMess img {
+.container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm img {
   width: 70px;
   height: 50px;
   font-size: 20px;
   transform: rotate(180deg);
 }
-.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form {
+.container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
-.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block {
+.container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block {
   display: flex;
   justify-content: center;
   align-items: stretch;
   flex-direction: column;
   margin: 1em auto;
-  width: 600px;
+  width: 100%;
   font: 1em Arial, sans-serif;
 }
-.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_nameEmail {
+.container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_nameEmail {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   flex-direction: row;
 }
-.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_nameEmail .form_element {
+.container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_nameEmail .form_element {
   flex-grow: 1;
 }
-.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_element {
+.container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_element {
   padding: 9px;
   margin: 0.5em;
   border: 1px solid #c1c1c1;
@@ -76,18 +84,18 @@
   color: red;
   cursor: pointer;
 }
-.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_element:hover {
+.container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_element:hover {
   color: red;
   background-color: #eeeeee;
   box-shadow: 0 0 0 1px black inset;
   border: 1px solid #000000;
   border-radius: 3px;
 }
-.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block ::placeholder {
+.container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block ::placeholder {
   color: #fcb5ae;
   opacity: 1; /* Firefox */
 }
-.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_button {
+.container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_button {
   padding: 0.7em 1em;
   background-color: red;
   min-width: 11.3em;
@@ -96,14 +104,16 @@
   font: 1em Arial, sans-serif;
   transition: all 0.5s ease;
 }
-.container_size .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_button:hover {
+.container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_button:hover {
   color: red;
   background-color: #e7e7e7;
 }
-.container_size .bottomOfHomePage_containerFeedbackFormContacts .contacts {
-  margin-bottom: 4em;
+.container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .contacts {
+  background-color: rgba(255, 255, 255, 0.73);
+  width: 100%;
+  border-radius: 6px;
 }
-.container_size .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_contactUs {
+.container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_contactUs {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,13 +126,13 @@
   letter-spacing: 3.5px;
   color: red;
 }
-.container_size .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_contactUs img {
+.container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_contactUs img {
   width: 70px;
   height: 50px;
   font-size: 20px;
   transform: rotate(180deg);
 }
-.container_size .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_numEmail {
+.container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_numEmail {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,13 +145,85 @@
   letter-spacing: 3px;
   color: #999a9e;
 }
-.container_size .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_numEmail .contacts_numEmail_line {
+.container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_numEmail .contacts_numEmail_line {
   border-left: 2px solid #999a9e;
   height: 16px;
   margin: 0 12px;
 }
-.container_size .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_numEmail a {
+.container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .contacts .contacts_numEmail a {
   color: #999a9e;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts {
+    row-gap: 0;
+    width: 100%;
+  }
+  .container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm {
+    width: 70%;
+    margin: 3em auto;
+  }
+  .container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_sendAMess {
+    width: 90%;
+  }
+  .container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form {
+    width: 90%;
+  }
+  .container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block {
+    width: 75%;
+  }
+  .container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_nameEmail {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_nameEmail .form_element {
+    margin: 0.5em;
+  }
+  .container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_button {
+    margin: 1em;
+  }
+  .container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .contacts {
+    padding: 1em;
+    width: 70%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts {
+    row-gap: 0;
+    width: 100%;
+  }
+  .container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm {
+    width: 70%;
+    margin: 3em auto;
+  }
+  .container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_sendAMess {
+    width: 90%;
+  }
+  .container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form {
+    width: 90%;
+  }
+  .container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block {
+    width: 75%;
+    margin: 0;
+  }
+  .container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_nameEmail {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_block .form_nameEmail .form_element {
+    margin: 0.5em;
+  }
+  .container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .feedbackForm .feedbackForm_form .form_button {
+    margin: 1em;
+  }
+  .container_size .background_container .bottomOfHomePage_containerFeedbackFormContacts .contacts {
+    padding: 1em;
+    width: 70%;
+  }
 }
 
 /*# sourceMappingURL=Contacts.module.css.map */

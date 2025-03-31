@@ -1,4 +1,4 @@
-import photo from "../Multimedia/lavender-7638368_1280.jpg";
+//import photo from "../Multimedia/lavender-7638368_1280.jpg";
 let products = {
     productsChristmasTrees: [
         {

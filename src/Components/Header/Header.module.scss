@@ -43,29 +43,25 @@ $colors: (
   width: inherit;
   background-color: map-get($colors, "white");
   .redHead {
-    font-size: 16px;
+    font-size: 1em;
     font-family: 'proximaNova', sans-serif;
     font-weight: 600;
+    letter-spacing: 0.7em;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.7em;
     padding: 1em;
     background-color: $redColor;
     color: $whiteColor;
   }
   .whiteHead {
-    display: flex;
+    @include disJusAli(flex, center, center);
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding-top: 2em;
     padding-bottom: 2em;
     width: 100%;
     .whiteHead_container {
-      display: flex;
+      @include disJusAli(flex, center, center);
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
       width: 90%;
       .whiteHead_header_title_burger {
         h1 {
@@ -134,7 +130,6 @@ $colors: (
         .whiteHead_menu_socialMediaButton {
           display: flex;
           justify-content: center;
-
           & a img {
             background-size: contain;
             width: 1.5em;
@@ -143,19 +138,18 @@ $colors: (
             max-width: 100%;
             background: center inherit;
           }
-
         }
         .navigation {
           @include disFlex(flex, row wrap, center);
           align-content: center;
           .menu {
             @include disFlex(flex, row wrap, center);
-            font-size: 1rem;
-            font-family: 'proximaNova', sans-serif;
-            font-weight: 600;
             align-content: center;
             column-gap: 2.3em;
             row-gap: 1em;
+            font-size: 1rem;
+            font-family: 'proximaNova', sans-serif;
+            font-weight: 600;
             cursor: pointer;
             padding: 0.5em;
             & a {
@@ -169,9 +163,7 @@ $colors: (
         .whiteHead_menu_logAndCart {
           @include disJusAli(flex, center, flex-start);
           .container_logAndCart{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include disJusAli(flex, center, center);
             .logIn, .cart {
               display: flex;
               align-items: center;
@@ -196,9 +188,8 @@ $colors: (
               margin-right: 0.5em;
             }
             .cart {
-              background-color: rgba(253, 253, 253, 0.65);
+              background: inherit;
               transition: .5s ease;
-              height: 2em;
             }
           }
         }
@@ -249,17 +240,17 @@ $colors: (
             flex: 2;
             margin: 0 auto;
             .container_logAndCart{
-            .logIn, .cart {
-              justify-content: center;
-              box-sizing: border-box;
-              white-space: nowrap;
-              height: 2em;
-              width: 50%;
-            }
-            .logInImage {}
-            .cart {
-              margin-right: 10px;
-            }
+              .logIn, .cart {
+                justify-content: center;
+                box-sizing: border-box;
+                white-space: nowrap;
+                height: 2em;
+                width: 50%;
+              }
+              .logInImage {}
+              .cart {
+                margin-right: 10px;
+              }
             }
           }
         }
@@ -304,6 +295,9 @@ $colors: (
     align-items: center;
     padding: 1.5em 0;
     width: 100%;
+    //background-color: #dadada;
+    background: url("../../Multimedia/decorative-christmas-arrangement-with-copy-space_23-21491559011.jpg") no-repeat top ;
+    background-size: cover;
     .redHead {
       display: none;
     }
@@ -323,6 +317,7 @@ $colors: (
           margin: 0.5em auto;
           .header_burger_container {
             @include disJusAli(flex, flex-end, center);
+            z-index: 30;
             .header_burger {
               @include disJusAli(flex, flex-end, center);
               & span {}
@@ -350,8 +345,6 @@ $colors: (
             display: none;
           }
           .whiteHead_menu_logAndCart {
-            //@include disJusAli(flex, center, center);
-            //flex-direction: row;
             position: absolute;
             top: 0.5em;
             right: -7%;
@@ -360,9 +353,12 @@ $colors: (
                 display: none;
               }
               .cart {
-                background: inherit;
+                //background-color: rgba(255, 255, 255, 0.69);
+                //background-color: white;
+                //box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+                border-radius: 0.5em;
                 width: 100%;
-                margin-right: 10px;
+                margin-right:  0.625em;
                 transition: .5s ease;
               }
             }
@@ -379,6 +375,7 @@ $colors: (
     align-items: center;
     padding: 1.5em 0;
     width: 100%;
+    background-color: #dadada;
     .redHead {
       display: none;
     }
@@ -403,8 +400,10 @@ $colors: (
             font-size: 1.5em;
           }
           .header_burger_container {
-            top: 5.5em;
-            right: -1em;
+            margin-right: 4em;
+            top: 5.45em;
+            right: -2em;
+            z-index: 49;
             @include disJusAli(flex, flex-end, center);
             .header_burger {
               @include disJusAli(flex, flex-end, center);
@@ -428,18 +427,15 @@ $colors: (
           font-size: 0.8rem;
           .whiteHead_menu_socialMediaButton button {
             text-align: center;
-
             background-color: #f9fafa;
           }
           .navigation {
             display: none;
           }
           .whiteHead_menu_logAndCart {
-            //@include disJusAli(flex, center, center);
-            //flex-direction: row;
             position: absolute;
             top: 0.5em;
-            right: -13%;
+            right: -12%;
             .container_logAndCart{
               position: relative;
               .logIn {
@@ -449,7 +445,7 @@ $colors: (
                 font-size: 0.7rem;
                 background: inherit;
                 width: 100%;
-                margin-right: 10px;
+                margin-right:  0.625em;
                 transition: .5s ease;
               }
             }

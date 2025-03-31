@@ -32,6 +32,7 @@
       //width: 1773px;
       //height: 411px;
       width: 100%;
+      height: 400px;
       object-fit: cover;
       object-position: 50% 50%;
     }
@@ -80,7 +81,7 @@
     .container_products {
       display: grid;
       //grid-template-columns: auto auto auto auto;
-      grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
       grid-auto-flow: dense; //?
       gap: 1em;
       width: 100%;

@@ -23,7 +23,7 @@
     transition: right 0.5s ease;
     padding: 2em;
     white-space: normal;
-
+    z-index: 50;
     .container_Cart_Menu_block{
       display: flex;
       flex-direction: column;
@@ -139,6 +139,7 @@
 
   .sidebar.open {
     right: 0;
+
   }
 
 .app {
