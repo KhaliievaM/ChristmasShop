@@ -3,6 +3,8 @@ import styles from "./ProductsInCart.module.css";
 import {GoDash, GoPlus} from "react-icons/go";
 import trashDelete from "../../../../Multimedia/delete_icon_trash.png";
 import {useState} from "react";
+import {Link} from "react-router-dom";
+import products from "../../../Products";
 
 const ProductsInCart = (props) => {
 
@@ -59,24 +61,37 @@ const ProductsInCart = (props) => {
             dataUpdateLocalStorage(decrementQuantity);
         }
     };
-
+    let actualArray;                                                                                                    // батьківський масив продукту
+    for(let obj in products){                                                                                           //пошук продукту, за заданим id
+        for(let inObj of products[obj]){
+            if(inObj.id === prodId){
+                actualArray=obj;
+            }
+        }
+    }
+    let isShopAll = false;
+    const dataToPass = { id: prodId, productsArray: actualArray, isShopAll: isShopAll };                           //дані для передачі компоненті ProductPageSwitcher(id, масив, ShopAll)
     return (
         <div className={styles.products_Section_Cart} key={reloadKey}>
-            <a href={'/product/' + productObj.id}>
+            <Link to={`/productPageSwitcher/product/${productObj.id}`}  state= {{dataToPass}}>
                 <img src={productObj.img} alt="" className={styles.img_product_Section_Cart}/>
-            </a>
-            <div className={styles.name_price_product_Section_Cart}>
-                <a href={'/product/' + productObj.id}>
-                    <div className={styles.name_product_Cart}>{productObj.name}</div>
-                </a>
-                <div className={styles.price_product_Cart}>$ {productObj.price}</div>
+            </Link>
+            <div className={styles.container_name_quantity_price}>
+                <div className={styles.name_price_product_Section_Cart}>
+                    <Link to={`/productPageSwitcher/product/${productObj.id}`} state= {{dataToPass}}>
+                        <div className={styles.name_product_Cart}>{productObj.name}</div>
+                    </Link>
+                    <div className={styles.price_product_Cart}>$ {productObj.price}</div>
+                </div>
+                <div className={styles.container_quantity_price}>
+                    <div className={styles.quantity_product_Section}>
+                        <button className={styles.quantity_btn_Cart} onClick={DecrementItems}><GoDash/></button>
+                        <input type="text" className={styles.quantity_input_Cart} value={productObj.quantity}/>
+                        <button className={styles.quantity_btn_Cart} onClick={IncrementCounter}><GoPlus/></button>
+                    </div>
+                    <div className={styles.price_Sum_product_Section}>$ {productObj.totalPrice}</div>
+                </div>
             </div>
-            <div className={styles.quantity_product_Section}>
-                <button className={styles.quantity_btn_Cart} onClick={DecrementItems}><GoDash/></button>
-                <input type="text" className={styles.quantity_input_Cart} value={productObj.quantity}/>
-                <button className={styles.quantity_btn_Cart} onClick={IncrementCounter}><GoPlus/></button>
-            </div>
-            <div className={styles.price_Sum_product_Section}>$ {productObj.totalPrice}</div>
             <button className={styles.delete_product_Section} onClick={()=>deleteProduct()}><img src={trashDelete} alt=""/></button>
         </div>
     )

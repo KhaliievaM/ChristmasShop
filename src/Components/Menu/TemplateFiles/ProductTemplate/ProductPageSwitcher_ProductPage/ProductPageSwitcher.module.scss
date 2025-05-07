@@ -7,7 +7,7 @@
   src: url("../../../../../Multimedia/DidotLTPro-Italic.ttf");
 }
 .marginContainer_ProductPage{
-  width: 100%;
+  width: 65%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,9 +75,27 @@
   }
 }
 @media screen and (min-width: 1200px) {}
-@media screen and (min-width: 992px) and (max-width: 1199px){}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  .marginContainer_ProductPage{
+    width: 85%;
+    .container_ProductPage {
+      width: 80%;
+      .navBlock_ProductPage {
+        .wayFrom_ProductPage {
+          .path_links {}
+          .path_name {}
+        }
+        .turnPages_ProductPage {
+          .btn_navBlock {}
+        }
+      }
+    }
+    .productOnThePage{}
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 991px){
   .marginContainer_ProductPage{
+    width: 85%;
     .container_ProductPage {
       width: 80%;
       .navBlock_ProductPage {
@@ -95,6 +113,7 @@
 }
 @media screen and (min-width: 320px) and (max-width: 768px){
   .marginContainer_ProductPage{
+    width: 85%;
     .container_ProductPage {
       width: 80%;
       .navBlock_ProductPage {

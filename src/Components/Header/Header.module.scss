@@ -292,9 +292,9 @@ $colors: (
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .header {
+    width: 100%;
     align-items: center;
     padding: 1.5em 0;
-    width: 100%;
     //background-color: #dadada;
     background: url("../../Multimedia/decorative-christmas-arrangement-with-copy-space_23-21491559011.jpg") no-repeat top ;
     background-size: cover;
@@ -302,18 +302,18 @@ $colors: (
       display: none;
     }
     .whiteHead {
+      width: 80%;
       justify-content: space-between;
       padding-top: 0;
       padding-bottom: 0;
-      width: 80%;
       .whiteHead_container {
-        flex-direction: column-reverse;
         width: 100%;
+        flex-direction: column-reverse;
         .whiteHead_header_title_burger {
+          width: 100%;
           display: flex;
           justify-content: center;
           gap: 30%;
-          width: 100%;
           margin: 0.5em auto;
           .header_burger_container {
             @include disJusAli(flex, flex-end, center);
@@ -332,9 +332,7 @@ $colors: (
          }
         .whiteHead_menu {
           display: flex;
-          justify-content: center;
           position: relative;
-          width: 100%;
           padding-top: 0;
           margin: 0.5em auto;
           .whiteHead_menu_socialMediaButton button {
@@ -346,18 +344,15 @@ $colors: (
           }
           .whiteHead_menu_logAndCart {
             position: absolute;
-            top: 0.5em;
+            top: -0.3em;
             right: -7%;
             .container_logAndCart{
               .logIn {
                 display: none;
               }
               .cart {
-                //background-color: rgba(255, 255, 255, 0.69);
-                //background-color: white;
-                //box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-                border-radius: 0.5em;
                 width: 100%;
+                border-radius: 0.5em;
                 margin-right:  0.625em;
                 transition: .5s ease;
               }
@@ -371,7 +366,6 @@ $colors: (
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .header {
-    display: flex;
     align-items: center;
     padding: 1.5em 0;
     width: 100%;
@@ -380,14 +374,11 @@ $colors: (
       display: none;
     }
     .whiteHead {
-      display: flex;
       justify-content: space-between;
       padding-top: 0;
       padding-bottom: 0;
       width: 80%;
       .whiteHead_container {
-        display: flex;
-        justify-content: center;
         flex-direction: column-reverse;
         width: 100%;
         .whiteHead_header_title_burger {
@@ -419,9 +410,7 @@ $colors: (
         }
         .whiteHead_menu {
           display: flex;
-          justify-content: center;
           position: relative;
-          width: 100%;
           padding-top: 0;
           margin: 0.5em auto;
           font-size: 0.8rem;
@@ -434,7 +423,7 @@ $colors: (
           }
           .whiteHead_menu_logAndCart {
             position: absolute;
-            top: 0.5em;
+            top: -0.8em;
             right: -12%;
             .container_logAndCart{
               position: relative;
@@ -442,7 +431,7 @@ $colors: (
                 display: none;
               }
               .cart {
-                font-size: 0.7rem;
+                //font-size: 1rem;
                 background: inherit;
                 width: 100%;
                 margin-right:  0.625em;

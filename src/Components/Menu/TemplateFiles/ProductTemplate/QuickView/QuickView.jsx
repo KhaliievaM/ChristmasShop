@@ -3,6 +3,7 @@ import styles from "./QuickView.module.css";
 import { IoClose } from "react-icons/io5";
 import {GoDash, GoPlus} from "react-icons/go";
 import {useState} from "react";
+import { Link } from 'react-router-dom';
 
 
 const QuickView = (props) => {                                                                                          //const QuickView = (props,{isOpen, onClose})
@@ -14,11 +15,14 @@ const QuickView = (props) => {                                                  
     }
     let minValue = 1;                                                                                                   //мінімальна кількість продукту
     let maxValue = 20;                                                                                                  //максимальна кількість продукту
+    const { dataToPass } = props;
+
     let prodId = props.id;
     let productKey = "product"+ prodId;
     let totalPrice;
     let incrementedQuantity;
     let decrementQuantity;
+   //
 
     const [quantity, setQuantity] = useState(minValue);
 
@@ -90,7 +94,13 @@ const QuickView = (props) => {                                                  
                                     </div>
                                 </div>
                                 <button className={styles.button_Quick_View} onClick={()=>addProductToCart()}>Add to Cart</button>             {/* кнопка додати в кошик */}
-                                <a href={'/product/' + props.id} className={styles.viewMoreDetails_Quick_View}>View More Details</a>           {/*посилання на сторінку продукту*/}
+                                <Link
+                                    to={`/productPageSwitcher/product/${prodId}`}
+                                    state={{dataToPass}}
+                                    className={styles.viewMoreDetails_Quick_View}
+                                > View More Details
+                                </Link>{/*посилання на сторінку продукту*/}
+
                             </div>
                             <button className={styles.close_btn_Quick_View} onClick={()=>props.onClose()}><IoClose /></button>                  {/* кнопка закрити */}
                         </div>

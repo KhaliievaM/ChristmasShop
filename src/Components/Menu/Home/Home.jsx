@@ -37,7 +37,7 @@ const Home = (props) => {
                                     src="https://static.wixstatic.com/media/84770f_3d61665c560442849e3ac2f6f7675427~mv2_d_1500_1500_s_2.jpg/v1/fill/w_303,h_432,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_3d61665c560442849e3ac2f6f7675427~mv2_d_1500_1500_s_2.jpg"
                                     alt="Christmas ProductTemplate"/>
 
-                                <a href="src/Components/Menu/Home/Home">Christmas Trees</a>
+                                <Link to="/christmasTrees">Christmas Trees</Link>
                                 <hr/>
                                 <Link to="/christmasTrees" className={styles.linkShop}>Shop Collection</Link>
 
@@ -49,7 +49,7 @@ const Home = (props) => {
                                 <img
                                     src="https://static.wixstatic.com/media/84770f_0a0ede78262c4c5e86861c5c598e82e6~mv2_d_1500_1500_s_2.jpg/v1/fill/w_318,h_432,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_0a0ede78262c4c5e86861c5c598e82e6~mv2_d_1500_1500_s_2.jpg"
                                     alt="Unique Ornaments"/>
-                                <a href="src/Components/Menu/Home/Home">Unique Ornaments</a>
+                                <Link to="/uniqueOrnaments">Unique Ornaments</Link>
                                 <hr/>
                                 <Link to="/uniqueOrnaments" className={styles.linkShop}>Shop Collection</Link>
 
@@ -61,7 +61,7 @@ const Home = (props) => {
                                 <img
                                     src="https://static.wixstatic.com/media/84770f_8ef70e422ee7477b8237772b4cd69cd3~mv2_d_1500_1500_s_2.jpg/v1/fill/w_303,h_432,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_8ef70e422ee7477b8237772b4cd69cd3~mv2_d_1500_1500_s_2.jpg"
                                     alt="Holiday Lights"/>
-                                <a href="src/Components/Menu/Home/Home">Holiday Lights</a>
+                                <Link to="/holidayLights">Holiday Lights</Link>
                                 <hr/>
                                 <Link to="/holidayLights" className={styles.linkShop}>Shop Collection</Link>
 

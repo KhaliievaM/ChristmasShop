@@ -34,7 +34,7 @@ $fontForButton: 1em Arial, sans-serif;
     background-size: cover;
     .bottomOfHomePage_containerFeedbackFormContacts {
       @include disFlexDirHome(flex, center, center, column);
-      width: 50%;
+      width: 48%;
       row-gap: 5em;
       margin: 4em auto;
       .feedbackForm {

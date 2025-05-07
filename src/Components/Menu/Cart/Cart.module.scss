@@ -17,9 +17,9 @@
     flex-direction: row;
     column-gap: 2em;
     font-family: proximaNova, sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
-    width: 50%;
+    width: 80%;
     padding: 2em;
     background-color: #f3f2f2;
     .product_Block_Cart{
@@ -38,8 +38,7 @@
         padding-bottom: 0.5em;
         padding-top: 0.5em;
         .h3_nameCart_Cart{
-          font-family: "proximaNova", sans-serif;
-          font-size: 20px;
+          font-size: 1.25rem;
           font-weight: 600;
         }
       }
@@ -60,8 +59,7 @@
           .btn_add_Promo_Code_Cart{
             color: #f73f23;
             background: transparent;
-            font-family: proximaNova, sans-serif;
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: 600;
           }
           .hidden_Block_Promo_Code_Cart{
@@ -69,17 +67,17 @@
 
             .input_add_Promo{
               border: 1px solid #6c676a;
-              padding: 10px;
+              padding:  0.625em;
               font-family: Arial, sans-serif;
-              font-size: 14px;
+              font-size: 0.875rem;
             }
             .btn_add_Promo{
               border: 1px solid #f73f23;
               color: #f73f23;
               font-family: Arial, sans-serif;
-              font-size: 16px;
+              font-size: 1rem;
               letter-spacing: 1px;
-              padding: 9px 12px;
+              padding: 0.5em 0.75em;
             }
           }
           .active{
@@ -96,26 +94,26 @@
             color: #f73f23;
             background: transparent;
             font-family: proximaNova, sans-serif;
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: 600;
           }
           .hidden_Block_Note_Cart{
             display: none;
             .txtArea_add_Note{
               border: 1px solid #6c676a;
-              padding: 10px;
+              padding: 0.625em;
               font-family: Arial, sans-serif;
-              font-size: 14px;
+              font-size: 0.875rem;
 
             }
             .btn_add_Note{
               border: 1px solid #f73f23;
               color: #f73f23;
               font-family: Arial, sans-serif;
-              font-size: 16px;
+              font-size: 1rem;
               letter-spacing: 1px;
               width: 5em;
-              padding: 8px;
+              padding: 0.5em;
             }
           }
           .active{
@@ -139,7 +137,7 @@
         padding-top: 0.5em;
         .h3_nameCart_Cart{
           font-family: "proximaNova", sans-serif;
-          font-size: 20px;
+          font-size: 1.25rem;
           font-weight: 600;
         }
       }
@@ -170,7 +168,7 @@
         width: 100%;
         padding-bottom: 1em;
         padding-top: 1em;
-        font-size: 20px;
+        font-size: 1.25rem;
         .total_price_Cart{
           display: flex;
           justify-content: space-between;
@@ -188,12 +186,110 @@
             color: white;
             border-radius: 2em;
             width: 100%;
-            padding: 15px;
+            padding: 0.9em;
             font-family: Arial, sans-serif;
-            font-size: 16px;
+            font-size: 1rem;
           }
           .secure_Checkout_Cart{
-            font-size: 14px;
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 992px) and (max-width: 1199px){}
+@media screen and (min-width: 768px) and (max-width: 991px){
+  .container_Cart{
+    .margin_container_Cart{
+      width: 80%;
+      background-color: #f3f2f2;
+      .product_Block_Cart{
+        .name_Column_Block_Cart{
+          .h3_nameCart_Cart{}
+        }
+        .additional_opportunities_Section_Cart{
+          .add_Promo_Code_Cart{
+            .btn_add_Promo_Code_Cart{}
+            .hidden_Block_Promo_Code_Cart{
+              .input_add_Promo{}
+              .btn_add_Promo{}
+            }
+            .active{}
+          }
+          .add_a_Note_Cart{
+            .btn_add_a_Note_Cart{}
+            .hidden_Block_Note_Cart{
+              .txtArea_add_Note{}
+              .btn_add_Note{}
+            }
+            .active{}
+          }
+        }
+      }
+      .inform_Block_Cart{
+        .name_Column_Block_Cart{
+          .h3_nameCart_Cart{}
+        }
+        .price_delivery_Block_Cart{
+          .price_Block_Cart{}
+          .choose_delivery_Cart{}
+        }
+        .total_price_Block_Cart{
+          .total_price_Cart{}
+          .checkout_Block_Cart{
+            .btn_Checkout_Cart{}
+            .secure_Checkout_Cart{}
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px){
+  .container_Cart{
+    .margin_container_Cart{
+      flex-direction: column;
+      row-gap: 2em;
+      background-color: #f3f2f2;
+      .product_Block_Cart{
+        .name_Column_Block_Cart{
+          .h3_nameCart_Cart{}
+        }
+        .additional_opportunities_Section_Cart{
+          .add_Promo_Code_Cart{
+            .btn_add_Promo_Code_Cart{}
+            .hidden_Block_Promo_Code_Cart{
+              .input_add_Promo{}
+              .btn_add_Promo{}
+            }
+            .active{}
+          }
+          .add_a_Note_Cart{
+            .btn_add_a_Note_Cart{}
+            .hidden_Block_Note_Cart{
+              .txtArea_add_Note{}
+              .btn_add_Note{}
+            }
+            .active{}
+          }
+        }
+      }
+      .inform_Block_Cart{
+        width: 100%;
+        .name_Column_Block_Cart{
+          .h3_nameCart_Cart{}
+        }
+        .price_delivery_Block_Cart{
+          .price_Block_Cart{}
+          .choose_delivery_Cart{}
+        }
+        .total_price_Block_Cart{
+          .total_price_Cart{}
+          .checkout_Block_Cart{
+            .btn_Checkout_Cart{}
+            .secure_Checkout_Cart{}
           }
         }
       }

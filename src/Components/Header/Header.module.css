@@ -244,9 +244,9 @@
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .header {
+    width: 100%;
     align-items: center;
     padding: 1.5em 0;
-    width: 100%;
     background: url("../../Multimedia/decorative-christmas-arrangement-with-copy-space_23-21491559011.jpg") no-repeat top;
     background-size: cover;
   }
@@ -254,20 +254,20 @@
     display: none;
   }
   .header .whiteHead {
+    width: 80%;
     justify-content: space-between;
     padding-top: 0;
     padding-bottom: 0;
-    width: 80%;
   }
   .header .whiteHead .whiteHead_container {
-    flex-direction: column-reverse;
     width: 100%;
+    flex-direction: column-reverse;
   }
   .header .whiteHead .whiteHead_container .whiteHead_header_title_burger {
+    width: 100%;
     display: flex;
     justify-content: center;
     gap: 30%;
-    width: 100%;
     margin: 0.5em auto;
   }
   .header .whiteHead .whiteHead_container .whiteHead_header_title_burger .header_burger_container {
@@ -283,9 +283,7 @@
   }
   .header .whiteHead .whiteHead_container .whiteHead_menu {
     display: flex;
-    justify-content: center;
     position: relative;
-    width: 100%;
     padding-top: 0;
     margin: 0.5em auto;
   }
@@ -298,22 +296,21 @@
   }
   .header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart {
     position: absolute;
-    top: 0.5em;
+    top: -0.3em;
     right: -7%;
   }
   .header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart .container_logAndCart .logIn {
     display: none;
   }
   .header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart .container_logAndCart .cart {
-    border-radius: 0.5em;
     width: 100%;
+    border-radius: 0.5em;
     margin-right: 0.625em;
     transition: 0.5s ease;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .header {
-    display: flex;
     align-items: center;
     padding: 1.5em 0;
     width: 100%;
@@ -323,15 +320,12 @@
     display: none;
   }
   .header .whiteHead {
-    display: flex;
     justify-content: space-between;
     padding-top: 0;
     padding-bottom: 0;
     width: 80%;
   }
   .header .whiteHead .whiteHead_container {
-    display: flex;
-    justify-content: center;
     flex-direction: column-reverse;
     width: 100%;
   }
@@ -361,9 +355,7 @@
   }
   .header .whiteHead .whiteHead_container .whiteHead_menu {
     display: flex;
-    justify-content: center;
     position: relative;
-    width: 100%;
     padding-top: 0;
     margin: 0.5em auto;
     font-size: 0.8rem;
@@ -377,7 +369,7 @@
   }
   .header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart {
     position: absolute;
-    top: 0.5em;
+    top: -0.8em;
     right: -12%;
   }
   .header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart .container_logAndCart {
@@ -387,7 +379,6 @@
     display: none;
   }
   .header .whiteHead .whiteHead_container .whiteHead_menu .whiteHead_menu_logAndCart .container_logAndCart .cart {
-    font-size: 0.7rem;
     background: inherit;
     width: 100%;
     margin-right: 0.625em;

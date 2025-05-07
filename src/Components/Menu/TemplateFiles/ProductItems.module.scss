@@ -1,104 +1,144 @@
-
-.marginContainer{
-  text-align: center;
-  margin: 0 auto;
-  width: 90%;
-  .container_ChristmasTrees {
+.mainContainerBlock{
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  margin: 2em auto;
-
-  .navBlock_DepartmentStore{
+  align-items: center;
+  width: 100%;
+  .marginContainer{
+    width: 90%;
     display: flex;
-    flex-direction: row;
-    column-gap: 0.8em;
-    font-family: 'proximaNova', sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-    color: #6c676a;
-    line-height: 1.5;
-    .linkHome{}
-  }
-  .headBlock_DepartmentStore{
-    display: flex;
-    flex-direction: column;
-    row-gap: 1em;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    .backImage{
-      margin: 1em auto;
-      //width: 1773px;
-      //height: 411px;
+    flex-direction: column;
+    .container_ChristmasTrees {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
       width: 100%;
-      height: 400px;
-      object-fit: cover;
-      object-position: 50% 50%;
-    }
-    .h2_DepartmentStoreName{
-      text-align: center;
-      font-family: 'CustomFont', sans-serif;
-      letter-spacing: normal;
-      font-size: 50px;
-      font-style: italic;
-      color: #48494e;
-    }
-  }
-}
+      margin-top: 2em;
+      margin-bottom: 2em;
 
-  .mainBlock_products {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-
-    .quantityAndSort_products {///////////////
+    .navBlock_DepartmentStore{
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      margin-top: 1em;
-      margin-bottom: 1em;
+      column-gap: 0.8em;
       font-family: 'proximaNova', sans-serif;
       font-size: 16px;
       font-weight: 800;
-      color: #48494e;
-      //div{
-      //  .select{
-      //    font-family: 'proximaNova', sans-serif;
-      //    font-size: 16px;
-      //    font-weight: 800;
-      //    color: #48494e;
-      //
-      //    option:checked { color: green; }
-      //  }
-      //}
-
+      color: #6c676a;
+      line-height: 1.5;
+      .linkHome{}
     }
-    .container_products {
-      display: grid;
-      //grid-template-columns: auto auto auto auto;
-      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-      grid-auto-flow: dense; //?
-      gap: 1em;
+    .headBlock_DepartmentStore{
+      display: flex;
+      flex-direction: column;
+      row-gap: 1em;
+      justify-content: center;
+      align-items: center;
       width: 100%;
-      margin-bottom: 3em;
+      .backImage{
+        margin: 1em auto;
+        //width: 1773px;
+        //height: 411px;
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        object-position: 50% 50%;
+      }
+      .h2_DepartmentStoreName{
+        text-align: center;
+        font-family: 'CustomFont', sans-serif;
+        letter-spacing: normal;
+        font-size: 50px;
+        font-style: italic;
+        color: #48494e;
+      }
+    }
+  }
+
+    .mainBlock_products {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .quantityAndSort_products {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-family: 'proximaNova', sans-serif;
+        font-size: 16px;
+        font-weight: 800;
+        color: #48494e;
+
+      }
+      .products{
+        //display: grid;
+        width: 100%;
+      .container_products {
+        display: grid;
+        //grid-template-columns: auto auto auto auto;
+        grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+        grid-auto-flow: dense; //?
+        gap: 1em;
+        width: 100%;
+        margin-bottom: 3em;
+      }
+      }
     }
   }
 }
-
-
-
-//@media screen and (min-width: 992px) and (max-width: 1199px) {
-// .container_ChristmasTrees {
-//    margin-top: 35vh;
-//    text-align: center;
-//  }}
-//@media screen and (min-width: 1200px)  {
-//  .container_ChristmasTrees{
-//    margin-top: 35vh;
-//    text-align: center;
-//  }}
+@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 992px) and (max-width: 1199px){}
+@media screen and (min-width: 768px) and (max-width: 991px){
+  .mainContainerBlock{
+    .marginContainer{
+      .container_ChristmasTrees {
+        .navBlock_DepartmentStore{
+          .linkHome{}
+        }
+        .headBlock_DepartmentStore{
+          .backImage{}
+          .h2_DepartmentStoreName{}
+        }
+      }
+      .mainBlock_products {
+        width: 80%;
+        .quantityAndSort_products {}
+        .products{
+          .container_products {
+            grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px){
+  .mainContainerBlock{
+    .marginContainer{
+      .container_ChristmasTrees {
+        .navBlock_DepartmentStore{
+          .linkHome{}
+        }
+        .headBlock_DepartmentStore{
+          .backImage{}
+          .h2_DepartmentStoreName{}
+        }
+      }
+      .mainBlock_products {
+        width: 80%;
+        .quantityAndSort_products {}
+        .products{
+          .container_products {
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+          }
+        }
+      }
+    }
+  }
+}

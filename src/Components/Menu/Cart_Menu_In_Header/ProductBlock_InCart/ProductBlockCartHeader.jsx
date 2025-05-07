@@ -1,6 +1,8 @@
 import React,{useState} from "react";
 import styles from "./ProductBlockCartHeader.module.css";
 import { IoClose } from "react-icons/io5";
+import products from "../../../Products";
+import {Link} from "react-router-dom";
 
 const ProductBlockCartHeader = (props) => {
     let minValue = 1;
@@ -64,7 +66,9 @@ const ProductBlockCartHeader = (props) => {
             <div className={styles.infoBlock_product_Cart}>                                                             {/*блок із зображенням і інформацією про товар*/}
                 <img src={props.img} alt="" className={styles.img_product_Cart}/>                                       {/*зображення товару*/}
                 <div className={styles.name_price_Cart}>                                                                {/*блок ім'я, ціна, стара ціна? товару*/}
-                    <div>{props.name}</div>                                                                             {/*ім'я товару*/}
+                    <div>
+                    {props.name}                                                                            {/*ім'я товару*/}
+                    </div>
                     <div className={styles.price_product_Cart}>                                                         {/*блок ціна і стара ціна? товару*/}
                         <div className={styles.new_price_product_Cart}>$ {props.price}</div>                            {/*ціна товару*/}
                         <div className={`${styles.old_price_product_Cart} ${isOldPrice ? '' : styles.noActive}`}>$ {props.oldprice}</div>{/*перевірка і вивід? старої ціни*/}

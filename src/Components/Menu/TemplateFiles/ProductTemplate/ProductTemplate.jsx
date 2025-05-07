@@ -40,7 +40,7 @@ const ProductTemplate = (props) => {
     return (
         <div className={styles.container_ProductCard}>
             <div className={styles.img_quickView_ProductCard}>
-                <Link to='/productPageSwitcher' state= {{dataToPass}}>
+                <Link to={`/productPageSwitcher/product/${prodId}`} state= {{dataToPass}}>
                     <img src={props.img} alt="Product image" />
                 </Link>                                                                                                     {/*зображення продукту\перехід на сторінку продукту*/}
                 <div  className={styles.quickView_ProductCard}>
@@ -48,21 +48,22 @@ const ProductTemplate = (props) => {
                 </div>
             </div>
             <div className={styles.productAction_ProductCard}>
-                    <Link to='/productPageSwitcher' state= {{dataToPass}} className={styles.goToProductPage_ProductCard}>      {/*перехід на сторінку продукту\назва\ціна*/}
-                    <div className={styles.productName_ProductCard}>{props.name}</div>
-                    <div className={styles.redLine_ProductCard}></div>
-                    <div className={styles.productPrice_ProductCard}>
-                        <span className={`${styles.oldProductPrice_ProductCard} ${isOldPrice ? '' : styles.noActive}`}>${props.oldprice}</span>
-                        <span className={styles.newProductPrice_ProductCard}>${props.price}</span>
-                    </div>
+                    <Link to={`/productPageSwitcher/product/${prodId}`} state= {{dataToPass}} className={styles.goToProductPage_ProductCard}>{/*перехід на сторінку продукту\назва\ціна*/}
+                        <div className={styles.productName_ProductCard}>{props.name}</div>
+                        <div className={styles.redLine_ProductCard}></div>
+                        <div className={styles.productPrice_ProductCard}>
+                            <span className={`${styles.oldProductPrice_ProductCard} ${isOldPrice ? '' : styles.noActive}`}>${props.oldprice}</span>
+                            <span className={styles.newProductPrice_ProductCard}>${props.price}</span>
+                        </div>
                     </Link>
                 <button className={styles.addToCart_Button_ProductCard} onClick={()=>addProductToCart()}>Add to Cart</button>  {/*додати в кошик*/}
             </div>
 
            <QuickView name={props.name} img={props.img} price={props.price}
                       oldprice={props.oldprice} quantity={props.quantity} SKU={props.SKU} totalPrice={props.totalPrice} id={props.id}
-                      isOpen={isProductQuickView} arrayOfProducts={arrayOfProducts} shopAllProducts={shopAllProducts}
+                      isOpen={isProductQuickView} arrayOfProducts={arrayOfProducts} shopAllProducts={shopAllProducts} dataToPass={dataToPass}
                        onClose={()=>setProductQuickView(false)}/>                                                       {/*передача сторінці QuickView props*/}
+
         </div>
     )
 }

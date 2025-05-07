@@ -67,25 +67,29 @@ class ProductItems extends React.Component {                                    
                                  info={p.info} SKU={p.SKU} quantity={p.quantity} id={p.id} productsArray={this.productsArray}/>);
         }
         return (
-            <div className={styles.marginContainer}>
-                <div className={styles.container_ChristmasTrees}>
-                    <div className={styles.navBlock_DepartmentStore}>                                                   {/*навігаційний рядок*/}
-                        <Link to="/">Home</Link>
-                        &#10095;
-                        <div>{this.pageName}</div>
+            <div className={styles.mainContainerBlock}>
+                <div className={styles.marginContainer}>
+                    <div className={styles.container_ChristmasTrees}>
+                        <div className={styles.navBlock_DepartmentStore}>                                                   {/*навігаційний рядок*/}
+                            <Link to="/">Home</Link>
+                            &#10095;
+                            <div>{this.pageName}</div>
+                        </div>
+                        <div className={styles.headBlock_DepartmentStore}>
+                            <img src={this.bgImg} alt="" fetchPriority="high" className={styles.backImage}/>                {/*фон сторінки*/}
+                            <h2 className={styles.h2_DepartmentStoreName}>{this.pageName}</h2>                              {/*назва сторінки*/}
+                        </div>
                     </div>
-                    <div className={styles.headBlock_DepartmentStore}>
-                        <img src={this.bgImg} alt="" fetchPriority="high" className={styles.backImage}/>                {/*фон сторінки*/}
-                        <h2 className={styles.h2_DepartmentStoreName}>{this.pageName}</h2>                              {/*назва сторінки*/}
-                    </div>
-                </div>
-                <div className={styles.mainBlock_products}>
-                    <div className={styles.quantityAndSort_products}>
-                        <div>{counterElements} products</div>                                                           {/*кількість продуктів на сторінці*/}
-                            <DropdownMenu onChange={this.changeSort}/>                                                  {/*сортувальне меню*/}
-                    </div>
-                    <div className={styles.container_products}>
-                        {productsContainer}                                                                             {/*блок продуктів сторінки*/}
+                    <div className={styles.mainBlock_products}>
+                        <div className={styles.quantityAndSort_products}>
+                            <div>{counterElements} products</div>                                                           {/*кількість продуктів на сторінці*/}
+                                <DropdownMenu onChange={this.changeSort}/>                                                  {/*сортувальне меню*/}
+                        </div>
+                        <div className={styles.products}>
+                            <div className={styles.container_products}>
+                                {productsContainer}                                                                             {/*блок продуктів сторінки*/}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -194,6 +194,7 @@ $transitionForButton: all 0.5s ease;
               text-align: center;
               box-sizing: content-box;
               position: relative;
+              width: 80%;
               background-color: $redColor;
               margin: 0.5em auto;
               .border_redBlock_text{
@@ -276,10 +277,57 @@ $transitionForButton: all 0.5s ease;
   .wrapper {
     text-align: center;
     width: 100%;
-    h1 {}
-    main {}
+    .containerOfHomePage {
+      .topOfHomePage {
+        .topOfHomePage_deer {
+          .topOfHomePage_deer_image {}
+          span {}
+        }
+        .topOfHomePage_title {
+          h1 {}
+          span {}
+        }
+        .link {
+          &:hover {}
+        }
+      }
+      .middleOfHomePage {
+        .middleOfHomePage_whiteBlock {
+          .middleOfHomePage_whiteBlock_containerOfThreeCategories {
+            .middleOfHomePage_whiteBlock_containerOfThreeCategories_threeCategories {
+              img {}
+              a {}
+              hr {}
+              .linkShop {
+                &:hover {}
+              }
+            }
+          }
+        }
+        .middleOfHomePageContainer_promoCodeBlock {
+          .middleOfHomePage_promoCodeBlock {
+            img {}
+            .middleOfHomePage_promoCodeBlock_redBlock {
+              .middleOfHomePage_promoCodeBlock_redBlockText_container{
+                margin: 1em auto;
+                .border_redBlock_text{
+                  .middleOfHomePage_promoCodeBlock_redBlock_text {
+                    margin: 2em 2em;
+                    img {}
+                    .zigzag {}
+                  }
+                }
+                .linkShopNow {
+                  &:hover {}
+                }
+              }
+            }
+          }
+        }
+      }
+      .bottomOfHomePage{}
+    }
   }
-
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
@@ -310,7 +358,6 @@ $transitionForButton: all 0.5s ease;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            //row-gap: 2em;
             top: 0;
             padding: 0;
             width: 100%;
@@ -347,8 +394,10 @@ $transitionForButton: all 0.5s ease;
                 flex-direction: column;
                 align-items: center;
                 top: 0;
+                margin: 1em auto;
                 .border_redBlock_text{
                   .middleOfHomePage_promoCodeBlock_redBlock_text {
+                    margin: 2em 2em;
                     font-size: 2em;
                     img {}
                     .zigzag {}

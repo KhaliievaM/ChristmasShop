@@ -7,49 +7,40 @@ import linkIcon from "../../../../../Multimedia/link_icon_grey.png";
 import styles from './Section.module.css'
 import {useState} from "react";
 
-const Section = (props, {open}) => {
-    const [isBlockActive, setFirstBlockActive] = useState(false);
+const Section = (props) => {
 
-    // let openedId ;
-    // let isOpened = false;
-    // function open (id) {
-    //     openedId = id;
-    //     isOpened = true;
-    //     const [firstBlockActive, setFirstBlockActive] = useState(isOpened);
-    // }
-    // function close (id) {
-    //     openedId = id;
-    //     isOpened = false;
-    //     document.getElementsByClassName('')
-    // }
-     //console.log(props.open)
-    let iD = props.id;
+    let index = props.index;                                                                                            //індекс об'єкта масиву питань FAQ
+    const [isBlockActive, setFirstBlockActive] = useState(false);                                              //статус блока відкритий/закритий
+
     return(
         <section className={styles.section}>
-            <div className={styles.h3_Arrow} onClick={()=>setFirstBlockActive(!isBlockActive)}>     {/*  onClick={ ()=> props.open(!props.isBlockActive, iD) }*/}
+            <div className={styles.h3_Arrow} onClick={()=>setFirstBlockActive(!isBlockActive)}>
                 <h3>{props.question}</h3>
-                <img src={downArrow} alt=""  className={`${styles.arrow} ${isBlockActive ? styles.upArrow  : ''}`}/>  {/* className={`${styles.arrow} ${props.isBlockActive ? styles.upArrow  : ''}`}*/}
+                <img src={downArrow} alt=""  className={`${styles.arrow} ${isBlockActive ? styles.upArrow  : ''}`}/>
             </div>
-            <div className={`${styles.main_Block_Section} ${isBlockActive ? styles.active : ''}`} >{/*className={`${styles.main_Block_Section} ${props.isBlockActive ? styles.active : ''}`} */}
+            {/*якщо isBlockActive або індекс об'єкта не undefined і = 0(тобто перший виведений на сторінці об'єкт)*/}
+            <div className={`${styles.main_Block_Section} ${isBlockActive || (index !== undefined && index === 0) ? styles.active : ''}`} >
                 <p>
                     {props.answer}
                 </p>
                 <div className={styles.link_ToSocialNetworks}>
                     <div className={styles.social_Networks}>
-                        <a href="https://www.facebook.com/share_channel/?link=https%3A%2F%2Fwww.wix.com%2Fdemone2%2Fchristmas-boutique%2Ffaq%3FquestionId%3D847ca3f0-5b64-474e-b5f3-411365f893b6&app_id=966242223397117&source_surface=external_reshare&display&hashtag"  target="_blank" rel="noopener">
+                        <a href="https://www.facebook.com/share_channel/?link=https%3A%2F%2Fwww.wix.com%2Fdemone2%2Fchristmas-boutique%2Ffaq%3FquestionId%3D847ca3f0-5b64-474e-b5f3-411365f893b6&app_id=966242223397117&source_surface=external_reshare&display&hashtag"
+                           target="_blank" rel="noopener">
                             <img src={facebookImg} alt=""/>
                         </a>
-                        <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.wix.com%2Fdemone2%2Fchristmas-boutique%2Ffaq%3FquestionId%3Ded199f9a-1b64-42c1-bf6d-55677d0d8312&appDefId=14c92d28-031e-7910-c9a8-a670011e062d" target="_blank" rel="noopener">
+                        <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.wix.com%2Fdemone2%2Fchristmas-boutique%2Ffaq%3FquestionId%3Ded199f9a-1b64-42c1-bf6d-55677d0d8312&appDefId=14c92d28-031e-7910-c9a8-a670011e062d"
+                           target="_blank" rel="noopener">
                             <img src={twitterImg} alt=""/>
                         </a>
-                        <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2FshareArticle%3Fmini%3Dtrue%26url%3Dhttps%3A%2F%2Fwww.wix.com%2Fdemone2%2Fchristmas-boutique%2Ffaq%3FquestionId%3Ded199f9a-1b64-42c1-bf6d-55677d0d8312%26appDefId%3D14c92d28-031e-7910-c9a8-a670011e062d" target="_blank" rel="noopener">
+                        <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2FshareArticle%3Fmini%3Dtrue%26url%3Dhttps%3A%2F%2Fwww.wix.com%2Fdemone2%2Fchristmas-boutique%2Ffaq%3FquestionId%3Ded199f9a-1b64-42c1-bf6d-55677d0d8312%26appDefId%3D14c92d28-031e-7910-c9a8-a670011e062d"
+                           target="_blank" rel="noopener">
                             <img src={linkedinImg} alt=""/>
                         </a>
                     </div>
                     <div className={styles.copy_link}>
                         <img src={linkIcon} alt=""/>
                     </div>
-
                 </div>
             </div>
         </section>

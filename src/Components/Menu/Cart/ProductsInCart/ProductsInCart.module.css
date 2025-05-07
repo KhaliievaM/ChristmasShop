@@ -1,38 +1,52 @@
 .products_Section_Cart {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
   width: 100%;
+  height: 8em;
   padding-bottom: 1em;
   padding-top: 1em;
   border-bottom: 1px solid #b6b8be;
 }
 .products_Section_Cart .img_product_Section_Cart {
-  width: 100px;
+  width: 6em;
+  height: border-box;
   border: 1px solid #b6b8be;
 }
-.products_Section_Cart .name_price_product_Section_Cart {
+.products_Section_Cart .container_name_quantity_price {
+  display: flex;
+  flex: 7;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.products_Section_Cart .container_name_quantity_price .name_price_product_Section_Cart {
   margin: 0 0.5em;
   text-align: start;
   flex: 6;
 }
-.products_Section_Cart .name_price_product_Section_Cart .name_product_Cart {
+.products_Section_Cart .container_name_quantity_price .name_price_product_Section_Cart .name_product_Cart {
   text-decoration: none;
   letter-spacing: 0.2px;
   color: #252525;
 }
-.products_Section_Cart .name_price_product_Section_Cart .price_product_Cart {
+.products_Section_Cart .container_name_quantity_price .name_price_product_Section_Cart .price_product_Cart {
   margin: 0.8em 0;
 }
-.products_Section_Cart .quantity_product_Section {
-  flex: 2;
+.products_Section_Cart .container_name_quantity_price .container_quantity_price {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5em;
+  flex: 5;
+}
+.products_Section_Cart .container_name_quantity_price .container_quantity_price .quantity_product_Section {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   border: 1px solid #b6b8be;
 }
-.products_Section_Cart .quantity_product_Section .quantity_btn_Cart {
+.products_Section_Cart .container_name_quantity_price .container_quantity_price .quantity_product_Section .quantity_btn_Cart {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +55,7 @@
   font-size: 1.4rem;
   color: #575757;
 }
-.products_Section_Cart .quantity_product_Section .quantity_input_Cart {
+.products_Section_Cart .container_name_quantity_price .container_quantity_price .quantity_product_Section .quantity_input_Cart {
   width: 2rem;
   padding: 0.4rem;
   font-size: 0.8rem;
@@ -49,9 +63,12 @@
   text-align: center;
   border: 0;
 }
-.products_Section_Cart .price_Sum_product_Section {
-  flex: 2;
+.products_Section_Cart .container_name_quantity_price .container_quantity_price .price_Sum_product_Section {
+  padding: 5px;
+  width: 5em;
+  text-align: start;
   margin: 0.3em 0;
+  background-color: #ffffff;
 }
 .products_Section_Cart .delete_product_Section {
   flex: 1;
@@ -60,6 +77,52 @@
 .products_Section_Cart .delete_product_Section img {
   background: inherit;
   width: 2em;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .products_Section_Cart {
+    justify-content: space-between;
+  }
+  .products_Section_Cart .container_name_quantity_price {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    margin-left: 1em;
+  }
+  .products_Section_Cart .container_name_quantity_price .name_price_product_Section_Cart {
+    margin: 0;
+  }
+  .products_Section_Cart .container_name_quantity_price .name_price_product_Section_Cart .price_product_Cart {
+    display: none;
+  }
+  .products_Section_Cart .container_name_quantity_price .container_quantity_price {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .products_Section_Cart {
+    justify-content: space-between;
+    height: min(8em, 10%);
+    row-gap: 1em;
+    flex-wrap: wrap;
+  }
+  .products_Section_Cart .container_name_quantity_price {
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 1em;
+    margin-left: 1em;
+  }
+  .products_Section_Cart .container_name_quantity_price .name_price_product_Section_Cart {
+    margin: 0;
+  }
+  .products_Section_Cart .container_name_quantity_price .name_price_product_Section_Cart .price_product_Cart {
+    display: none;
+  }
+  .products_Section_Cart .container_name_quantity_price .container_quantity_price {
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=ProductsInCart.module.css.map */

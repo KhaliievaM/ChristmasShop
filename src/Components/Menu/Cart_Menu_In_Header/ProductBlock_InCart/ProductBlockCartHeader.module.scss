@@ -1,26 +1,26 @@
+@mixin disDirJusAli($display, $flexDir, $jusCon, $aliIte) {
+  display: $display;
+  flex-direction: $flexDir;
+  justify-content: $jusCon;
+  align-items: $aliIte;
+}
 .container_product_Cart{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  column-gap: 1em;
+  @include disDirJusAli(flex, row, space-between, flex-start);
   width: 100%;
+  column-gap: 1em;
+  font-size: 1rem;
   padding-bottom: 1em;
   padding-top: 1em;
   border-bottom: 1px solid white;
   .infoBlock_product_Cart{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    column-gap: 1em;
+    @include disDirJusAli(flex, row, flex-start, flex-start);
     width: 100%;
+    column-gap: 1em;
     .img_product_Cart{
       width: 100px;
     }
     .name_price_Cart{
-      display: flex;
-      flex-direction: column;
+      @include disDirJusAli(flex, column, flex-start, flex-start);
       row-gap: 0.5em;
       .price_product_Cart{
         display: flex;
@@ -36,18 +36,15 @@
         }
       }
       .quantity_product_Cart{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        @include disDirJusAli(flex, row, center, center);
+        width: 6em;
+        column-gap: 0;
         background: inherit;
         border: 1px solid white;
-        width: 6em;
         .quantity_btn_Cart{
           display: flex;
           justify-content: center;
           align-items: center;
-          //padding: 0.2rem;
           width: 1em;
           font-family: Arial, sans-serif;
           font-size: 1.4rem;
@@ -60,10 +57,10 @@
           font-size: 0.8rem;
           font-weight: 600;
           text-align: center;
-          border: 0;color: white;
+          border: 0;
+          color: white;
           background: inherit;
         }
-
       }
     }
   }
@@ -72,8 +69,8 @@
     background: inherit;
     color: white;
     img{
-      background: inherit;
       width: 2em;
+      background: inherit;
     }
   }
 }

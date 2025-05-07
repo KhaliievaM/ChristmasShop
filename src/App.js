@@ -17,6 +17,7 @@ import FAQ from "./Components/Footer/InformationBlockFooter/FAQ/FAQ";
 import ShippingAndReturns from "./Components/Footer/InformationBlockFooter/ShippingAndReturn/ShippingAndReturns";
 import ProductPage from "./Components/Menu/TemplateFiles/ProductTemplate/Product_Page/ProductPage";
 import Cart from "./Components/Menu/Cart/Cart";
+import QuickView from "./Components/Menu/TemplateFiles/ProductTemplate/QuickView/QuickView"
 import ProductPageSwitcher
     from "./Components/Menu/TemplateFiles/ProductTemplate/ProductPageSwitcher_ProductPage/ProductPageSwitcher";
 import {logDOM} from "@testing-library/react";
@@ -49,10 +50,9 @@ function App() {
                     <Route path="/privacyPolicy" element={<PrivacyPolicy/>}/>
                     <Route path="/FAQ" element={<FAQ/>}/>
                     <Route path="/shippingAndReturns" element={<ShippingAndReturns/>}/>
-                    <Route path="/productPageSwitcher" element={<ProductPageSwitcher/>}/>
-                    <Route path="/product/:id" element={<ProductPage/>}/>
+                    <Route path="/productPageSwitcher/product/:id" element={<ProductPageSwitcher/>}/>
                     <Route path="/cart" element={<Cart/>}/>
-
+                    <Route path="/quickView" element={<QuickView/>}/>
                     {/*<Route path="*" element={<NoPage />} />*/}
                 </Routes>
             </div>

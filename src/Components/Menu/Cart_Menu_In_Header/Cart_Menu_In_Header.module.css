@@ -79,6 +79,7 @@
   position: absolute;
   height: 23%;
   margin-bottom: 2em;
+  font-size: 1em;
   min-height: 100px;
   bottom: 0;
   right: 0;
@@ -111,6 +112,7 @@
   background-color: #f73f23;
   color: white;
   width: 100%;
+  font-size: 1.2rem;
   padding-top: 2em;
   text-align: center;
 }

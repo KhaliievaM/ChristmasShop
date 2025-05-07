@@ -1,15 +1,25 @@
-.marginContainer {
-  text-align: center;
-  margin: 0 auto;
-  width: 90%;
+.mainContainerBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-.marginContainer .container_ChristmasTrees {
+.mainContainerBlock .marginContainer {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.mainContainerBlock .marginContainer .container_ChristmasTrees {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 2em auto;
+  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
-.marginContainer .container_ChristmasTrees .navBlock_DepartmentStore {
+.mainContainerBlock .marginContainer .container_ChristmasTrees .navBlock_DepartmentStore {
   display: flex;
   flex-direction: row;
   column-gap: 0.8em;
@@ -19,7 +29,7 @@
   color: #6c676a;
   line-height: 1.5;
 }
-.marginContainer .container_ChristmasTrees .headBlock_DepartmentStore {
+.mainContainerBlock .marginContainer .container_ChristmasTrees .headBlock_DepartmentStore {
   display: flex;
   flex-direction: column;
   row-gap: 1em;
@@ -27,14 +37,14 @@
   align-items: center;
   width: 100%;
 }
-.marginContainer .container_ChristmasTrees .headBlock_DepartmentStore .backImage {
+.mainContainerBlock .marginContainer .container_ChristmasTrees .headBlock_DepartmentStore .backImage {
   margin: 1em auto;
   width: 100%;
   height: 400px;
   object-fit: cover;
   object-position: 50% 50%;
 }
-.marginContainer .container_ChristmasTrees .headBlock_DepartmentStore .h2_DepartmentStoreName {
+.mainContainerBlock .marginContainer .container_ChristmasTrees .headBlock_DepartmentStore .h2_DepartmentStoreName {
   text-align: center;
   font-family: "CustomFont", sans-serif;
   letter-spacing: normal;
@@ -42,14 +52,14 @@
   font-style: italic;
   color: #48494e;
 }
-.marginContainer .mainBlock_products {
+.mainContainerBlock .marginContainer .mainBlock_products {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.marginContainer .mainBlock_products .quantityAndSort_products {
+.mainContainerBlock .marginContainer .mainBlock_products .quantityAndSort_products {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -62,13 +72,33 @@
   font-weight: 800;
   color: #48494e;
 }
-.marginContainer .mainBlock_products .container_products {
+.mainContainerBlock .marginContainer .mainBlock_products .products {
+  width: 100%;
+}
+.mainContainerBlock .marginContainer .mainBlock_products .products .container_products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-auto-flow: dense;
   gap: 1em;
   width: 100%;
   margin-bottom: 3em;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .mainContainerBlock .marginContainer .mainBlock_products {
+    width: 80%;
+  }
+  .mainContainerBlock .marginContainer .mainBlock_products .products .container_products {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .mainContainerBlock .marginContainer .mainBlock_products {
+    width: 80%;
+  }
+  .mainContainerBlock .marginContainer .mainBlock_products .products .container_products {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
 
 /*# sourceMappingURL=ProductItems.module.css.map */

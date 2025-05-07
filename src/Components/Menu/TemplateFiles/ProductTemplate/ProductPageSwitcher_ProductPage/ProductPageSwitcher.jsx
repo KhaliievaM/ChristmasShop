@@ -8,12 +8,15 @@ import { useLocation } from 'react-router-dom';
 import {useState} from "react";
 
 
-const ProductPageSwitcher = ()=>{
-    const location = useLocation();                                                                                     //витягування даних переданих
+const ProductPageSwitcher = (props)=>{
+
+    const location = useLocation();
+    const dataToPass = location.state?.dataToPass;                                                                      //витягування даних переданих
     const { state } = location;                                                                                         // з батьківської компоненти
-    let prodId = state.dataToPass.id;                                                                                   //id продукту
-    let productsArray = state.dataToPass.productsArray;                                                                 //масив, в якому знаходиться продукт
-    let isShopAll = state.dataToPass.isShopAll;                                                                         //булеве значення(чи масив ShopAll, чи ні)
+    // Використовуйте optional chaining, щоб уникнути помилки, якщо dataToPass не визначено
+    let prodId = dataToPass?.id;                                                                                        //id продукту
+    let productsArray = dataToPass?.productsArray;                                                                      //масив, в якому знаходиться продукт
+    let isShopAll = dataToPass?.isShopAll;                                                                              //булеве значення(чи масив ShopAll, чи ні)
     let prod;                                                                                                           //поточний продукт(об'єкт)
     for(let obj in products){                                                                                           //пошук продукту, за заданим id
         for(let inObj of products[obj]){
@@ -24,6 +27,7 @@ const ProductPageSwitcher = ()=>{
             }
         }
     }
+    //console.log(props.productId)
     const [productToSend, setProductToSend] = useState(prod);                                                           //State для оновлення продукту,для відправки дочірній компоненті
     let nameParentPage = '';                                                                                            //назва батьківської сторінки(категорії товарів)
     let link = '';                                                                                                      //посилання на сторінку категорії товарів
